@@ -30,6 +30,6 @@ echo "$g" > build/mix.gain
 node src/stems.mjs build stems
 mkdir -p ../project/public/audio
 cp mix.wav ../project/public/audio/mix.wav
-node src/qa.mjs || echo "WARNING: QA reported failures (see qa.txt)"
+node src/qa.mjs   # fails the build if any audio QA check fails
 bash src/qa-images.sh
 echo "build complete: $(cat qa.txt | grep -m1 RESULT)"

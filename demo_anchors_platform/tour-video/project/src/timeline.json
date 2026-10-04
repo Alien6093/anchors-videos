@@ -289,7 +289,11 @@
    "sfx": [
     "click"
    ],
-   "note": "Goal selection: Engagement."
+   "note": "Goal selection: Engagement.",
+   "callWin": [
+    0,
+    0.9
+   ]
   },
   {
    "id": "s08",
@@ -568,17 +572,17 @@
    "focus": [
     {
      "at": 0,
-     "x": 460,
-     "y": 150,
-     "w": 1000,
-     "h": 563
+     "x": 380,
+     "y": 50,
+     "w": 1150,
+     "h": 647
     },
     {
      "at": 1,
-     "x": 560,
-     "y": 280,
-     "w": 760,
-     "h": 428
+     "x": 420,
+     "y": 60,
+     "w": 1100,
+     "h": 619
     }
    ],
    "callout": "65 creators matched instantly",
@@ -594,7 +598,7 @@
     "impact",
     "chime"
    ],
-   "note": "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense).",
+   "note": "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense). QA2: focus raised so there is room above the modal for the top callout.",
    "calloutAt": "top"
   },
   {
@@ -910,7 +914,7 @@
    ],
    "note": "CLEO-detected Zepto products; pick 'Zepto Core Grocery Delivery' -> product details auto-filled.",
    "callWin": [
-    0,
+    0.1,
     0.72
    ]
   },
@@ -1128,7 +1132,8 @@
    "clicks": [],
    "transition": "cut",
    "sfx": [],
-   "note": "PAYOFF freeze on full brief text (What's happening / Why / What we want / Example vibes)."
+   "note": "PAYOFF freeze on full brief text (What's happening / Why / What we want / Example vibes).",
+   "calloutAt": "below"
   },
   {
    "id": "s34",
@@ -1405,10 +1410,10 @@
     },
     {
      "at": 1,
-     "x": 420,
-     "y": 120,
-     "w": 1080,
-     "h": 608
+     "x": 400,
+     "y": 150,
+     "w": 1120,
+     "h": 630
     }
    ],
    "callout": "Campaign activated!",
@@ -1720,11 +1725,6 @@
    ],
    "clicks": [
     {
-     "t": 0.71,
-     "x": 1166,
-     "y": 472
-    },
-    {
      "t": 2.45,
      "x": 1732,
      "y": 466
@@ -1759,10 +1759,10 @@
    "focus": [
     {
      "at": 0,
-     "x": 760,
-     "y": 120,
-     "w": 1150,
-     "h": 647
+     "x": 1000,
+     "y": 352,
+     "w": 914,
+     "h": 514
     }
    ],
    "callout": "Both creators scheduled",
@@ -2342,7 +2342,7 @@
    "tOut": 114.6,
    "src": 3,
    "srcIn": 175.2,
-   "srcOut": 179.6,
+   "srcOut": 179.3,
    "freeze": false,
    "chapter": 10,
    "focus": [

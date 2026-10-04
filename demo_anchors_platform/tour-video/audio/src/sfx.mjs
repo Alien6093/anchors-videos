@@ -138,7 +138,9 @@ for (const c of cues) {
       const seq = [5, 7, 6, 8, 5, 4, 6, 7];
       v = pop({ note: PENTA[seq[popIdx % seq.length]] + key, seed: 50 + popIdx });
       const sh = T.shots.find((s) => Math.abs(s.tIn + 0.15 - c.t) < 0.01);
-      pan = sh?.callTarget ? PAN_X(sh.callTarget.x + sh.callTarget.w / 2) * 0.6 : 0;
+      // callTarget is a rect or a keyframe list [{at,x,y,w,h}]; pan towards its first position.
+      const ct = Array.isArray(sh?.callTarget) ? sh.callTarget[0] : sh?.callTarget;
+      pan = ct ? PAN_X(ct.x + ct.w / 2) * 0.6 : 0;
       popIdx++; break;
     }
     case 'click': v = click({ seed: 80 + Math.round(c.t * 10) }); pan = PAN_X(c.x) * 0.6; break;
@@ -147,6 +149,8 @@ for (const c of cues) {
     case 'bell': v = bell({ key }); break;
     case 'sting': v = sting({ key: 2 }); break;
   }
+  if (!Number.isFinite(pan)) pan = 0;
+  if (!Number.isFinite(gain)) throw new Error(`sfx cue ${c.type}@${c.t}: non-finite gain`);
   const start = c.t - v.lead;
   // where the cue is actually heard, measured on its own rendered buffer: envelope peak (10 ms RMS) for sweeps,
   // end for risers/swells, first sample above 30 % of the first 150 ms peak for transients
@@ -181,7 +185,7 @@ for (let i = 0; i < nOut; i++) {
 // fixed raw-stem scale (headroom for 24-bit file); mix.mjs balances the buses
 const RAW_SCALE = 0.4;
 for (let i = 0; i < nOut; i++) { L[i] *= RAW_SCALE; R[i] *= RAW_SCALE; }
-if (peakOf(L, R) >= 1) throw new Error('sfx raw stem would clip');
+{ const pk = peakOf(L, R); if (!(pk < 1)) throw new Error(`sfx raw stem invalid (peak ${pk}): clipping or NaN`); }
 writeWav(OUT, L, R, 24);
 fs.writeFileSync(CUES, JSON.stringify(out, null, 1));
 const counts = out.reduce((m, c) => ((m[c.type] = (m[c.type] ?? 0) + 1), m), {});
