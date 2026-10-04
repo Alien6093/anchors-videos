@@ -1,0 +1,265 @@
+ANCHORS PLATFORM TOUR (120 s) - AUDIO QA   generated 2026-10-04T22:55:00.313Z
+timeline: ../project/src/timeline.json  duration 120 s, 61 shots, 10 chapters, end card 115.5 s
+
+== FILES ==
+mix.wav
+   codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
+   samples 5760000 = 120.000 s | integrated -14 LUFS | LRA 7.2 LU | true peak -1.3 dBTP | sample peak -1.51 dBFS | clipped samples 0
+   astats: DC offset 0.000004, peak -1.514414 dBFS, RMS -15.177331 dBFS | first sample -0.022305 | max |x| in last 50 ms 0.00e+0
+PASS  mix.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
+PASS  mix.wav: no clipped samples
+PASS  mix.wav: DC offset 4.42e-6 (< 1e-4)
+PASS  mix.wav: < 50 MB
+PASS  mix.wav: integrated loudness -14 LUFS within -14 +/- 0.5
+PASS  mix.wav: true peak -1.3 dBTP <= -1.0
+PASS  mix.wav: ends in silence (last 50 ms max -Infinity dBFS)
+stems/music.wav
+   codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
+   samples 5760000 = 120.000 s | integrated -15.3 LUFS | LRA 7.9 LU | true peak -1.6 dBTP | sample peak -1.66 dBFS | clipped samples 0
+   astats: DC offset -0.000000, peak -1.657984 dBFS, RMS -16.364961 dBFS | first sample 0.000000 | max |x| in last 50 ms 0.00e+0
+PASS  stems/music.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
+PASS  stems/music.wav: no clipped samples
+PASS  stems/music.wav: DC offset -4.19e-11 (< 1e-4)
+PASS  stems/music.wav: < 50 MB
+stems/sfx.wav
+   codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
+   samples 5760000 = 120.000 s | integrated -20.2 LUFS | LRA 18.4 LU | true peak -1.3 dBTP | sample peak -1.31 dBFS | clipped samples 0
+   astats: DC offset 0.000000, peak -1.310032 dBFS, RMS -27.420731 dBFS | first sample -0.020116 | max |x| in last 50 ms 0.00e+0
+PASS  stems/sfx.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
+PASS  stems/sfx.wav: no clipped samples
+PASS  stems/sfx.wav: DC offset 1.02e-12 (< 1e-4)
+PASS  stems/sfx.wav: < 50 MB
+../project/public/audio/mix.wav
+   codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
+   samples 5760000 = 120.000 s | integrated -14 LUFS | LRA 7.2 LU | true peak -1.3 dBTP | sample peak -1.51 dBFS | clipped samples 0
+   astats: DC offset 0.000004, peak -1.514414 dBFS, RMS -15.177331 dBFS | first sample -0.022305 | max |x| in last 50 ms 0.00e+0
+PASS  ../project/public/audio/mix.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
+PASS  ../project/public/audio/mix.wav: no clipped samples
+PASS  ../project/public/audio/mix.wav: DC offset 4.42e-6 (< 1e-4)
+PASS  ../project/public/audio/mix.wav: < 50 MB
+PASS  ../project/public/audio/mix.wav: integrated loudness -14 LUFS within -14 +/- 0.5
+PASS  ../project/public/audio/mix.wav: true peak -1.3 dBTP <= -1.0
+PASS  ../project/public/audio/mix.wav: ends in silence (last 50 ms max -Infinity dBFS)
+PASS  project/public/audio/mix.wav is byte-identical to audio/mix.wav
+   mastering alignment: mix.wav vs pre-master cross-correlation lag 0 samples
+PASS  mastering adds no delay (limiter latency compensated)
+   stems: common gain 0.5 dB (mastering gain 1.4 dB, trim -0.9 dB); null test mix - (music+sfx)x1.109: residual -37.4 dB below the mix
+PASS  stems sum to the mix (residual from the limiter only, < -30 dB)
+
+== CLICK / DISCONTINUITY SCAN (mix.wav) ==
+   samples whose 2nd difference exceeds 25x the running average (and 0.08): 5587; not within 30 ms of a cue or 16th-note grid onset: 0
+PASS  no unexplained discontinuities (clicks/pops) in the mix
+
+== CUE SYNC ==
+   (a) all 101 cues: |heard - timeline time| max 30.0 ms (heard = transient for hits/pops/clicks/chimes, envelope peak for whooshes, arrival for risers)
+PASS  every SFX cue is heard within 1 frame of its timeline time
+   (b) 33 isolated percussive cues measured in stems/sfx.wav: worst onset offset 0.0 ms (0.00 frames)
+PASS  isolated cue onsets in the SFX stem within 1 frame of the timeline
+
+== MUSIC DOWNBEATS ON ANCHORS (stems/music.wav, low-band onset) ==
+      0.000 s  onset 0.006  (+6.0 ms, rise >60 dB)
+PASS  music downbeat at 0.00 s within 1 frame
+      1.000 s  onset 1.006  (+6.0 ms, rise 26 dB)
+PASS  music downbeat at 1.00 s within 1 frame
+      2.000 s  onset 2.006  (+6.0 ms, rise 20 dB)
+PASS  music downbeat at 2.00 s within 1 frame
+      3.000 s  onset 3.013  (+13.0 ms, rise 24 dB)
+PASS  music downbeat at 3.00 s within 1 frame
+      4.000 s  onset 4.005  (+5.0 ms, rise 21 dB)
+PASS  music downbeat at 4.00 s within 1 frame
+      5.000 s  onset 5.005  (+5.0 ms, rise 19 dB)
+PASS  music downbeat at 5.00 s within 1 frame
+     70.400 s  onset 70.410  (+10.0 ms, rise 4 dB)
+PASS  music downbeat at 70.40 s within 1 frame
+     88.400 s  onset 88.401  (+1.0 ms, rise 13 dB)
+PASS  music downbeat at 88.40 s within 1 frame
+     95.200 s  onset 95.201  (+1.0 ms, rise 7 dB)
+PASS  music downbeat at 95.20 s within 1 frame
+    115.500 s  onset 115.501  (+1.0 ms, rise 12 dB)
+PASS  music downbeat at 115.50 s within 1 frame
+
+== TEMPO MAP (derived from timeline chapters) ==
+      5.00-70.40   128 beats @ 117.43 BPM (32 bars of 4/4)
+     70.40-88.40    36 beats @ 120.00 BPM (9 bars of 4/4)
+     88.40-95.20    13 beats @ 114.71 BPM (3 bars of 4/4 + 1-beat pickup)
+     95.20-115.50   40 beats @ 118.23 BPM (10 bars of 4/4)
+
+== ARRANGEMENT / SECTION LEVELS (mid RMS dBFS; music stem | sfx stem | mix) ==
+   Hook     0.00-5.00    key D bars  -  hits I vi IV V I                    -17.2 |  -17.4 |  -14.0
+   L1       5.00-15.22   key D bars  5  I vi IV Vsus I                      -20.3 |  -33.7 |  -19.2
+   L2      15.22-27.48   key D bars  6  vi IV Vsus I vi IV                  -19.4 |  -31.0 |  -18.2
+   L3      27.48-45.88   key D bars  9  Vsus I vi IV Vsus I vi IV Vsus      -17.6 |  -33.0 |  -16.6
+   L4      45.88-60.18   key D bars  7  I vi IV Vsus I vi IV                -17.2 |  -31.4 |  -16.2
+   L5      60.18-64.27   key D bars  2  Vsus I                              -16.5 |  -38.3 |  -15.6
+   Lpre    64.27-66.31   key D bars  1  V                                   -20.5 |  -30.8 |  -19.2
+   L6      66.31-70.40   key D bars  2  I vi                                -16.0 |  -20.6 |  -13.8
+   R1      70.40-82.40   key D bars  6  vi IV I6 V vi IV                    -15.4 |  -30.2 |  -14.3
+   R2      82.40-86.40   key D bars  2  I6 V                                -16.2 |  -35.6 |  -15.2
+   Rpre    86.40-88.40   key D bars  1  V                                   -17.6 |  -31.4 |  -16.5
+   M1      88.40-94.68   key E bars  3  I vi IV                             -14.3 |  -36.1 |  -13.4
+   Mpre    94.68-95.20   key E bars  1  V                                   -19.2 |  -24.5 |  -17.1
+   M2      95.20-111.44  key E bars  8  I V vi IV I V vi IV                 -13.3 |  -33.8 |  -12.4
+   M3     111.44-113.47  key E bars  1  ii                                  -14.0 |  -35.3 |  -13.1
+   Mres   113.47-115.50  key E bars  1  V                                   -18.2 |  -36.0 |  -17.2
+   End    115.50-120.00  key E bars  -  I (Emaj9) ring-out                  -23.8 |  -21.9 |  -19.0
+   act averages (music): Launch -18.0 (first 10 s -20.2, last 10 s -16.9) | Run -15.7 | Measure -13.9
+PASS  music builds: Launch rises across the act and Measure is the loudest act
+   ending: mix RMS -15.3 dBFS just after the end-card sting, -64.0 dBFS in the last 0.5 s
+PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
+
+== PER-SECOND RMS (mid dBFS): music stem | sfx stem | mix ==
+     0s  -17.1  -17.9  -14.3  |  1s  -17.2  -17.8  -14.3  |  2s  -17.3  -17.8  -14.0  |  3s  -17.2  -17.8  -13.9
+     4s  -17.3  -16.1  -13.6  |  5s  -20.7  -29.1  -19.2  |  6s  -19.7  -94.0  -18.8  |  7s  -20.3  -35.0  -19.3
+     8s  -20.2  -48.3  -19.2  |  9s  -21.0  -35.0  -19.9  | 10s  -19.8 -104.0  -18.9  | 11s  -20.6  -35.1  -19.5
+    12s  -20.5 -108.8  -19.6  | 13s  -20.0  -35.2  -19.0  | 14s  -19.8  -34.8  -18.8  | 15s  -19.8  -27.1  -18.1
+    16s  -19.6  -35.2  -18.6  | 17s  -18.5  -64.0  -17.6  | 18s  -19.8  -35.2  -18.8  | 19s  -18.5  -63.0  -17.6
+    20s  -20.1  -35.3  -19.1  | 21s  -18.2  -64.0  -17.3  | 22s  -20.1  -36.2  -19.1  | 23s  -22.0  -21.8  -18.0
+    24s  -19.6  -33.1  -18.5  | 25s  -18.4  -70.1  -17.5  | 26s  -19.5 -116.5  -18.6  | 27s  -19.5  -26.3  -17.8
+    28s  -17.3  -74.9  -16.4  | 29s  -18.5  -27.4  -17.1  | 30s  -17.2  -72.8  -16.3  | 31s  -17.5  -35.2  -16.6
+    32s  -17.7  -79.6  -16.8  | 33s  -18.0  -35.2  -17.0  | 34s  -17.1  -75.5  -16.2  | 35s  -17.8  -35.3  -16.8
+    36s  -17.3  -43.8  -16.4  | 37s  -18.2  -26.8  -16.8  | 38s  -17.2  -88.4  -16.3  | 39s  -17.3  -35.2  -16.3
+    40s  -18.0  -29.5  -16.8  | 41s  -18.0  -29.1  -16.8  | 42s  -17.6  -35.2  -16.7  | 43s  -17.4  -48.8  -16.5
+    44s  -17.3 -106.1  -16.4  | 45s  -17.4 -104.0  -16.5  | 46s  -17.8  -26.1  -16.3  | 47s  -16.7  -78.6  -15.9
+    48s  -17.1 -125.0  -16.2  | 49s  -17.4  -35.5  -16.4  | 50s  -19.0  -24.5  -17.0  | 51s  -17.7  -30.5  -16.6
+    52s  -17.0  -50.5  -16.1  | 53s  -17.0  -35.2  -16.1  | 54s  -16.9  -64.3  -16.0  | 55s  -16.6 -111.8  -15.7
+    56s  -17.0  -35.2  -16.0  | 57s  -17.1  -62.3  -16.2  | 58s  -17.4  -35.1  -16.4  | 59s  -17.4  -26.5  -16.0
+    60s  -16.4  -78.7  -15.5  | 61s  -16.6  -35.2  -15.7  | 62s  -16.5  -80.4  -15.6  | 63s  -16.7  -35.2  -15.7
+    64s  -17.9  -63.4  -17.0  | 65s  -21.8  -32.3  -20.5  | 66s  -19.7  -16.0  -13.8  | 67s  -15.8  -20.3  -13.4
+    68s  -14.7  -30.1  -13.6  | 69s  -15.8  -41.9  -14.9  | 70s  -17.0  -29.2  -15.9  | 71s  -15.0  -83.1  -14.1
+    72s  -14.9  -35.2  -14.0  | 73s  -15.3  -80.7  -14.4  | 74s  -14.7  -35.3  -13.8  | 75s  -14.3  -81.0  -13.4
+    76s  -16.0  -35.0  -15.0  | 77s  -17.7  -21.7  -15.0  | 78s  -16.3  -26.7  -15.1  | 79s  -15.0  -36.5  -14.1
+    80s  -14.7  -77.4  -13.8  | 81s  -15.3  -48.6  -14.4  | 82s  -15.9  -26.7  -14.6  | 83s  -16.3  -48.3  -15.4
+    84s  -15.5 -123.8  -14.6  | 85s  -16.6 -178.5  -15.7  | 86s  -16.2  -35.3  -15.3  | 87s  -17.4  -71.8  -16.6
+    88s  -17.1  -27.0  -15.7  | 89s  -14.8  -35.2  -13.9  | 90s  -13.8  -81.7  -12.9  | 91s  -13.6 -130.4  -12.7
+    92s  -14.4  -35.2  -13.4  | 93s  -14.2  -69.4  -13.3  | 94s  -16.0  -33.1  -15.0  | 95s  -14.5  -26.1  -13.3
+    96s  -13.6  -35.2  -12.7  | 97s  -12.9  -64.0  -12.0  | 98s  -13.4 -113.8  -12.5  | 99s  -13.2  -28.7  -12.2
+   100s  -13.9  -26.4  -12.9  |101s  -13.4  -42.9  -12.5  |102s  -13.5  -35.2  -12.5  |103s  -13.0  -91.2  -12.1
+   104s  -13.7  -35.2  -12.7  |105s  -13.0  -35.2  -12.1  |106s  -13.6  -35.7  -12.6  |107s  -12.8  -44.6  -11.9
+   108s  -13.2  -35.1  -12.3  |109s  -13.2  -72.1  -12.3  |110s  -13.4  -35.2  -12.5  |111s  -13.6  -35.2  -12.7
+   112s  -13.9  -63.6  -13.0  |113s  -15.5  -35.3  -14.6  |114s  -18.0  -90.8  -17.1  |115s  -20.8  -18.0  -15.5
+   116s  -20.3  -20.0  -16.4  |117s  -26.1  -25.1  -21.7  |118s  -40.9  -32.7  -31.2  |119s  -80.4  -49.6  -48.7
+
+== CUE LIST (101 SFX cues; time = moment heard; frame @ 30 fps) ==
+   counts: hit 5, whoosh 12, riser 5, zoom 8, pop 45, click 17, impact 2, bell 3, success 2, swell 1, sting 1
+   time_s   frame  type     gain  duck_dB  heard_ms  reason
+     0.000      0  hit      0.90     -5  +  0.5    hook hit 1/5 (s01 "65 creators matched")
+     1.000     30  hit      0.90     -5  +  0.7    hook hit 2/5 (s02 "AI writes every brief")
+     1.000     30  whoosh   0.42     -3  -11.0    whoosh transition into s02
+     2.000     60  hit      0.90     -5  +  0.4    hook hit 3/5 (s03 "Live in minutes")
+     2.000     60  whoosh   0.42     -3   -6.0    whoosh transition into s03
+     3.000     90  hit      0.90     -5  +  0.8    hook hit 4/5 (s04 "AI reads every comment")
+     3.000     90  whoosh   0.42     -3  +  4.0    whoosh transition into s04
+     4.000    120  hit      0.99     -5  +  0.7    hook hit 5/5 (s05 "Launch. Run. Measure.")
+     4.000    120  whoosh   0.42     -3   -6.0    whoosh transition into s05
+     5.000    150  riser    0.32     -3  -20.0    lift into chapter 1 "Create campaign"
+     5.000    150  zoom     0.62     -3  + 10.0    zoom transition into s06
+     5.150    155  pop      0.45     -3  +  0.1    callout "Name your campaign" (s06)
+     7.370    221  click    0.55     -3  +  0.2    cursor click in s06 (1 in shot, first kept)
+     7.550    227  pop      0.45     -3  +  0.5    callout "Pick your goal" (s07)
+     8.070    242  click    0.55     -3  +  0.1    cursor click in s07 (1 in shot, first kept)
+     9.050    272  pop      0.45     -3  +  0.6    callout "Business type & platform" (s08)
+     9.380    281  click    0.55     -3  +  0.2    cursor click in s08 (1 in shot, first kept)
+    11.050    332  pop      0.45     -3  +  0.5    callout "Set budget & timeline" (s09)
+    11.230    337  click    0.55     -3  +  0.1    cursor click in s09 (1 in shot, first kept)
+    13.250    398  pop      0.45     -3  +  0.6    callout "Confirm in one glance" (s10)
+    14.970    449  click    0.55     -3  +  0.1    cursor click in s10 (1 in shot, first kept)
+    15.100    453  whoosh   0.60     -3  -25.0    whoosh transition into s11
+    15.250    458  pop      0.45     -3  +  0.8    callout "Choose content topics" (s11)
+    15.480    464  click    0.55     -3  +  0.2    cursor click in s11 (1 in shot, first kept)
+    16.850    506  pop      0.45     -3  +  0.6    callout "Set follower range" (s12)
+    18.850    566  pop      0.45     -3  +  0.5    callout "Roles & seniority" (s13)
+    20.850    626  pop      0.45     -3  +  0.7    callout "Target their audience" (s14)
+    23.300    699  zoom     0.62     -3  +  5.0    zoom transition into s16
+    23.300    699  riser    0.40     -3  -10.0    riser into reveal "65 creators matched instantly" (s16)
+    23.300    699  impact   0.36   -4.5  +  0.8    timeline impact on s16 "65 creators matched instantly"
+    23.400    702  bell     0.50     -3  +  1.0    reveal bell on s16 "65 creators matched instantly"
+    27.500    825  whoosh   0.60     -3   -5.0    whoosh transition into s17
+    27.650    830  pop      0.45     -3  +  0.5    callout "AI-ranked creator list" (s17)
+    29.500    885  zoom     0.62     -3  + 10.0    zoom transition into s18
+    29.650    890  pop      0.45     -3  +  0.6    callout "Real, synced creator data" (s18)
+    31.650    950  pop      0.45     -3  +  0.5    callout "AI-analysed content" (s19)
+    33.650   1010  pop      0.45     -3  +  0.1    callout "Know their audience" (s20)
+    35.150   1055  pop      0.45     -3  +  0.8    callout "Reach updates as you pick" (s21)
+    37.200   1116  whoosh   0.60     -3  -10.0    whoosh transition into s22
+    37.350   1121  pop      0.45     -3  +  0.1    callout "See past brand collabs" (s22)
+    39.350   1181  pop      0.45     -3  +  0.5    callout "Your shortlist, ready" (s24)
+    41.000   1230  whoosh   0.60     -3  -10.0    whoosh transition into s25
+    41.150   1235  pop      0.45     -3  +  0.6    callout "Add your website" (s25)
+    42.750   1283  pop      0.45     -3  +  0.5    callout "AI detects your products" (s26)
+    43.620   1309  click    0.55     -3  +  0.1    cursor click in s26 (1 in shot, first kept)
+    46.040   1381  click    0.55     -3  +  0.1    cursor click in s27 (1 in shot, first kept)
+    46.400   1392  whoosh   0.60     -3  +  5.0    whoosh transition into s29
+    46.550   1397  pop      0.45     -3  +  0.6    callout "Format picked from real data" (s29)
+    49.630   1489  click    0.55     -3  +  0.2    cursor click in s31 (1 in shot, first kept)
+    49.950   1499  pop      0.45     -3  +  0.5    callout "CLEO writes every brief" (s31b)
+    50.600   1518  zoom     0.62     -3  +  5.0    zoom transition into s32
+    50.600   1518  riser    0.40     -3  -30.0    timeline riser under s31b "CLEO writes every brief" into s32
+    50.700   1521  bell     0.50     -3  +  1.0    reveal bell on s32 ""
+    53.850   1616  pop      0.45     -3  +  0.6    callout "Personalised, ready to send" (s33)
+    56.850   1706  pop      0.45     -3  +  0.8    callout "Guidelines & hashtags included" (s34)
+    58.350   1751  pop      0.45     -3  +  0.6    callout "Applied to all creators" (s35)
+    58.600   1758  click    0.55     -3  +  0.2    cursor click in s35 (1 in shot, first kept)
+    59.400   1782  whoosh   0.60     -3   -5.0    whoosh transition into s36
+    59.550   1787  pop      0.45     -3  +  0.5    callout "Final check before launch" (s36)
+    61.550   1847  pop      0.45     -3  +  0.7    callout "Clear pricing, GST included" (s37)
+    63.350   1901  pop      0.45     -3  +  0.5    callout "Pay by UPI or card" (s39)
+    65.350   1960  pop      0.45     -3  +  0.6    callout "Invoice details saved" (s40)
+    65.580   1967  click    0.55     -3  +  0.1    cursor click in s40 (2 in shot, first kept)
+    66.400   1992  zoom     0.62     -3  + 20.0    zoom transition into s41
+    66.400   1992  riser    0.40     -3  -30.0    riser into "Campaign activated!" (s41)
+    66.400   1992  success  0.65     -4  +  1.4    "Campaign activated!" (s41)
+    66.400   1992  impact   0.49   -4.5  +  0.8    impact under activation (s41)
+    70.400   2112  swell    0.80     -3  -10.0    fade transition into s42 (act start)
+    70.550   2117  pop      0.45     -3  +  0.4    callout "Track every creator's status" (s42)
+    72.550   2177  pop      0.45     -3  +  0.1    callout "Preview drafts before they post" (s43)
+    74.550   2237  pop      0.45     -3  +  0.8    callout "Request changes in-app" (s44)
+    76.150   2285  pop      0.45     -3  +  0.6    callout "Approve with one click" (s45)
+    76.410   2292  click    0.55     -3  +  0.2    cursor click in s45 (2 in shot, first kept)
+    77.400   2322  zoom     0.62     -3  + 10.0    zoom transition into s46
+    77.400   2322  success  0.52     -4  +  1.9    "Draft approved" (s46)
+    81.540   2446  click    0.55     -3  +  0.2    cursor click in s47 (2 in shot, first kept)
+    82.400   2472  whoosh   0.60     -3  +  5.0    whoosh transition into s49
+    82.550   2477  pop      0.45     -3  +  0.5    callout "Pick each go-live date" (s49)
+    83.110   2493  click    0.55     -3  +  0.2    cursor click in s49 (3 in shot, first kept)
+    86.750   2603  pop      0.45     -3  +  0.7    callout "Both creators scheduled" (s50)
+    88.400   2652  whoosh   0.60     -3   -5.0    whoosh transition into s51
+    88.770   2663  click    0.55     -3  +  0.2    cursor click in s51 (1 in shot, first kept)
+    89.550   2687  pop      0.45     -3  +  0.5    callout "Reach & engagement, live" (s52)
+    92.550   2777  pop      0.45     -3  +  0.5    callout "Per-post stats, synced" (s53)
+    94.700   2841  click    0.55     -3  +  0.1    cursor click in s54 (1 in shot, first kept)
+    95.200   2856  zoom     0.62     -3  + 10.0    zoom transition into s55
+    95.200   2856  riser    0.40     -3  -20.0    riser into chapter "AI analysis"
+    95.350   2861  pop      0.45     -3  +  0.4    callout "AI audience breakdown" (s55)
+    96.850   2906  pop      0.45     -3  +  0.6    callout "Campaign-wide metrics" (s56)
+    99.900   2997  zoom     0.62     -3  + 15.0    zoom transition into s58
+   100.000   3000  bell     0.50     -3  +  1.3    reveal bell on s58 "AI sentiment on every comment"
+   102.350   3071  pop      0.45     -3  +  0.7    callout "Positive, negative, neutral" (s59)
+   104.050   3122  pop      0.45     -3  +  0.5    callout "Queries & purchase intent" (s60)
+   105.650   3170  pop      0.45     -3  +  0.5    callout "Spot buyers in the comments" (s61)
+   106.950   3209  pop      0.45     -3  +  0.6    callout "Rank creators by results" (s63)
+   108.750   3263  pop      0.45     -3  +  0.5    callout "Export to CSV" (s64)
+   108.900   3267  click    0.55     -3  +  0.1    cursor click in s64 (1 in shot, first kept)
+   110.250   3308  pop      0.45     -3  +  0.5    callout "Drill into each creator" (s65)
+   111.850   3356  pop      0.45     -3  +  0.4    callout "Keywords that drive talk" (s67)
+   113.350   3401  pop      0.45     -3  +  0.6    callout "Rate creators for next time" (s68)
+   115.500   3465  sting    0.80     -5  +  0.5    end card: Anchors logo + tagline
+
+== MUSIC CUES (score events) ==
+     5.000  section L1    (I vi IV Vsus I) key D
+    15.219  section L2    (vi IV Vsus I vi IV) key D
+    27.481  section L3    (Vsus I vi IV Vsus I vi IV Vsus) key D
+    45.875  section L4    (I vi IV Vsus I vi IV) key D
+    60.181  section L5    (Vsus I) key D
+    64.269  section Lpre  (V) key D
+    66.313  section L6    (I vi) key D
+    70.400  section R1    (vi IV I6 V vi IV) key D
+    82.400  section R2    (I6 V) key D
+    86.400  section Rpre  (V) key D
+    88.400  section M1    (I vi IV) key E
+    94.677  section Mpre  (V) key E
+    95.200  section M2    (I V vi IV I V vi IV) key E
+   111.440  section M3    (ii) key E
+   113.470  section Mres  (V) key E
+   115.500  end-card resolve: Emaj9 stab + pad + sub + bells, ring-out, digital silence from 119.90 s
+
+RESULT: ALL CHECKS PASSED
