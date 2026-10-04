@@ -7,12 +7,13 @@ import {ChapterChip} from './components/ChapterChip';
 import {ProgressBar} from './components/ProgressBar';
 import {Callouts} from './components/Callouts';
 import {EndCard} from './components/EndCard';
-import './fonts';
+import {useInterFonts} from './fonts';
 
 // Flip to true once public/audio/mix.wav exists (sound designer's mix).
 export const HAS_AUDIO = false;
 
 export const Tour: React.FC = () => {
+  useInterFonts();
   const endFrom = f(endCard.tIn);
   return (
     <AbsoluteFill style={{backgroundColor: C.base}}>

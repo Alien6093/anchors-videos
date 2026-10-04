@@ -30,12 +30,16 @@ because the clean source height is 862 px.
 ## Typography
 
 Inter comes from the local `public/fonts/inter-latin-{400..800}-normal.woff2` files. They are embedded as base64
-data: URIs in `src/fontData.ts`, generated from those files, and loaded with `FontFace` behind a `delayRender` in
-`src/fonts.ts`. Nothing is loaded from the network.
+data: URIs in `src/fontData.ts`, generated from those files, and declared with a CSS `@font-face` that `src/fonts.ts`
+injects. The render waits for the faces through `useInterFonts()`, which is called inside `<Tour>` and capped at 5 s.
+Nothing is loaded from the network.
 
-Earlier, fetching the fonts from the render server through `staticFile` stalled under concurrency 4. The server was
-busy with OffthreadVideo frame requests, and the stall timed out the render. If the woff2 files change, regenerate
-`fontData.ts`.
+Two earlier approaches failed:
+- Fetching the fonts through `staticFile`.
+- A module-level `delayRender`. It also ran in the composition-listing tab and never cleared there, which timed the
+  render out at about 60 s.
+
+If the woff2 files change, regenerate `fontData.ts`.
 
 | use | size / weight |
 |---|---|
