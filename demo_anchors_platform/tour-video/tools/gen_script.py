@@ -95,7 +95,7 @@ shot("s14", 2.6, 1, 82.5, 95.6, False, 2, [(0, R(380, 150, 1000, 563)), (1, R(76
      "Audience Demographics dropdowns with Student / Intern chips.",
      "You can also target who the creator's audience is.")
 shot("s16", 4.2, 1, 99.5, 103.7, False, 2, [(0, R(460, 150, 1000, 563)), (1, R(560, 280, 760, 428))],
-     "65 creators matched instantly", R(590, 590, 580, 260), [], "zoom", ["impact", "chime"],
+     "65 creators matched instantly", R(668, 312, 577, 134), [], "zoom", ["impact", "chime"],
      "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense).",
      "'Criteria saved - here's your match preview': 65 matched, est. impressions, expected expense.",
      "Instant preview of how many creators fit and what reach/cost to expect.")
@@ -186,7 +186,7 @@ shot("s34", 1.5, 1, 336.5, 340.1, False, 5, [(0, R(440, 100, 1040, 585))],
      "Bulleted guidelines list and hashtag chips.",
      "Dos, don'ts and hashtags are generated too.")
 shot("s35", 1.2, 1, 350.2, 351.4, False, 5, [(0, R(700, 300, 900, 506)), (1, R(380, 240, 1100, 619))],
-     "Applied to all creators", R(1420, 770, 300, 40), [(350.6, 1335, 760)], "cut", ["click", "pop"],
+     "Applied to all creators", R(1255, 738, 170, 44), [(350.6, 1335, 760)], "cut", ["click", "pop"],
      "Apply All -> toast 'AI brief applied to 2 creators', briefs 100% complete.",
      "Toast + progress bar 2 of 2 briefs complete.",
      "All briefs are applied in one go.")
@@ -269,7 +269,7 @@ shot("s51", 1.0, 2, 79.9, 81.5, False, 9, [(0, R(0, 100, 1100, 619))],
      "Sidebar steps all ticked; Performance opens.",
      "Step 9: performance is one click away.")
 shot("s52", 3.0, 3, 0.5, 4.5, False, 9, [(0, R(350, 260, 1000, 563)), (1, R(840, 250, 1000, 563))],
-     "Reach & engagement, live", R(380, 320, 760, 120), [], "cut", ["pop"],
+     "Reach & engagement, live", R(365, 418, 780, 198), [], "cut", ["pop"],
      "Overall Summary: 134,193 impressions, 10,738 likes, 542 comments, 8.41% avg engagement, 2/2 live, budget gauge Rs 7,268.",
      "Live campaign KPIs and utilised-budget gauge.",
      "Live results of the whole campaign at a glance.")

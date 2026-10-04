@@ -580,10 +580,10 @@
    ],
    "callout": "65 creators matched instantly",
    "callTarget": {
-    "x": 590,
-    "y": 590,
-    "w": 580,
-    "h": 260
+    "x": 668,
+    "y": 312,
+    "w": 577,
+    "h": 134
    },
    "clicks": [],
    "transition": "zoom",
@@ -1166,10 +1166,10 @@
    ],
    "callout": "Applied to all creators",
    "callTarget": {
-    "x": 1420,
-    "y": 770,
-    "w": 300,
-    "h": 40
+    "x": 1255,
+    "y": 738,
+    "w": 170,
+    "h": 44
    },
    "clicks": [
     {
@@ -1763,10 +1763,10 @@
    ],
    "callout": "Reach & engagement, live",
    "callTarget": {
-    "x": 380,
-    "y": 320,
-    "w": 760,
-    "h": 120
+    "x": 365,
+    "y": 418,
+    "w": 780,
+    "h": 198
    },
    "clicks": [],
    "transition": "cut",
