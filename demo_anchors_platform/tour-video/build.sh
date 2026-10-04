@@ -28,6 +28,9 @@ cd project
 npx remotion render src/index.ts Tour out/tour.mp4 --codec=h264 --crf=20 --pixel-format=yuv420p \
   --audio-codec=aac --audio-bitrate=192k --concurrency=4 --timeout=120000 --browser-executable="$HS"
 cd ..
-# Remux with faststart for web playback.
-ffmpeg -v error -y -i project/out/tour.mp4 -c copy -movflags +faststart anchors-platform-tour-final.mp4
+# Final encode: Remotion emits full-range yuvj420p; convert to standard limited-range BT.709 yuv420p
+# (plays correctly everywhere), copy the AAC audio, faststart for web playback.
+ffmpeg -v error -y -i project/out/tour.mp4 -vf "scale=in_range=full:out_range=tv,format=yuv420p" \
+  -c:v libx264 -preset slow -crf 18 -profile:v high -colorspace bt709 -color_primaries bt709 -color_trc bt709 -color_range tv \
+  -c:a copy -movflags +faststart anchors-platform-tour-final.mp4
 ffprobe -v error -show_entries format=duration,size -of compact anchors-platform-tour-final.mp4
