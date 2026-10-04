@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Easing, interpolate, spring, useCurrentFrame} from 'remotion';
 import {chapters, endCard, f} from '../timeline';
-import {C, FONT, FPS, H, SRC_H_CLEAN, SRC_W, W} from '../theme';
+import {C, FONT, FPS, H, SRC_W, W} from '../theme';
 import {SourceVideo} from './SourceVideo';
 
 // Background: the real "Campaign Activated" screen (V1), heavily blurred.
@@ -34,10 +34,16 @@ export const EndCard: React.FC = () => {
   const len = f(endCard.tOut) - f(endCard.tIn);
   const fadeIn = interpolate(frame, [0, 12], [0, 1], {...clamp, easing: Easing.inOut(Easing.quad)});
   const toBlack = interpolate(frame, [len - 15, len - 1], [0, 1], {...clamp, easing: Easing.in(Easing.quad)});
-  const push = 1.06 + 0.05 * (frame / len);
+  // slow push-in (~4 %) on the background and the logo/text group
+  const pushP = interpolate(frame, [0, len - 1], [0, 1], {...clamp, easing: Easing.inOut(Easing.sin)});
+  const push = 1.04 + 0.04 * pushP;
+  const contentPush = 1 + 0.035 * pushP;
   const logo = spring({frame: frame - 6, fps: FPS, config: {damping: 15, stiffness: 120, mass: 0.8}});
   const line = spring({frame: frame - 18, fps: FPS, config: {damping: 20, stiffness: 120}});
-  const bgScale = H / SRC_H_CLEAN;
+  // Only the top BG_ROWS source rows (check mark + headline) fill the frame,
+  // so the red "Go to Dashboard" button (src y≈690–740) is never under the tagline.
+  const BG_ROWS = 600;
+  const bgScale = H / BG_ROWS;
 
   // tagline: split on the em dash so the brand name can be emphasised
   const [brand, rest] = endCard.text.includes('—')
@@ -79,7 +85,7 @@ export const EndCard: React.FC = () => {
       <AbsoluteFill style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontFamily: FONT}}>
         <div
           style={{
-            transform: `translateY(${(1 - logo) * 30}px) scale(${0.88 + 0.12 * logo})`,
+            transform: `translateY(${(1 - logo) * 30 - 30 * pushP}px) scale(${(0.88 + 0.12 * logo) * contentPush})`,
             opacity: Math.min(1, logo * 1.4),
             marginBottom: 44,
             // the crop's light UI background melts into the light card
@@ -90,7 +96,7 @@ export const EndCard: React.FC = () => {
         </div>
         <div
           style={{
-            transform: `translateY(${(1 - line) * 24}px)`,
+            transform: `translateY(${(1 - line) * 24}px) scale(${contentPush})`,
             opacity: line,
             fontSize: 50,
             fontWeight: 700,
@@ -107,7 +113,7 @@ export const EndCard: React.FC = () => {
           ) : null}
           {rest}
         </div>
-        <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 34}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 34, transform: `translateY(${16 * pushP}px) scale(${contentPush})`}}>
           {recap.map((wd, i) => {
             const s = spring({frame: frame - 30 - i * 4, fps: FPS, config: {damping: 18, stiffness: 160}});
             return (

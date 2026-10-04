@@ -17,10 +17,10 @@ const Sparkles: React.FC<{age: number; seed: string}> = ({age, seed}) => {
     >
       {new Array(n).fill(0).map((_, i) => {
         const ang = (i / n) * Math.PI * 2 + random(`${seed}-a${i}`) * 0.5;
-        const dist = 170 + random(`${seed}-d${i}`) * 140;
+        const dist = 120 + random(`${seed}-d${i}`) * 70;
         const p = Easing.out(Easing.cubic)(Math.min(1, age / 26));
-        const x = Math.cos(ang) * dist * (0.45 + 0.55 * p) * 1.25;
-        const y = Math.sin(ang) * dist * 0.42 * (0.45 + 0.55 * p);
+        const x = Math.cos(ang) * dist * (0.45 + 0.55 * p) * 2.2;
+        const y = Math.sin(ang) * dist * 0.5 * (0.45 + 0.55 * p);
         const sz = (10 + random(`${seed}-s${i}`) * 12) * (1 - p * 0.6);
         const op = interpolate(age, [0, 4, 30], [0, 1, 0], {extrapolateRight: 'clamp'});
         const d = `M ${x} ${y - sz} Q ${x} ${y} ${x + sz} ${y} Q ${x} ${y} ${x} ${y + sz} Q ${x} ${y} ${x - sz} ${y} Q ${x} ${y} ${x} ${y - sz} Z`;
@@ -43,18 +43,18 @@ const Pill: React.FC<{seg: CalloutSeg; frame: number}> = ({seg, frame}) => {
     easing: Easing.in(Easing.cubic),
   });
   const scale = (seg.big ? 0.6 + 0.4 * sp : 0.86 + 0.14 * sp) * (1 - 0.05 * out);
-  const y = (1 - sp) * (seg.pos === 'bottom' ? 26 : -26) - out * 10;
+  const y = (1 - sp) * 26 * seg.dir - out * 10;
   const pulse = seg.big ? 0.5 + 0.5 * Math.sin(age / 7) : 0;
 
   return (
     <div
       style={{
         position: 'absolute',
-        left: 0,
+        left: seg.cx - W / 2,
         width: W,
+        top: seg.top,
         display: 'flex',
         justifyContent: 'center',
-        ...(seg.pos === 'bottom' ? {bottom: 104} : {top: 30}),
       }}
     >
       <div

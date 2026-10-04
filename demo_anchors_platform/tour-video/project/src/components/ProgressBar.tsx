@@ -28,7 +28,7 @@ export const ProgressBar: React.FC = () => {
         gap: 8,
         padding: '10px 18px 12px',
         borderRadius: 14,
-        background: 'rgba(17,17,17,0.80)',
+        background: 'rgba(17,17,17,0.92)',
         boxShadow: '0 8px 28px rgba(0,0,0,0.25)',
         fontFamily: FONT,
       }}

@@ -1,35 +1,23 @@
 import React from 'react';
-import {Easing, interpolate} from 'remotion';
-import {Cam, mapRect, Shot} from '../timeline';
+import {Cam, mapRect, Shot, targetAt, targetOpacity} from '../timeline';
 import {C, H, W} from '../theme';
 
-/** Dims everything but the shot's callTarget with a soft rounded cut-out and
- * a thin red glow outline. Animated in after the transition, out at the end. */
+/** Dims everything but the shot's (keyframed) callTarget with a soft rounded
+ * cut-out and a thin red glow outline, visible inside shot.callWin. */
 export const FocusMask: React.FC<{shot: Shot; local: number; cam: Cam}> = ({
   shot,
   local,
   cam,
 }) => {
-  const t = shot.callTarget;
+  const t = targetAt(shot, local);
   if (!t || shot.isHook) return null;
-  const inStart = Math.max(2, shot.transIn);
-  const inLen = Math.max(4, Math.min(12, Math.round(shot.dur * 0.3)));
-  const outLen = Math.max(3, Math.min(7, Math.round(shot.dur * 0.18)));
-  const oIn = interpolate(local, [inStart, inStart + inLen], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    easing: Easing.out(Easing.cubic),
-  });
-  const oOut = interpolate(local, [shot.dur - outLen, shot.dur], [1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    easing: Easing.in(Easing.quad),
-  });
-  const o = Math.min(oIn, oOut);
+  const o = targetOpacity(shot, local);
   if (o <= 0.001) return null;
+  // focus-pull (cut-out tightens) only when it fades in mid-shot
+  const pull = shot.callWin[0] > 0 ? 1 - o : 0;
 
   const r = mapRect(cam, t);
-  const pad = 14 + 46 * (1 - oIn); // focus-pull: cut-out tightens as it appears
+  const pad = 14 + 46 * pull; // focus-pull: cut-out tightens as it appears
   let x0 = r.x - pad;
   let y0 = r.y - pad;
   let x1 = r.x + r.w + pad;

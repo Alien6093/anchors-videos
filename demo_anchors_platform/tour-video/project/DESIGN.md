@@ -43,7 +43,7 @@ If the woff2 files change, regenerate `fontData.ts`.
 
 | use | size / weight |
 |---|---|
-| Hook headline | 124 px / 800, tracking −3, word-by-word reveal |
+| Hook headline | 124 px / 800, tracking −3, whole-phrase pop |
 | Step chip title | 32 px / 700 (number: 26 px / 800 in a 48 px red circle) |
 | Callout pill | 40 px / 700. Hero beats use 48 px / 800 |
 | Progress labels | 20 px (number 800, current title 600) |
@@ -79,11 +79,14 @@ rgba(0,0,0,.25–.35).
   - `zoom`: 10 f. The new shot scales from 1.45 to 1 with a 22 px blur and fades in. The old shot scales to 1.3 and
     blurs.
   - `fade`: 10 f crossfade, with the outgoing shot dipping to 55 % brightness. The first shot fades up from black.
-- **Focus mask** (whenever `callTarget` is set, outside the hook):
-  - Everything else dims by 50 %, with a 7 px soft-edged rounded cut-out and a 3 px #DB2425 outline with a 6 px glow.
-  - It starts after the transition. The cut-out "focus-pulls" from 60 px padding to 14 px as it fades in (easeOutCubic,
-    ≤12 f) and fades out over the last ≤7 f.
-  - The cut-out follows the moving camera every frame.
+- **Focus mask / highlight**:
+  - `callTarget` can be one rect or a keyframe list `[{at,x,y,w,h}]`, eased like `focus` (`targetAt()`).
+  - The optional `callWin: [a,b]` (fractions of the shot, default `[0,1]`) limits when the highlight is visible. Interior
+    window edges fade over about 6 f. A window that starts at 0 is fully on from the shot's first frame, and one that
+    ends at 1 holds until the cut.
+  - The highlight dims the rest by 50 %, with a 7 px soft rounded cut-out that follows the target and camera every frame,
+    and a 3 px #DB2425 outline with a 6 px glow.
+  - When it fades in mid-shot, the cut-out focus-pulls from 60 px padding to 14 px.
 - **Click ripples**: these start at the click frame and last 24 f. There are two rings (a red stroke over a white halo)
   that expand to 70 px and 52 px, plus a soft red dot. They are mapped through the live camera, so they stay on the real
   cursor.
@@ -94,24 +97,26 @@ rgba(0,0,0,.25–.35).
   (flex 1 → 3.9 over 10 f) to show its title and fills in red with a glow. Past segments are white at 72 %. It fades in
   at chapter 1 and out at the end card.
 - **Callouts**:
-  - Each one starts after its shot's transition (≥3 f) and is held across following shots that have no callout, in the
-    same chapter (up to +2.2 s). It is held for at least 1.3 s and leaves over 6 f.
-  - It sits bottom-centre. If any `callTarget` it spans would sit under it, it moves to the top-centre.
-  - Normal pills are ink with a red dot, with a scale spring from 0.86.
+  - A callout starts after its shot's transition and is held across following shots in the same chapter that have no
+    callout (up to +2.2 s). It is held for at least 1.3 s and leaves over 6 f.
+  - Placement is computed from where the target and clicks are during the frames the pill is visible. Candidates are
+    tried in order: directly below the target, directly above it, the bottom band, then the top band.
+  - The first candidate that overlaps neither a visible target nor a click point wins.
+  - The optional `calloutAt` field (`below` / `above` / `bottom` / `top`) overrides this.
 - **Hero beats** (a callout matching /matched|activated|approved|sentiment/):
   - A red gradient pill with a bouncy spring from 0.6, a pulsing red glow and a 10-particle sparkle burst.
   - The camera push-in is slower and deeper (+7 %).
   - Nothing is drawn on the UI itself.
 - **Hook (0–5 s)**:
-  - A dark radial vignette over the footage, which makes the 124 px white words readable. The words reveal one at a
-    time (spring + blur → 0).
-  - Digits are drawn in #EE4243. In the last hook shot the final word ("Measure.") turns red, and its words are
-    staggered 6 f apart instead of 3.
+  - A dark radial vignette over the footage, which makes the 124 px white phrase readable. The whole phrase pops in at
+    once within about 5 f (scale 1.35 → 1, blur → 0), so it reads for most of its 1 s shot.
+  - Digits are drawn in #EE4243. In the last hook shot the final word ("Measure.") turns red.
   - The hook shots are joined by whooshes.
 - **End card** (115.5–120 s):
   - It dissolves in over 12 f while the last shot blurs out.
-  - The background is the real "Campaign Activated" frame (V1 @ 392.6 s), blurred 30 px under a light wash, with a slow
-    push-in.
+  - The background is the real "Campaign Activated" frame (V1 @ 392.6 s), blurred 30 px under a light wash. Only its top
+    600 source rows are used, so the red "Go to Dashboard" button stays out of frame.
+  - The background and the logo/text group each get a slow eased push-in of about 4 %.
   - The **real logo** is cropped from V1 @ 13.0 s (rect 12,12,144,36) and shown at 3.6x. It is laid out at full size
     (resampled once) with a mild `feConvolveMatrix` unsharp. `mix-blend-mode: multiply` melts its white UI background
     into the light card.

@@ -3,14 +3,23 @@ import {interpolate, spring} from 'remotion';
 import {Shot, shots} from '../timeline';
 import {C, FONT, FPS, H, W} from '../theme';
 
-/** Big bold per-shot line for the cold-open hook, revealed word by word. */
+/** Big bold per-shot line for the cold-open hook: the whole phrase pops in
+ * within ~5 frames so it is readable for most of the 1 s shot. */
 export const HookText: React.FC<{shot: Shot; local: number}> = ({shot, local}) => {
   if (!shot.isHook || !shot.callout) return null;
   const words = shot.callout.split(/\s+/);
   const lastHook = shots.filter((s) => s.isHook).slice(-1)[0];
   const isFinale = lastHook && lastHook.id === shot.id;
-  const gap = isFinale ? 6 : 3;
-  const start = Math.max(2, Math.round(shot.transIn * 0.5));
+  // whole phrase pops in at once (readable by ~frame 6), with a punchy scale
+  const start = 1;
+  const sp = spring({
+    frame: local - start,
+    fps: FPS,
+    config: {damping: 13, stiffness: 320, mass: 0.5},
+  });
+  const scale = interpolate(sp, [0, 1], [1.35, 1]);
+  const opacity = interpolate(local - start, [0, 3], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const blur = interpolate(local - start, [0, 4], [10, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 
   return (
     <div
@@ -32,6 +41,9 @@ export const HookText: React.FC<{shot: Shot; local: number}> = ({shot, local}) =
           justifyContent: 'center',
           gap: '0 30px',
           maxWidth: 1600,
+          transform: `scale(${scale})`,
+          opacity,
+          filter: blur > 0.2 ? `blur(${blur}px)` : undefined,
           fontFamily: FONT,
           fontWeight: 800,
           fontSize: 124,
@@ -42,24 +54,9 @@ export const HookText: React.FC<{shot: Shot; local: number}> = ({shot, local}) =
         }}
       >
         {words.map((wd, i) => {
-          const s = spring({
-            frame: local - start - i * gap,
-            fps: FPS,
-            config: {damping: 14, stiffness: 180, mass: 0.6},
-          });
-          const blur = interpolate(s, [0, 1], [12, 0], {extrapolateRight: 'clamp'});
           const accent = /\d/.test(wd) || (isFinale && i === words.length - 1);
           return (
-            <span
-              key={i}
-              style={{
-                display: 'inline-block',
-                transform: `translateY(${(1 - s) * 50}px) scale(${0.9 + 0.1 * s})`,
-                opacity: Math.min(1, s * 1.4),
-                filter: blur > 0.2 ? `blur(${blur}px)` : undefined,
-                color: accent ? C.redLight : C.white,
-              }}
-            >
+            <span key={i} style={{display: 'inline-block', color: accent ? C.redLight : C.white}}>
               {wd}
             </span>
           );

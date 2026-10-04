@@ -26,7 +26,12 @@ export type RawShot = {
   chapter: number | null;
   focus: Key[];
   callout: string | null;
-  callTarget: Rect | null;
+  // single rect, or keyframes [{at,x,y,w,h}] eased like focus
+  callTarget: Rect | Key[] | null;
+  // optional visibility window for highlight/mask, fractions of the shot
+  callWin?: [number, number];
+  // optional callout placement override (default 'auto')
+  calloutAt?: 'auto' | 'below' | 'above' | 'bottom' | 'top';
   clicks: Click[];
   transition: string;
 };
@@ -38,7 +43,9 @@ export type EndCardData = {
   logoSource: {src: 1 | 2 | 3; t: number} & Rect;
 };
 
-export type Shot = RawShot & {
+export type Shot = Omit<RawShot, 'callTarget' | 'callWin'> & {
+  callTarget: Key[] | null; // normalised to keyframes
+  callWin: [number, number];
   index: number;
   from: number; // first output frame
   dur: number; // frames
@@ -74,8 +81,19 @@ export const shots: Shot[] = sorted.map((s, i) => {
   const dur = Math.max(1, f(s.tOut) - from);
   const isHook = s.chapter === null && s.tIn < (chapters[0]?.tIn ?? 5);
   const transIn = i === 0 ? TRANS_FRAMES.fade : TRANS_FRAMES[s.transition] ?? 0;
+  const ct = s.callTarget;
+  const callTarget: Key[] | null = !ct
+    ? null
+    : Array.isArray(ct)
+      ? ct.length
+        ? [...ct].sort((a, b) => a.at - b.at)
+        : null
+      : [{at: 0, ...ct}];
+  const win = s.callWin && s.callWin.length === 2 ? s.callWin : [0, 1];
   return {
     ...s,
+    callTarget,
+    callWin: [Math.max(0, Math.min(1, win[0])), Math.max(0, Math.min(1, win[1]))] as [number, number],
     focus: [...s.focus].sort((a, b) => a.at - b.at),
     index: i,
     from,
@@ -111,8 +129,10 @@ const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 const clamp01 = (t: number) => Math.min(1, Math.max(0, t));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-export const focusAt = (s: Shot, p: number): Rect => {
-  const k = s.focus;
+export const focusAt = (s: Shot, p: number): Rect => interpKeys(s.focus, p);
+
+/** Eased keyframe interpolation shared by focus and callTarget. */
+export const interpKeys = (k: Key[], p: number): Rect => {
   if (k.length === 1 || p <= k[0].at) return k[0];
   for (let i = 0; i < k.length - 1; i++) {
     const a = k[i];
@@ -206,6 +226,33 @@ export const mapRect = (c: Cam, r: Rect): Rect => ({
   h: r.h * c.s,
 });
 
+// ---------- highlight target ----------
+const FADE = 6; // frames
+
+/** Target rect (source px) at a local frame, or null if the shot has none. */
+export const targetAt = (s: Shot, local: number): Rect | null => {
+  if (!s.callTarget) return null;
+  const l = Math.min(Math.max(local, 0), s.dur - 1);
+  return interpKeys(s.callTarget, s.dur > 1 ? l / (s.dur - 1) : 0);
+};
+
+/** Highlight/mask opacity (0..1) at a local frame, honouring callWin.
+ * A window starting at 0 is fully on from the shot's first frame; a window
+ * ending at 1 holds to the cut. Interior edges fade over ~6 frames. */
+export const targetOpacity = (s: Shot, local: number): number => {
+  if (!s.callTarget || s.isHook) return 0;
+  if (local >= s.dur) return 0;
+  const a = s.callWin[0] * s.dur;
+  const b = s.callWin[1] * s.dur;
+  if (b - a < 1) return 0;
+  const fade = Math.max(2, Math.min(FADE, Math.floor((b - a) / 3)));
+  let o = 1;
+  if (s.callWin[0] > 0) o = Math.min(o, (local - a) / fade);
+  else if (local < 0) o = 0;
+  if (s.callWin[1] < 1) o = Math.min(o, (b - local) / fade);
+  return Math.max(0, Math.min(1, o));
+};
+
 // ---------- callouts ----------
 export type CalloutSeg = {
   text: string;
@@ -213,10 +260,20 @@ export type CalloutSeg = {
   to: number;
   big: boolean;
   shot: Shot;
-  pos: 'bottom' | 'top';
+  // pill placement (screen px): horizontal centre and top edge
+  cx: number;
+  top: number;
+  // which side it enters from
+  dir: 1 | -1;
 };
 
-const CALLOUT_ZONE = {x0: W / 2 - 520, x1: W / 2 + 520, y0: 820, y1: 1080};
+const PILL_H = 92;
+const PILL_SAFE = {top: 118, bottom: 1000}; // below the step chip, above the progress bar
+const pillWidth = (text: string, big: boolean) =>
+  text.length * (big ? 48 : 40) * 0.56 + (big ? 80 : 90);
+
+type Box = {x0: number; y0: number; x1: number; y1: number};
+const overlaps = (a: Box, b: Box) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
 
 export const callouts: CalloutSeg[] = (() => {
   const out: CalloutSeg[] = [];
@@ -231,26 +288,59 @@ export const callouts: CalloutSeg[] = (() => {
       end = Math.min(n.from + n.dur, s.from + s.dur + f(2.2));
       if (end < n.from + n.dur) break;
     }
-    // minimum hold for reading
     const nextStart = shots.slice(i + 1).find((n) => n.callout)?.from ?? Infinity;
     end = Math.max(end, Math.min(start + f(1.3), nextStart));
-    // pick a position that does not cover the highlighted target
-    let pos: 'bottom' | 'top' = 'bottom';
-    const spanned = shots.filter((n) => n.from < end && n.from + n.dur > start);
-    for (const sh of spanned) {
-      if (!sh.callTarget) continue;
-      for (const pp of [0.2, 0.6, 1]) {
-        const r = mapRect(camera(sh, Math.round(pp * (sh.dur - 1))), sh.callTarget);
-        const overlap =
-          r.x < CALLOUT_ZONE.x1 &&
-          r.x + r.w > CALLOUT_ZONE.x0 &&
-          r.y + r.h > CALLOUT_ZONE.y0 &&
-          r.y < CALLOUT_ZONE.y1;
-        // big targets that fill the frame: keep bottom (mask cut-out covers it anyway)
-        if (overlap && r.y > 260) pos = 'top';
+
+    // Everything the pill must not cover, sampled over the frames it is on
+    // screen: highlighted targets (where visible) and click points.
+    const avoid: Box[] = [];
+    for (let fr = start; fr < end; fr += 3) {
+      const sh = shots.find((n) => fr >= n.from && fr < n.from + n.dur);
+      if (!sh) continue;
+      const local = fr - sh.from;
+      const cam = camera(sh, local);
+      const t = targetAt(sh, local);
+      if (t && targetOpacity(sh, local) > 0.05) {
+        const r = mapRect(cam, t);
+        avoid.push({x0: r.x - 16, y0: r.y - 16, x1: r.x + r.w + 16, y1: r.y + r.h + 16});
+      }
+      for (const c of sh.clicks) {
+        const x = c.x * cam.s + cam.tx;
+        const y = c.y * cam.s + cam.ty;
+        avoid.push({x0: x - 60, y0: y - 50, x1: x + 60, y1: y + 50});
       }
     }
-    out.push({text: s.callout, from: start, to: end, big: s.isBig, shot: s, pos});
+    const pw = pillWidth(s.callout, s.isBig);
+    const clampCx = (cx: number) => Math.min(W - 40 - pw / 2, Math.max(40 + pw / 2, cx));
+    const boxAt = (cx: number, top: number): Box => ({x0: cx - pw / 2, y0: top, x1: cx + pw / 2, y1: top + PILL_H});
+
+    // candidates, best first: next to the target (below, then above),
+    // then the bottom band, then the top band
+    type Cand = {cx: number; top: number; dir: 1 | -1; kind: string};
+    const cands: Cand[] = [];
+    const t0 = targetAt(s, Math.max(0, start - s.from));
+    if (t0) {
+      const r = mapRect(camera(s, Math.max(0, start - s.from)), t0);
+      const cx = clampCx(r.x + r.w / 2);
+      const u = avoid.filter((b) => b.x1 - b.x0 > 140); // target boxes only
+      const yb = Math.max(...u.map((b) => b.y1), r.y + r.h + 16) + 10;
+      const ya = Math.min(...u.map((b) => b.y0), r.y - 16) - 10 - PILL_H;
+      cands.push({cx, top: yb, dir: 1, kind: 'below'}, {cx, top: ya, dir: -1, kind: 'above'});
+    }
+    cands.push(
+      {cx: W / 2, top: PILL_SAFE.bottom - PILL_H, dir: 1, kind: 'bottom'},
+      {cx: W / 2, top: 30, dir: -1, kind: 'top'},
+    );
+    const valid = (c: {cx: number; top: number}) =>
+      (c.top >= PILL_SAFE.top || (c.top === 30 && c.cx === W / 2)) && c.top + PILL_H <= PILL_SAFE.bottom;
+    const cost = (c: {cx: number; top: number}) => {
+      const b = boxAt(c.cx, c.top);
+      return avoid.filter((a) => overlaps(a, b)).length;
+    };
+    const forced = s.calloutAt && s.calloutAt !== 'auto' ? cands.find((c) => c.kind === s.calloutAt) : undefined;
+    let best = forced ?? cands.find((c) => valid(c) && cost(c) === 0);
+    if (!best) best = [...cands].filter(valid).sort((a, b) => cost(a) - cost(b))[0];
+    out.push({text: s.callout, from: start, to: end, big: s.isBig, shot: s, cx: best.cx, top: best.top, dir: best.dir});
   });
   return out;
 })();
