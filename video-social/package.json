@@ -1,0 +1,30 @@
+{
+  "name": "anchors-zeko-social",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "render:Stage1_916": "bash tools/render-all.sh Stage1-916",
+    "render:Stage1_45": "bash tools/render-all.sh Stage1-45",
+    "render:Stage2_916": "bash tools/render-all.sh Stage2-916",
+    "render:Stage2_45": "bash tools/render-all.sh Stage2-45",
+    "render:Stage3_916": "bash tools/render-all.sh Stage3-916",
+    "render:Stage3_45": "bash tools/render-all.sh Stage3-45",
+    "render:all": "bash tools/render-all.sh",
+    "still": "remotion still src/index.ts Stage3-916 out/still.png --frame=300",
+    "still:45": "remotion still src/index.ts Stage3-45 out/still45.png --frame=300",
+    "test:clip": "remotion render src/index.ts Stage3-916 out/test3s.mp4 --codec=h264 --frames=0-89"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.290",
+    "@remotion/google-fonts": "4.0.290",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.290"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}

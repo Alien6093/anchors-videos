@@ -1,0 +1,571 @@
+[
+ {
+  "file": "sfx/counter-ramp-B0-v2.wav",
+  "time": 0,
+  "volume": 0.6,
+  "pan": 0.1,
+  "src": 0,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/s3-f0-thud.wav",
+  "time": 0.0,
+  "volume": 0.95,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW frame-0 thud (sub 100>38 Hz + 2-6 kHz click) under the 2,80,000 freeze",
+  "tier": "T1"
+ },
+ {
+  "file": "sfx/lock-glass.wav",
+  "time": 0.0,
+  "volume": 0.5,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW glass tick on frame 0 (reuse lock-glass)",
+  "tier": "T1"
+ },
+ {
+  "file": "sfx/mid-tick.wav",
+  "time": 0.5357,
+  "volume": 0.6,
+  "pan": -0.15,
+  "src": 0.5357,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/mid-tick.wav",
+  "time": 1.0714,
+  "volume": 0.65,
+  "pan": 0.15,
+  "src": 1.0714,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/smash-hit.wav",
+  "time": 1.607,
+  "volume": 0.85,
+  "pan": 0,
+  "src": 1.607,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/pill-flip-tick-8.wav",
+  "time": 2.114285714285714,
+  "volume": 0.38,
+  "pan": 0.2950000000000001,
+  "src": 6.4,
+  "part": "B",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/sub-hit.wav",
+  "time": 2.142857142857143,
+  "volume": 0.9,
+  "pan": 0,
+  "src": 2.143,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/title-thump.wav",
+  "time": 2.142857142857143,
+  "volume": 0.7,
+  "pan": 0,
+  "src": 2.143,
+  "part": "A",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/bubble-whoosh.wav",
+  "time": 3.750285714285713,
+  "volume": 0.7,
+  "pan": 0,
+  "src": 8.036,
+  "part": "B",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/counter-ramp-B1.wav",
+  "time": 4.285285714285713,
+  "volume": 0.7,
+  "pan": 0,
+  "src": 8.571,
+  "part": "B",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 5.357142857142857,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 10 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/s3-hitstop-tape-5f.wav",
+  "time": 5.892857142857142,
+  "volume": 0.55,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW hit-stop tape click, 5f freeze at 1,85,700 lock (f177-181); music ducks -6 dB for the freeze",
+  "tier": "T1"
+ },
+ {
+  "file": "sfx/lock-glass.wav",
+  "time": 5.893285714285714,
+  "volume": 0.7,
+  "pan": 0,
+  "src": 10.179,
+  "part": "B",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/s3-riser-bar.wav",
+  "time": 6.428571428571429,
+  "volume": 0.5,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW 1-bar filter-sweep riser before the dip (out beats 12-16), resolves into the whip",
+  "tier": "T1"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 6.7142857142857135,
+  "volume": 0.35,
+  "pan": 0.2,
+  "src": 11,
+  "part": "B",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 6.964285714285714,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 13 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 8.035714285714285,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 15 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/whip-peak.wav",
+  "time": 8.371714285714285,
+  "volume": 0.4,
+  "pan": 0,
+  "src": 19.086,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/riser-1071.wav",
+  "time": 9.652714285714287,
+  "volume": 0.6,
+  "pan": 0,
+  "src": 20.367,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/counter-ramp-final.wav",
+  "time": 11.785714285714286,
+  "volume": 0.6,
+  "pan": 0,
+  "src": 22.5,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/s3-hitstop-tape-6f.wav",
+  "time": 13.928571428571429,
+  "volume": 0.6,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW hit-stop tape click, 6f freeze at 2,80,000 lock (f418-423); music ducks -6 dB for the freeze",
+  "tier": "T1"
+ },
+ {
+  "file": "sfx/lock-glass.wav",
+  "time": 13.928714285714287,
+  "volume": 0.34,
+  "pan": 0,
+  "src": 24.643,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/low-impact.wav",
+  "time": 13.928714285714287,
+  "volume": 0.36,
+  "pan": 0,
+  "src": 24.643,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 15.0,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 28 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 15.285714285714286,
+  "volume": 0.35,
+  "pan": -0.2,
+  "src": 26,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 16.07142857142857,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 30 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/label-ping-3.wav",
+  "time": 17.142714285714284,
+  "volume": 0.5,
+  "pan": 0,
+  "src": 27.857,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 17.142857142857142,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 32 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 18.214285714285715,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 34 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/sort-swish.wav",
+  "time": 20.35711428571429,
+  "volume": 0.42,
+  "pan": 0,
+  "src": 31.0714,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/lock-glass.wav",
+  "time": 23.035714285714285,
+  "volume": 0.7,
+  "pan": 0,
+  "src": 33.75,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/label-ping-5.wav",
+  "time": 25.785714285714285,
+  "volume": 0.45,
+  "pan": 0,
+  "src": 36.5,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/green-tick.wav",
+  "time": 25.785714285714285,
+  "volume": 0.35,
+  "pan": 0.2,
+  "src": 36.5,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/chip-click-2.wav",
+  "time": 26.685714285714283,
+  "volume": 0.45,
+  "pan": 0,
+  "src": 37.4,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/reaction-pop.wav",
+  "time": 28.124714285714283,
+  "volume": 0.4,
+  "pan": 0,
+  "src": 38.839,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 28.392857142857142,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 53 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tool-blip.wav",
+  "time": 28.660714285714285,
+  "volume": 0.3,
+  "pan": 0,
+  "src": 39.375,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/widget-whoosh.wav",
+  "time": 29.999714285714283,
+  "volume": 0.28,
+  "pan": 0.1,
+  "src": 40.714,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 30.0,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 56 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/count-up-soft.wav",
+  "time": 30.267714285714284,
+  "volume": 0.5,
+  "pan": 0,
+  "src": 40.982,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 31.07142857142857,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 58 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 31.071714285714286,
+  "volume": 0.3,
+  "pan": 0.1,
+  "src": 41.786,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/chip-click-1.wav",
+  "time": 31.071714285714286,
+  "volume": 0.4,
+  "pan": -0.1,
+  "src": 41.786,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/check-stroke-tick.wav",
+  "time": 31.606714285714283,
+  "volume": 0.26,
+  "pan": 0,
+  "src": 42.321,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/bar-fill.wav",
+  "time": 33.385714285714286,
+  "volume": 0.4,
+  "pan": 0,
+  "src": 44.1,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 33.75,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 63 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 35.89285714285714,
+  "volume": 0.2780148821534985,
+  "pan": -0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 67 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/card-whoosh.wav",
+  "time": 36.18571428571428,
+  "volume": 0.42,
+  "pan": 0,
+  "src": 46.9,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/panel-tick.wav",
+  "time": 39.785714285714285,
+  "volume": 0.35,
+  "pan": 0,
+  "src": 50.5,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/pad-swell.wav",
+  "time": 40.71431428571429,
+  "volume": 0.45,
+  "pan": 0,
+  "src": 51.4286,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/toggle-click.wav",
+  "time": 41.24971428571428,
+  "volume": 0.45,
+  "pan": -0.1,
+  "src": 51.964,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/morph-swish.wav",
+  "time": 41.48571428571429,
+  "volume": 0.4,
+  "pan": -0.1,
+  "src": 52.2,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/toggle-click.wav",
+  "time": 42.85671428571428,
+  "volume": 0.45,
+  "pan": 0.1,
+  "src": 53.571,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/morph-swish.wav",
+  "time": 43.08571428571428,
+  "volume": 0.4,
+  "pan": 0.1,
+  "src": 53.8,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/tile-tick.wav",
+  "time": 44.464285714285715,
+  "volume": 0.2780148821534985,
+  "pan": 0.15,
+  "src": null,
+  "part": "new",
+  "kind": "hop",
+  "why": "NEW 9:16 crop-hop tick, beat 83 (-2 dB under T2, pan alternating)",
+  "tier": "T2"
+ },
+ {
+  "file": "sfx/logo-hit-short.wav",
+  "time": 44.9033,
+  "volume": 0.55,
+  "pan": 0,
+  "src": 55.68,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/glass-tail.wav",
+  "time": 45.423300000000005,
+  "volume": 0.45,
+  "pan": 0,
+  "src": 56.2,
+  "part": "C",
+  "kind": "mapped"
+ },
+ {
+  "file": "sfx/s3-loop-inhale.wav",
+  "time": 48.88571428571428,
+  "volume": 0.6,
+  "pan": 0.0,
+  "src": null,
+  "part": "new",
+  "kind": "new",
+  "why": "NEW loop bridge: reversed-cymbal swell + air inhale into the frame-0 thud",
+  "tier": "T1"
+ }
+]

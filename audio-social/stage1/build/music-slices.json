@@ -1,0 +1,72 @@
+[
+ {
+  "name": "hook A1 drone (synth)",
+  "out": 0,
+  "dur": 1.607
+ },
+ {
+  "name": "hook pad (v4 pad @1.9)",
+  "src": 1.9,
+  "out": 1.6071,
+  "dur": 0.5357
+ },
+ {
+  "name": "prompt->projection->creators->cut bed",
+  "src": 4.2857,
+  "out": 2.1429,
+  "dur": 19.5536
+ },
+ {
+  "name": "dip (bass+click pulse)",
+  "src": 40.9821,
+  "out": 21.6964,
+  "dur": 1.875
+ },
+ {
+  "name": "16 to 8 groove + filter rise",
+  "src": 42.8571,
+  "out": 23.5714,
+  "dur": 4.2857
+ },
+ {
+  "name": "briefs arpeggio",
+  "src": 51.4286,
+  "out": 27.8571,
+  "dur": 4.2857
+ },
+ {
+  "name": "pad rise into pay",
+  "src": 66.4286,
+  "out": 32.1429,
+  "dur": 1.875
+ },
+ {
+  "name": "room tone",
+  "src": 70.1,
+  "out": 34.0179,
+  "dur": 0.268
+ },
+ {
+  "name": "pay key change C major + groove restart",
+  "src": 70.7143,
+  "out": 34.2857,
+  "dur": 5.3571
+ },
+ {
+  "name": "snare build (synth)",
+  "out": 39.1071,
+  "dur": 0.5357
+ },
+ {
+  "name": "live peak + tease breath (low-passed)",
+  "src": 114.6429,
+  "out": 39.6429,
+  "dur": 7.5
+ },
+ {
+  "name": "end card chord",
+  "src": 145.7143,
+  "out": 47.1429,
+  "dur": 4.2857
+ }
+]

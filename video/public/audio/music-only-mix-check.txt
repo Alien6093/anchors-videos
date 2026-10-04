@@ -1,0 +1,15 @@
+Audio level check (ffmpeg ebur128 / astats), 48 kHz stereo 24-bit PCM, 60.000 s
+
+music.wav (instrumental only)
+  Integrated loudness: -14.9 LUFS, LRA 10.1 LU
+  True peak: -8.3 dBTP, sample peak -9.5 dBFS (deliberately low headroom; the arc is
+  preserved: intro -27 dB RMS, thin section -17, drops about -14.5, tail 59.9-60.0 at -88 dB RMS)
+  Near-silence window 33.5-34.0: -53 dB RMS. Tail is silent at 60.0, first/last samples are ~0.
+
+mix.wav (music + 171 SFX cues, music ducked -3.5 dB around chimes at 26.8 / 28.0 / 34.8 / 43.3)
+  Integrated loudness: -14.0 LUFS, LRA 6.9 LU
+  True peak: -1.3 dBTP (limit -1.0), no clipped samples
+  Music level in the mix is 0.62 of music.wav so SFX sit clearly above it.
+
+Key A minor, 112 BPM (beat 0.5357 s, bar 2.1429 s, 28 bars), progression Am7 - Fmaj7 - C - Gadd9.
+Rebuild: tools/audio/build.sh (run from project root). Verify with tools/audio/check.mjs.

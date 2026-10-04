@@ -1,0 +1,284 @@
+[
+  {
+    "file": "sfx/hook-slam.wav",
+    "time": 0,
+    "volume": 0.85,
+    "pan": 0
+  },
+  {
+    "file": "sfx/hook-riser.wav",
+    "time": 0,
+    "volume": 0.55,
+    "pan": 0
+  },
+  {
+    "file": "sfx/stamp-thud.wav",
+    "time": 1.07143,
+    "volume": 0.85,
+    "pan": 0
+  },
+  {
+    "file": "sfx/hook-drop-sub.wav",
+    "time": 1.07143,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/sub-hit.wav",
+    "time": 2.14286,
+    "volume": 0.9,
+    "pan": 0
+  },
+  {
+    "file": "sfx/card-whoosh.wav",
+    "time": 2.41071,
+    "volume": 0.34,
+    "pan": 0
+  },
+  {
+    "file": "sfx/label-ping-1.wav",
+    "time": 4.82143,
+    "volume": 0.3,
+    "pan": -0.25
+  },
+  {
+    "file": "sfx/label-ping-2.wav",
+    "time": 5.35714,
+    "volume": 0.3,
+    "pan": -0.15
+  },
+  {
+    "file": "sfx/label-ping-3.wav",
+    "time": 5.89286,
+    "volume": 0.3,
+    "pan": -0.04999999999999999
+  },
+  {
+    "file": "sfx/label-ping-4.wav",
+    "time": 6.42857,
+    "volume": 0.3,
+    "pan": 0.050000000000000044
+  },
+  {
+    "file": "sfx/label-ping-5.wav",
+    "time": 6.96429,
+    "volume": 0.3,
+    "pan": 0.15000000000000002
+  },
+  {
+    "file": "sfx/label-ping-6.wav",
+    "time": 7.5,
+    "volume": 0.3,
+    "pan": 0.25
+  },
+  {
+    "file": "sfx/tool-blip.wav",
+    "time": 8.57143,
+    "volume": 0.4,
+    "pan": -0.2
+  },
+  {
+    "file": "sfx/highlight-ping.wav",
+    "time": 9.64286,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/highlight-ping.wav",
+    "time": 10.71429,
+    "volume": 0.32,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/chip-click-1.wav",
+    "time": 12.05357,
+    "volume": 0.45,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/attach-clip.wav",
+    "time": 12.85714,
+    "volume": 0.45,
+    "pan": -0.2
+  },
+  {
+    "file": "sfx/attach-clip.wav",
+    "time": 13.39286,
+    "volume": 0.45,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/avatar-chime.wav",
+    "time": 15.80357,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/check-tick.wav",
+    "time": 20.03571,
+    "volume": 0.34,
+    "pan": -0.2
+  },
+  {
+    "file": "sfx/check-tick.wav",
+    "time": 20.57143,
+    "volume": 0.34,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/check-tick.wav",
+    "time": 21.10714,
+    "volume": 0.34,
+    "pan": 0
+  },
+  {
+    "file": "sfx/check-tick.wav",
+    "time": 21.64286,
+    "volume": 0.34,
+    "pan": 0.10000000000000003
+  },
+  {
+    "file": "sfx/check-tick.wav",
+    "time": 22.17857,
+    "volume": 0.34,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/green-tick.wav",
+    "time": 22.82143,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/bright-stab-1.wav",
+    "time": 23.57143,
+    "volume": 0.6,
+    "pan": -0.22499999999999998
+  },
+  {
+    "file": "sfx/bright-stab-2.wav",
+    "time": 24.10714,
+    "volume": 0.6,
+    "pan": -0.075
+  },
+  {
+    "file": "sfx/bright-stab-3.wav",
+    "time": 24.64286,
+    "volume": 0.6,
+    "pan": 0.075
+  },
+  {
+    "file": "sfx/bright-stab-4.wav",
+    "time": 25.17857,
+    "volume": 0.6,
+    "pan": 0.22499999999999998
+  },
+  {
+    "file": "sfx/approve-chime-1.wav",
+    "time": 25.98214,
+    "volume": 0.55,
+    "pan": -0.2
+  },
+  {
+    "file": "sfx/approve-chime-2.wav",
+    "time": 26.51786,
+    "volume": 0.55,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/approve-chime-3.wav",
+    "time": 27.05357,
+    "volume": 0.55,
+    "pan": 0
+  },
+  {
+    "file": "sfx/approve-chime-4.wav",
+    "time": 27.58929,
+    "volume": 0.55,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/approve-chime-5.wav",
+    "time": 28.125,
+    "volume": 0.55,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/cross-thud.wav",
+    "time": 28.66071,
+    "volume": 0.5,
+    "pan": -0.15
+  },
+  {
+    "file": "sfx/cross-thud.wav",
+    "time": 29.19643,
+    "volume": 0.5,
+    "pan": 0.15
+  },
+  {
+    "file": "sfx/note-blip.wav",
+    "time": 31.07143,
+    "volume": 0.4,
+    "pan": -0.3
+  },
+  {
+    "file": "sfx/note-blip.wav",
+    "time": 31.60714,
+    "volume": 0.4,
+    "pan": 0.3
+  },
+  {
+    "file": "sfx/send-blip.wav",
+    "time": 32.67857,
+    "volume": 0.8,
+    "pan": 0
+  },
+  {
+    "file": "sfx/send-blip.wav",
+    "time": 37.5,
+    "volume": 0.5,
+    "pan": 0
+  },
+  {
+    "file": "sfx/near-silence-air.wav",
+    "time": 38.03571,
+    "volume": 0.28,
+    "pan": 0
+  },
+  {
+    "file": "sfx/gold-impact.wav",
+    "time": 40.71429,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/approve-chime-big.wav",
+    "time": 40.71429,
+    "volume": 0.45,
+    "pan": 0
+  },
+  {
+    "file": "sfx/next-riser.wav",
+    "time": 42.85714,
+    "volume": 0.55,
+    "pan": 0
+  },
+  {
+    "file": "sfx/logo-hit-short.wav",
+    "time": 44.99429,
+    "volume": 0.75,
+    "pan": 0
+  },
+  {
+    "file": "sfx/glass-tail-s2.wav",
+    "time": 45.26786,
+    "volume": 0.6,
+    "pan": 0
+  },
+  {
+    "file": "sfx/loop-tail.wav",
+    "time": 48.75,
+    "volume": 0.5,
+    "pan": 0
+  }
+]

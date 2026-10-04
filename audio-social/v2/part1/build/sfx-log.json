@@ -1,0 +1,387 @@
+[
+ {
+  "id": "hook-slam",
+  "start": 0.001,
+  "len": 0.7
+ },
+ {
+  "id": "swap-whoosh-1",
+  "start": 0.8,
+  "len": 0.2
+ },
+ {
+  "id": "whoosh-cut-b4",
+  "start": 1.75,
+  "len": 0.25
+ },
+ {
+  "id": "hook-land-A5",
+  "start": 2,
+  "len": 0.95
+ },
+ {
+  "id": "chip-note-1",
+  "start": 2,
+  "len": 0.5
+ },
+ {
+  "id": "chip-note-2",
+  "start": 2.5,
+  "len": 0.5
+ },
+ {
+  "id": "chip-note-3",
+  "start": 3,
+  "len": 0.5
+ },
+ {
+  "id": "chip-note-4",
+  "start": 3.5,
+  "len": 0.5
+ },
+ {
+  "id": "whoosh-cut-b8",
+  "start": 3.75,
+  "len": 0.25
+ },
+ {
+  "id": "card-pop-plan",
+  "start": 4,
+  "len": 0.14
+ },
+ {
+  "id": "whoosh-cut-b12",
+  "start": 5.75,
+  "len": 0.25
+ },
+ {
+  "id": "card-pop-proj",
+  "start": 6.25,
+  "len": 0.14
+ },
+ {
+  "id": "range-sweep",
+  "start": 6.5,
+  "len": 1.5
+ },
+ {
+  "id": "hit-stop-lock",
+  "start": 8,
+  "len": 0.5
+ },
+ {
+  "id": "whoosh-cut-b20",
+  "start": 9.75,
+  "len": 0.25
+ },
+ {
+  "id": "chip-click-sort",
+  "start": 13,
+  "len": 0.07
+ },
+ {
+  "id": "whoosh-cut-b27",
+  "start": 13.35,
+  "len": 0.15
+ },
+ {
+  "id": "whoosh-cut-b32",
+  "start": 15.75,
+  "len": 0.25
+ },
+ {
+  "id": "key-click-00",
+  "start": 16,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-02",
+  "start": 16.25,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-03",
+  "start": 16.375,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-04",
+  "start": 16.5,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-06",
+  "start": 16.75,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-08",
+  "start": 17,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-09",
+  "start": 17.125,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-11",
+  "start": 17.375,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-12",
+  "start": 17.5,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-14",
+  "start": 17.75,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-16",
+  "start": 18,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-18",
+  "start": 18.25,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-19",
+  "start": 18.375,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-20",
+  "start": 18.5,
+  "len": 0.07
+ },
+ {
+  "id": "key-click-22",
+  "start": 18.75,
+  "len": 0.07
+ },
+ {
+  "id": "enter-thock",
+  "start": 19,
+  "len": 0.2
+ },
+ {
+  "id": "send-whoosh",
+  "start": 19,
+  "len": 0.2
+ },
+ {
+  "id": "pill-tick-1",
+  "start": 19.5,
+  "len": 0.5
+ },
+ {
+  "id": "pill-tick-2",
+  "start": 20.5,
+  "len": 0.5
+ },
+ {
+  "id": "riser-build-b36",
+  "start": 18,
+  "len": 3.9375
+ },
+ {
+  "id": "reverse-crash-b44",
+  "start": 20.9375,
+  "len": 1
+ },
+ {
+  "id": "drop-impact",
+  "start": 22,
+  "len": 1.8
+ },
+ {
+  "id": "digit-roll",
+  "start": 22.2,
+  "len": 0.27
+ },
+ {
+  "id": "digit-land",
+  "start": 22.466666666666665,
+  "len": 0.18
+ },
+ {
+  "id": "cell-write-1",
+  "start": 23.5,
+  "len": 0.5
+ },
+ {
+  "id": "cell-write-2",
+  "start": 24,
+  "len": 0.5
+ },
+ {
+  "id": "whoosh-cut-b52",
+  "start": 25.75,
+  "len": 0.25
+ },
+ {
+  "id": "avoid-highlight",
+  "start": 29,
+  "len": 0.7
+ },
+ {
+  "id": "whoosh-cut-b60",
+  "start": 29.75,
+  "len": 0.25
+ },
+ {
+  "id": "row-tick-1",
+  "start": 30.25,
+  "len": 0.5
+ },
+ {
+  "id": "row-tick-2",
+  "start": 30.5,
+  "len": 0.5
+ },
+ {
+  "id": "row-tick-3",
+  "start": 30.75,
+  "len": 0.5
+ },
+ {
+  "id": "row-tick-4",
+  "start": 31,
+  "len": 0.5
+ },
+ {
+  "id": "row-tick-total",
+  "start": 31.25,
+  "len": 0.5
+ },
+ {
+  "id": "quote-riser",
+  "start": 28,
+  "len": 3.8
+ },
+ {
+  "id": "pay-restart",
+  "start": 32,
+  "len": 1.1
+ },
+ {
+  "id": "check-draw",
+  "start": 32,
+  "len": 0.5
+ },
+ {
+  "id": "check-tick",
+  "start": 32.5,
+  "len": 0.5
+ },
+ {
+  "id": "whoosh-cut-b68",
+  "start": 33.75,
+  "len": 0.25
+ },
+ {
+  "id": "stamp-1",
+  "start": 34.5,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-2",
+  "start": 34.6,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-3",
+  "start": 34.7,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-4",
+  "start": 34.8,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-5",
+  "start": 34.9,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-6",
+  "start": 35,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-7",
+  "start": 35.1,
+  "len": 0.5
+ },
+ {
+  "id": "stamp-8",
+  "start": 35.2,
+  "len": 0.5
+ },
+ {
+  "id": "light-burst",
+  "start": 35.2,
+  "len": 1.3
+ },
+ {
+  "id": "hit-stop-freeze",
+  "start": 36,
+  "len": 0.12
+ },
+ {
+  "id": "phrase-hit-1",
+  "start": 38,
+  "len": 0.5
+ },
+ {
+  "id": "whoosh-cut-b76",
+  "start": 37.75,
+  "len": 0.25
+ },
+ {
+  "id": "phrase-hit-2",
+  "start": 40,
+  "len": 0.5
+ },
+ {
+  "id": "phrase-hit-3",
+  "start": 42,
+  "len": 1
+ },
+ {
+  "id": "tease-breath",
+  "start": 42,
+  "len": 1.3
+ },
+ {
+  "id": "tease-lift",
+  "start": 41.9375,
+  "len": 2
+ },
+ {
+  "id": "logo-sting",
+  "start": 44,
+  "len": 2.95
+ },
+ {
+  "id": "cta-pop",
+  "start": 44.5,
+  "len": 0.12
+ },
+ {
+  "id": "button-pop",
+  "start": 45,
+  "len": 0.5
+ },
+ {
+  "id": "loop-pickup",
+  "start": 47.5,
+  "len": 0.5
+ }
+]

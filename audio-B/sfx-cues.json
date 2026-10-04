@@ -1,0 +1,308 @@
+[
+  {
+    "file": "sfx/counter-ramp-B0-v2.wav",
+    "time": 0,
+    "volume": 0.6,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/mid-tick.wav",
+    "time": 0.5357,
+    "volume": 0.6,
+    "pan": -0.15
+  },
+  {
+    "file": "sfx/mid-tick.wav",
+    "time": 1.0714,
+    "volume": 0.65,
+    "pan": 0.15
+  },
+  {
+    "file": "sfx/smash-hit.wav",
+    "time": 1.607,
+    "volume": 0.85,
+    "pan": 0
+  },
+  {
+    "file": "sfx/sub-hit.wav",
+    "time": 2.143,
+    "volume": 0.9,
+    "pan": 0
+  },
+  {
+    "file": "sfx/title-thump.wav",
+    "time": 2.143,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/pill-flip-tick-1.wav",
+    "time": 5.4,
+    "volume": 0.24,
+    "pan": -0.3
+  },
+  {
+    "file": "sfx/pill-flip-tick-2.wav",
+    "time": 5.5429,
+    "volume": 0.26,
+    "pan": -0.21499999999999997
+  },
+  {
+    "file": "sfx/pill-flip-tick-3.wav",
+    "time": 5.6857,
+    "volume": 0.27999999999999997,
+    "pan": -0.12999999999999998
+  },
+  {
+    "file": "sfx/pill-flip-tick-4.wav",
+    "time": 5.8286,
+    "volume": 0.3,
+    "pan": -0.044999999999999984
+  },
+  {
+    "file": "sfx/pill-flip-tick-5.wav",
+    "time": 5.9714,
+    "volume": 0.32,
+    "pan": 0.040000000000000036
+  },
+  {
+    "file": "sfx/pill-flip-tick-6.wav",
+    "time": 6.1143,
+    "volume": 0.33999999999999997,
+    "pan": 0.12500000000000006
+  },
+  {
+    "file": "sfx/pill-flip-tick-7.wav",
+    "time": 6.2571,
+    "volume": 0.36,
+    "pan": 0.21000000000000002
+  },
+  {
+    "file": "sfx/pill-flip-tick-8.wav",
+    "time": 6.4,
+    "volume": 0.38,
+    "pan": 0.2950000000000001
+  },
+  {
+    "file": "sfx/bubble-whoosh.wav",
+    "time": 8.036,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/counter-ramp-B1.wav",
+    "time": 8.571,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/lock-glass.wav",
+    "time": 10.179,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/tile-tick.wav",
+    "time": 11,
+    "volume": 0.35,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/row-swish.wav",
+    "time": 13.4,
+    "volume": 0.35,
+    "pan": 0
+  },
+  {
+    "file": "sfx/highlight-ping.wav",
+    "time": 15.5,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/bar-fill.wav",
+    "time": 17.6,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/lock-glass.wav",
+    "time": 18.7,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/whip-peak.wav",
+    "time": 19.086,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/riser-1071.wav",
+    "time": 20.367,
+    "volume": 0.6,
+    "pan": 0
+  },
+  {
+    "file": "sfx/counter-ramp-final.wav",
+    "time": 22.5,
+    "volume": 0.6,
+    "pan": 0
+  },
+  {
+    "file": "sfx/lock-glass.wav",
+    "time": 24.643,
+    "volume": 0.34,
+    "pan": 0
+  },
+  {
+    "file": "sfx/low-impact.wav",
+    "time": 24.643,
+    "volume": 0.36,
+    "pan": 0
+  },
+  {
+    "file": "sfx/tile-tick.wav",
+    "time": 26,
+    "volume": 0.35,
+    "pan": -0.2
+  },
+  {
+    "file": "sfx/label-ping-3.wav",
+    "time": 27.857,
+    "volume": 0.5,
+    "pan": 0
+  },
+  {
+    "file": "sfx/sort-swish.wav",
+    "time": 31.0714,
+    "volume": 0.42,
+    "pan": 0
+  },
+  {
+    "file": "sfx/lock-glass.wav",
+    "time": 33.75,
+    "volume": 0.7,
+    "pan": 0
+  },
+  {
+    "file": "sfx/label-ping-5.wav",
+    "time": 36.5,
+    "volume": 0.45,
+    "pan": 0
+  },
+  {
+    "file": "sfx/green-tick.wav",
+    "time": 36.5,
+    "volume": 0.35,
+    "pan": 0.2
+  },
+  {
+    "file": "sfx/chip-click-2.wav",
+    "time": 37.4,
+    "volume": 0.45,
+    "pan": 0
+  },
+  {
+    "file": "sfx/reaction-pop.wav",
+    "time": 38.839,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/tool-blip.wav",
+    "time": 39.375,
+    "volume": 0.3,
+    "pan": 0
+  },
+  {
+    "file": "sfx/widget-whoosh.wav",
+    "time": 40.714,
+    "volume": 0.28,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/count-up-soft.wav",
+    "time": 40.982,
+    "volume": 0.5,
+    "pan": 0
+  },
+  {
+    "file": "sfx/tile-tick.wav",
+    "time": 41.786,
+    "volume": 0.3,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/chip-click-1.wav",
+    "time": 41.786,
+    "volume": 0.4,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/check-stroke-tick.wav",
+    "time": 42.321,
+    "volume": 0.26,
+    "pan": 0
+  },
+  {
+    "file": "sfx/bar-fill.wav",
+    "time": 44.1,
+    "volume": 0.4,
+    "pan": 0
+  },
+  {
+    "file": "sfx/card-whoosh.wav",
+    "time": 46.9,
+    "volume": 0.42,
+    "pan": 0
+  },
+  {
+    "file": "sfx/panel-tick.wav",
+    "time": 50.5,
+    "volume": 0.35,
+    "pan": 0
+  },
+  {
+    "file": "sfx/pad-swell.wav",
+    "time": 51.4286,
+    "volume": 0.45,
+    "pan": 0
+  },
+  {
+    "file": "sfx/toggle-click.wav",
+    "time": 51.964,
+    "volume": 0.45,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/morph-swish.wav",
+    "time": 52.2,
+    "volume": 0.4,
+    "pan": -0.1
+  },
+  {
+    "file": "sfx/toggle-click.wav",
+    "time": 53.571,
+    "volume": 0.45,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/morph-swish.wav",
+    "time": 53.8,
+    "volume": 0.4,
+    "pan": 0.1
+  },
+  {
+    "file": "sfx/logo-hit-short.wav",
+    "time": 55.68,
+    "volume": 0.55,
+    "pan": 0
+  },
+  {
+    "file": "sfx/glass-tail.wav",
+    "time": 56.2,
+    "volume": 0.45,
+    "pan": 0
+  }
+]

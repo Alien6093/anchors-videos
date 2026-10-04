@@ -1,0 +1,74 @@
+# Stage 2 cue sheet (49.3 s = 1479 frames @30 fps, 112 BPM, 23 bars)
+
+time = moment the sound is heard (transient); plan_frame = round(beat x 16.0714) from social_plan_stage2.md; delta must be within +/-1. gain = linear cue volume before the SFX bus (x0.85) and master. Tiers: T1 loud, T2 subtle. source: reuse = audio-A/sfx copy, NEW = built in this folder.
+
+| time_s | frame_30fps | beat | kind | tier | cue | sound | gain | plan_frame | delta_frames | source |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0.000 | 0 | 0.00 | MUSIC | - | Hook: frame-0 sub hit + Am9 pad, kick | music |  | 0 | 0 |  |
+| 0.000 | 0 | 0.00 | SFX | T1 | Hook slam on frame 0 (text slams f0-6) | hook-slam | 0.85 | 0 | 0 | NEW |
+| 0.000 | 0 | 0.00 | SFX | T2 | Hook reverse-swell riser 0-1.071 s | hook-riser | 0.55 | 0 | 0 | NEW |
+| 1.071 | 32 | 2.00 | MUSIC | - | Drop under the stamp: kick + hats + sub | music |  | 32 | 0 |  |
+| 1.071 | 32 | 2.00 | SFX | T1 | Off-brief stamp thud (plan f32) | stamp-thud | 0.85 | 32 | 0 | reuse |
+| 1.071 | 32 | 2.00 | SFX | T1 | Low sub layered under the stamp | hook-drop-sub | 0.7 | 32 | 0 | NEW |
+| 2.143 | 64 | 4.00 | MUSIC | - | Title: sub hit + kick/pluck enter | music |  | 64 | 0 |  |
+| 2.143 | 64 | 4.00 | SFX | T1 | Sub hit, scene 2 (bar line) | sub-hit | 0.9 | 64 | 0 | reuse |
+| 2.411 | 72 | 4.50 | SFX | T2 | Pill cluster whoosh | card-whoosh | 0.34 | 72 | 0 | reuse |
+| 4.286 | 129 | 8.00 | MUSIC | - | Arpeggio + muted pluck (ducked 3 dB under typing b8-16) | music |  | 129 | 0 |  |
+| 4.821 | 145 | 9.00 | SFX | T2 | Label ping 1 of 6 | label-ping-1 | 0.3 | 145 | 0 | reuse |
+| 5.357 | 161 | 10.00 | SFX | T2 | Label ping 2 of 6 | label-ping-2 | 0.3 | 161 | 0 | reuse |
+| 5.893 | 177 | 11.00 | SFX | T2 | Label ping 3 of 6 | label-ping-3 | 0.3 | 177 | 0 | reuse |
+| 6.429 | 193 | 12.00 | SFX | T2 | Label ping 4 of 6 | label-ping-4 | 0.3 | 193 | 0 | reuse |
+| 6.964 | 209 | 13.00 | SFX | T2 | Label ping 5 of 6 | label-ping-5 | 0.3 | 209 | 0 | reuse |
+| 7.500 | 225 | 14.00 | SFX | T2 | Label ping 6 of 6 | label-ping-6 | 0.3 | 225 | 0 | reuse |
+| 8.571 | 257 | 16.00 | SFX | T2 | Tool blip (own angle) | tool-blip | 0.4 | 257 | 0 | reuse |
+| 9.643 | 289 | 18.00 | SFX | T2 | Angle line glow | highlight-ping | 0.4 | 289 | 0 | reuse |
+| 10.714 | 321 | 20.00 | MUSIC | - | F chord (key-point ping) | music |  | 321 | 0 |  |
+| 10.714 | 321 | 20.00 | SFX | T2 | Key point ping (F chord) | highlight-ping | 0.32 | 321 | 0 | reuse |
+| 11.786 | 354 | 22.00 | MUSIC | - | Full groove, hats | music |  | 354 | 0 |  |
+| 12.054 | 362 | 22.50 | SFX | T2 | Format chip click | chip-click-1 | 0.45 | 362 | 0 | reuse |
+| 12.857 | 386 | 24.00 | SFX | T2 | Attach clip 1 | attach-clip | 0.45 | 386 | 0 | reuse |
+| 13.393 | 402 | 25.00 | SFX | T2 | Attach clip 2 | attach-clip | 0.45 | 402 | 0 | reuse |
+| 15.804 | 474 | 29.50 | SFX | T1 | Soft chime on the 8th stamp | avatar-chime | 0.7 | 474 | 0 | reuse |
+| 16.607 | 498 | 31.00 | MUSIC | - | Flip sweep rising b31-36 | music |  | 498 | 0 |  |
+| 19.286 | 579 | 36.00 | MUSIC | - | Review groove | music |  | 579 | 0 |  |
+| 20.036 | 601 | 37.40 | SFX | T2 | Check tick 1 of 5 | check-tick | 0.34 | 601 | 0 | reuse |
+| 20.571 | 617 | 38.40 | SFX | T2 | Check tick 2 of 5 | check-tick | 0.34 | 617 | 0 | reuse |
+| 21.107 | 633 | 39.40 | SFX | T2 | Check tick 3 of 5 | check-tick | 0.34 | 633 | 0 | reuse |
+| 21.643 | 649 | 40.40 | SFX | T2 | Check tick 4 of 5 | check-tick | 0.34 | 649 | 0 | reuse |
+| 22.179 | 665 | 41.40 | SFX | T2 | Check tick 5 of 5 | check-tick | 0.34 | 665 | 0 | reuse |
+| 22.821 | 685 | 42.60 | SFX | T2 | Badge pop (green tick) | green-tick | 0.4 | 685 | 0 | reuse |
+| 23.571 | 707 | 44.00 | MUSIC | - | Same-standard flashes, bright stabs | music |  | 707 | 0 |  |
+| 23.571 | 707 | 44.00 | SFX | T1 | Same-standard flash 1 stab | bright-stab-1 | 0.6 | 707 | 0 | reuse |
+| 24.107 | 723 | 45.00 | SFX | T1 | Same-standard flash 2 stab | bright-stab-2 | 0.6 | 723 | 0 | reuse |
+| 24.643 | 739 | 46.00 | SFX | T1 | Same-standard flash 3 stab | bright-stab-3 | 0.6 | 739 | 0 | reuse |
+| 25.179 | 755 | 47.00 | SFX | T1 | Same-standard flash 4 stab | bright-stab-4 | 0.6 | 755 | 0 | reuse |
+| 25.714 | 771 | 48.00 | MUSIC | - | Approve: rising stab under each chime | music |  | 771 | 0 |  |
+| 25.982 | 779 | 48.50 | SFX | T1 | Approve chime 1 of 5 (rising) | approve-chime-1 | 0.55 | 779 | 0 | reuse |
+| 26.518 | 796 | 49.50 | SFX | T1 | Approve chime 2 of 5 (rising) | approve-chime-2 | 0.55 | 796 | 0 | reuse |
+| 27.054 | 812 | 50.50 | SFX | T1 | Approve chime 3 of 5 (rising) | approve-chime-3 | 0.55 | 812 | 0 | reuse |
+| 27.589 | 828 | 51.50 | SFX | T1 | Approve chime 4 of 5 (rising) | approve-chime-4 | 0.55 | 828 | 0 | reuse |
+| 28.125 | 844 | 52.50 | SFX | T1 | Approve chime 5 of 5 (rising) | approve-chime-5 | 0.55 | 844 | 0 | reuse |
+| 28.661 | 860 | 53.50 | SFX | T1 | Cross 1 thud | cross-thud | 0.5 | 860 | 0 | reuse |
+| 29.196 | 876 | 54.50 | SFX | T1 | Cross 2 thud | cross-thud | 0.5 | 876 | 0 | reuse |
+| 31.071 | 932 | 58.00 | SFX | T2 | Note blip 1 | note-blip | 0.4 | 932 | 0 | reuse |
+| 31.607 | 948 | 59.00 | SFX | T2 | Note blip 2 | note-blip | 0.4 | 948 | 0 | reuse |
+| 32.143 | 964 | 60.00 | MUSIC | - | Groove eases | music |  | 964 | 0 |  |
+| 32.679 | 980 | 61.00 | SFX | T1 | Send blip | send-blip | 0.8 | 980 | 0 | reuse |
+| 34.286 | 1029 | 64.00 | MUSIC | - | Thin: bass + pluck (pluck ducked under notes) | music |  | 1029 | 0 |  |
+| 37.500 | 1125 | 70.00 | SFX | T2 | Both badges (sent back) | send-blip | 0.5 | 1125 | 0 | reuse |
+| 38.036 | 1141 | 71.00 | MUSIC | - | NEAR-SILENCE (room tone only) | music |  | 1141 | 0 |  |
+| 38.036 | 1141 | 71.00 | SFX | T2 | NEAR-SILENCE beat b71-72: room air only | near-silence-air | 0.28 | 1141 | 0 | NEW |
+| 38.571 | 1157 | 72.00 | MUSIC | - | Drum return on bar line, chord swell builds | music |  | 1157 | 0 |  |
+| 40.714 | 1221 | 76.00 | MUSIC | - | GOLD hit: impact + C stab, NO cymbal | music |  | 1221 | 0 |  |
+| 40.714 | 1221 | 76.00 | SFX | T1 | GOLD impact, 8 of 8 locks (bar line, loudest element) | gold-impact | 0.7 | 1221 | 0 | reuse |
+| 40.714 | 1221 | 76.00 | SFX | T1 | Layered chime with gold hit | approve-chime-big | 0.45 | 1221 | 0 | reuse |
+| 41.786 | 1254 | 78.00 | MUSIC | - | Slow hold: kick + pad | music |  | 1254 | 0 |  |
+| 42.857 | 1286 | 80.00 | MUSIC | - | 'Next' bridge: pad rise + soft snare build | music |  | 1286 | 0 |  |
+| 42.857 | 1286 | 80.00 | SFX | T2 | 'Next' bridge: rising pad note + riser tail, ends b83.45 | next-riser | 0.55 | 1286 | 0 | NEW |
+| 44.732 | 1342 | 83.50 | MUSIC | - | Clean silence before the logo | music |  | 1342 | 0 |  |
+| 45.000 | 1350 | 84.00 | MUSIC | - | End card: Am(add9) bloom | music |  | 1350 | 0 |  |
+| 45.214 | 1356 | 84.40 | SFX | T1 | Logo hit (transient on beat 84.4) | logo-hit-short | 0.75 | 1356 | 0 | reuse |
+| 45.268 | 1358 | 84.50 | SFX | T1 | Glass tail b84.5-88.5, pulled to -12 dB by 49.0 s | glass-tail-s2 | 0.6 | 1358 | 0 | NEW (from audio-A glass-tail) |
+| 47.143 | 1414 | 88.00 | MUSIC | - | CTA sub pulses b88, b90 | music |  | 1414 | 0 |  |
+| 48.750 | 1463 | 91.00 | MUSIC | - | Loop-seam Am tail, fade over last 0.3 s | music |  | 1462 | 1 |  |
+| 48.750 | 1463 | 91.00 | SFX | T2 | Loop-seam low Am(add9) pad tail | loop-tail | 0.5 | 1462 | 1 | NEW |

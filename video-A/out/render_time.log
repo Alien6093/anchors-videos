@@ -1,0 +1,1 @@
+npx remotion render src/index.ts BriefReviewApprove out/A_silent_v2.mp4    >   330.73s user 16.83s system 388% cpu 1:29.55 total
