@@ -1,0 +1,2240 @@
+{
+ "fps": 30,
+ "durationSec": 120,
+ "chapters": [
+  {
+   "n": 1,
+   "title": "Create campaign",
+   "tIn": 5.0,
+   "tOut": 15.1
+  },
+  {
+   "n": 2,
+   "title": "Set criteria",
+   "tIn": 15.1,
+   "tOut": 27.5
+  },
+  {
+   "n": 3,
+   "title": "Pick influencers",
+   "tIn": 27.5,
+   "tOut": 41.0
+  },
+  {
+   "n": 4,
+   "title": "Add product",
+   "tIn": 41.0,
+   "tOut": 46.4
+  },
+  {
+   "n": 5,
+   "title": "AI briefs",
+   "tIn": 46.4,
+   "tOut": 59.4
+  },
+  {
+   "n": 6,
+   "title": "Checkout & launch",
+   "tIn": 59.4,
+   "tOut": 70.4
+  },
+  {
+   "n": 7,
+   "title": "Review drafts",
+   "tIn": 70.4,
+   "tOut": 82.4
+  },
+  {
+   "n": 8,
+   "title": "Set live dates",
+   "tIn": 82.4,
+   "tOut": 88.4
+  },
+  {
+   "n": 9,
+   "title": "Track performance",
+   "tIn": 88.4,
+   "tOut": 95.2
+  },
+  {
+   "n": 10,
+   "title": "AI analysis",
+   "tIn": 95.2,
+   "tOut": 115.5
+  }
+ ],
+ "shots": [
+  {
+   "id": "s01",
+   "tIn": 0.0,
+   "tOut": 1.0,
+   "src": 1,
+   "srcIn": 100.6,
+   "srcOut": 101.4,
+   "freeze": false,
+   "chapter": null,
+   "focus": [
+    {
+     "at": 0,
+     "x": 600,
+     "y": 230,
+     "w": 720,
+     "h": 405
+    },
+    {
+     "at": 1,
+     "x": 640,
+     "y": 260,
+     "w": 640,
+     "h": 360
+    }
+   ],
+   "callout": "65 creators matched",
+   "callTarget": {
+    "x": 590,
+    "y": 290,
+    "w": 680,
+    "h": 170
+   },
+   "clicks": [],
+   "transition": "fade",
+   "sfx": [
+    "riser",
+    "impact"
+   ],
+   "note": "Hook: strongest 'match' payoff, number 65 big on screen."
+  },
+  {
+   "id": "s02",
+   "tIn": 1.0,
+   "tOut": 2.0,
+   "src": 1,
+   "srcIn": 333.0,
+   "srcOut": 334.5,
+   "freeze": false,
+   "chapter": null,
+   "focus": [
+    {
+     "at": 0,
+     "x": 480,
+     "y": 300,
+     "w": 960,
+     "h": 540
+    }
+   ],
+   "callout": "AI writes every brief",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Hook: AI-written brief text scrolling."
+  },
+  {
+   "id": "s03",
+   "tIn": 2.0,
+   "tOut": 3.0,
+   "src": 1,
+   "srcIn": 392.2,
+   "srcOut": 393.2,
+   "freeze": false,
+   "chapter": null,
+   "focus": [
+    {
+     "at": 0,
+     "x": 560,
+     "y": 150,
+     "w": 800,
+     "h": 450
+    }
+   ],
+   "callout": "Live in minutes",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "pop"
+   ],
+   "note": "Hook: activation success screen."
+  },
+  {
+   "id": "s04",
+   "tIn": 3.0,
+   "tOut": 4.0,
+   "src": 3,
+   "srcIn": 69.9,
+   "srcOut": 70.9,
+   "freeze": false,
+   "chapter": null,
+   "focus": [
+    {
+     "at": 0,
+     "x": 440,
+     "y": 160,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "AI reads every comment",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Hook: AI sentiment donut (519 comments)."
+  },
+  {
+   "id": "s05",
+   "tIn": 4.0,
+   "tOut": 5.0,
+   "src": 3,
+   "srcIn": 2.0,
+   "srcOut": 3.0,
+   "freeze": false,
+   "chapter": null,
+   "focus": [
+    {
+     "at": 0,
+     "x": 350,
+     "y": 300,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Launch. Run. Measure.",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "impact"
+   ],
+   "note": "Hook end on live numbers (134,193 impressions)."
+  },
+  {
+   "id": "s06",
+   "tIn": 5.0,
+   "tOut": 7.4,
+   "src": 1,
+   "srcIn": 1.0,
+   "srcOut": 10.1,
+   "freeze": false,
+   "chapter": 1,
+   "focus": [
+    {
+     "at": 0,
+     "x": 410,
+     "y": 120,
+     "w": 1100,
+     "h": 620
+    }
+   ],
+   "callout": "Name your campaign",
+   "callTarget": {
+    "x": 694,
+    "y": 330,
+    "w": 530,
+    "h": 300
+   },
+   "clicks": [
+    {
+     "t": 2.37,
+     "x": 1132,
+     "y": 685
+    }
+   ],
+   "transition": "zoom",
+   "sfx": [
+    "whoosh",
+    "click"
+   ],
+   "note": "Typing of name + description sped up ~3.8x; click Create at the end. Spinner 10.2-11.7 cut."
+  },
+  {
+   "id": "s07",
+   "tIn": 7.4,
+   "tOut": 8.9,
+   "src": 1,
+   "srcIn": 18.6,
+   "srcOut": 20.4,
+   "freeze": false,
+   "chapter": 1,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 150,
+     "w": 960,
+     "h": 540
+    }
+   ],
+   "callout": "Pick your goal",
+   "callTarget": {
+    "x": 857,
+    "y": 290,
+    "w": 448,
+    "h": 75
+   },
+   "clicks": [
+    {
+     "t": 0.67,
+     "x": 1080,
+     "y": 330
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Goal selection: Engagement."
+  },
+  {
+   "id": "s08",
+   "tIn": 8.9,
+   "tOut": 10.9,
+   "src": 1,
+   "srcIn": 23.6,
+   "srcOut": 30.2,
+   "freeze": false,
+   "chapter": 1,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 300,
+     "w": 960,
+     "h": 540
+    }
+   ],
+   "callout": "Business type & platform",
+   "callTarget": {
+    "x": 400,
+    "y": 440,
+    "w": 900,
+    "h": 90
+   },
+   "clicks": [
+    {
+     "t": 0.48,
+     "x": 520,
+     "y": 560
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Business type B2C, metric Member Reach, platform LinkedIn (dropdowns, 3.3x)."
+  },
+  {
+   "id": "s09",
+   "tIn": 10.9,
+   "tOut": 13.1,
+   "src": 1,
+   "srcIn": 30.6,
+   "srcOut": 38.6,
+   "freeze": false,
+   "chapter": 1,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 120,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 620,
+     "y": 100,
+     "w": 1294,
+     "h": 728
+    }
+   ],
+   "callout": "Set budget & timeline",
+   "callTarget": {
+    "x": 1590,
+    "y": 90,
+    "w": 324,
+    "h": 110
+   },
+   "clicks": [
+    {
+     "t": 0.33,
+     "x": 420,
+     "y": 350
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "Date picker -> 13 Oct 2026, budget typed 500000; outline panel jumps to Rs 500,000. Idle 39-43 cut."
+  },
+  {
+   "id": "s10",
+   "tIn": 13.1,
+   "tOut": 15.1,
+   "src": 1,
+   "srcIn": 43.9,
+   "srcOut": 46.2,
+   "freeze": false,
+   "chapter": 1,
+   "focus": [
+    {
+     "at": 0,
+     "x": 400,
+     "y": 170,
+     "w": 1110,
+     "h": 625
+    }
+   ],
+   "callout": "Confirm in one glance",
+   "callTarget": {
+    "x": 640,
+    "y": 170,
+    "w": 640,
+    "h": 640
+   },
+   "clicks": [
+    {
+     "t": 1.87,
+     "x": 1127,
+     "y": 648
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "pop",
+    "click"
+   ],
+   "note": "Quick summary modal (budget 5.0L, live 13 Oct, B2C, Engagement) -> Add Influencer Criteria."
+  },
+  {
+   "id": "s11",
+   "tIn": 15.1,
+   "tOut": 16.7,
+   "src": 1,
+   "srcIn": 51.0,
+   "srcOut": 54.8,
+   "freeze": false,
+   "chapter": 2,
+   "focus": [
+    {
+     "at": 0,
+     "x": 390,
+     "y": 120,
+     "w": 960,
+     "h": 540
+    }
+   ],
+   "callout": "Choose content topics",
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 0.38,
+     "x": 640,
+     "y": 330
+    }
+   ],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "click"
+   ],
+   "note": "Content topics chips: Health & Wellness, E-commerce & D2C, Marketing & Advertising (max 3)."
+  },
+  {
+   "id": "s12",
+   "tIn": 16.7,
+   "tOut": 18.7,
+   "src": 1,
+   "srcIn": 56.5,
+   "srcOut": 63.0,
+   "freeze": false,
+   "chapter": 2,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 300,
+     "w": 960,
+     "h": 540
+    }
+   ],
+   "callout": "Set follower range",
+   "callTarget": {
+    "x": 400,
+    "y": 500,
+    "w": 920,
+    "h": 60
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Follower range min 5000 / max 200000 typed (3.25x)."
+  },
+  {
+   "id": "s13",
+   "tIn": 18.7,
+   "tOut": 20.7,
+   "src": 1,
+   "srcIn": 64.0,
+   "srcOut": 72.0,
+   "freeze": false,
+   "chapter": 2,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 120,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Roles & seniority",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Current-role dropdown -> Engineering/Technology; seniority dropdown (4x)."
+  },
+  {
+   "id": "s14",
+   "tIn": 20.7,
+   "tOut": 23.3,
+   "src": 1,
+   "srcIn": 82.5,
+   "srcOut": 95.6,
+   "freeze": false,
+   "chapter": 2,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 760,
+     "y": 300,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Target their audience",
+   "callTarget": {
+    "x": 1320,
+    "y": 815,
+    "w": 240,
+    "h": 40
+   },
+   "clicks": [
+    {
+     "t": 2.54,
+     "x": 1440,
+     "y": 834
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "click"
+   ],
+   "note": "Audience demographics: audience roles, Student + Intern seniority, country list, then click View Matched Influencers (5.0x). Disabled/loading button 95.6-99.4 cut."
+  },
+  {
+   "id": "s16",
+   "tIn": 23.3,
+   "tOut": 27.5,
+   "src": 1,
+   "srcIn": 99.5,
+   "srcOut": 103.7,
+   "freeze": false,
+   "chapter": 2,
+   "focus": [
+    {
+     "at": 0,
+     "x": 460,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 560,
+     "y": 280,
+     "w": 760,
+     "h": 428
+    }
+   ],
+   "callout": "65 creators matched instantly",
+   "callTarget": {
+    "x": 590,
+    "y": 590,
+    "w": 580,
+    "h": 260
+   },
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "impact",
+    "chime"
+   ],
+   "note": "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense)."
+  },
+  {
+   "id": "s17",
+   "tIn": 27.5,
+   "tOut": 29.5,
+   "src": 1,
+   "srcIn": 106.6,
+   "srcOut": 110.6,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 390,
+     "y": 170,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "AI-ranked creator list",
+   "callTarget": {
+    "x": 400,
+    "y": 200,
+    "w": 1100,
+    "h": 500
+   },
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Matched list (AI Suggested, Best match sort, tiers) with Kartik/Mira cards; outline shows 1.0M reach."
+  },
+  {
+   "id": "s18",
+   "tIn": 29.5,
+   "tOut": 31.5,
+   "src": 1,
+   "srcIn": 113.6,
+   "srcOut": 117.6,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 600,
+     "y": 40,
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "callout": "Real, synced creator data",
+   "callTarget": {
+    "x": 1580,
+    "y": 70,
+    "w": 230,
+    "h": 30
+   },
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "pop"
+   ],
+   "note": "Kartik profile: 'Actual, synced data', followers 10,653, avg likes 303, ER 4.1%."
+  },
+  {
+   "id": "s19",
+   "tIn": 31.5,
+   "tOut": 33.5,
+   "src": 1,
+   "srcIn": 117.6,
+   "srcOut": 126.6,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 600,
+     "y": 100,
+     "w": 1240,
+     "h": 698
+    }
+   ],
+   "callout": "AI-analysed content",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Content Niche tab: AI-analysed top categories, content types, engagement over time (4.5x scroll)."
+  },
+  {
+   "id": "s20",
+   "tIn": 33.5,
+   "tOut": 35.0,
+   "src": 1,
+   "srcIn": 127.0,
+   "srcOut": 129.0,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 600,
+     "y": 40,
+     "w": 1240,
+     "h": 698
+    }
+   ],
+   "callout": "Know their audience",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Audience tab: job titles, industries, companies, company size."
+  },
+  {
+   "id": "s21",
+   "tIn": 35.0,
+   "tOut": 37.2,
+   "src": 1,
+   "srcIn": 129.6,
+   "srcOut": 133.6,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 420,
+     "y": 160,
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "at": 1,
+     "x": 1100,
+     "y": 0,
+     "w": 814,
+     "h": 458
+    }
+   ],
+   "callout": "Reach updates as you pick",
+   "callTarget": {
+    "x": 1600,
+    "y": 40,
+    "w": 314,
+    "h": 260
+   },
+   "clicks": [
+    {
+     "t": 0.11,
+     "x": 1241,
+     "y": 798
+    },
+    {
+     "t": 1.43,
+     "x": 1368,
+     "y": 556
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "Select Kartik, Add Mira; toasts 'selected for campaign'; outline reach 1.0M -> 9.6K -> 19.9K-22.2K, expense Rs 7,268."
+  },
+  {
+   "id": "s22",
+   "tIn": 37.2,
+   "tOut": 39.2,
+   "src": 1,
+   "srcIn": 175.5,
+   "srcOut": 183.5,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 600,
+     "y": 0,
+     "w": 1300,
+     "h": 731
+    }
+   ],
+   "callout": "See past brand collabs",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Rohan Arora 'Past Collabs' tab: brand-tagged posts (Shaadi.com, Crocs, Swiggy...) scrolled 4x."
+  },
+  {
+   "id": "s24",
+   "tIn": 39.2,
+   "tOut": 41.0,
+   "src": 1,
+   "srcIn": 241.5,
+   "srcOut": 246.5,
+   "freeze": false,
+   "chapter": 3,
+   "focus": [
+    {
+     "at": 0,
+     "x": 390,
+     "y": 150,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Your shortlist, ready",
+   "callTarget": {
+    "x": 400,
+    "y": 360,
+    "w": 1100,
+    "h": 300
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "pop"
+   ],
+   "note": "Selected tab (2): Kartik and Mira marked Selected."
+  },
+  {
+   "id": "s25",
+   "tIn": 41.0,
+   "tOut": 42.6,
+   "src": 1,
+   "srcIn": 250.0,
+   "srcOut": 255.0,
+   "freeze": false,
+   "chapter": 4,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Add your website",
+   "callTarget": {
+    "x": 400,
+    "y": 330,
+    "w": 1100,
+    "h": 60
+   },
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Product Details tab: company website typed zepto.com. Skeleton loading 256-273.5 cut."
+  },
+  {
+   "id": "s26",
+   "tIn": 42.6,
+   "tOut": 44.8,
+   "src": 1,
+   "srcIn": 273.6,
+   "srcOut": 278.8,
+   "freeze": false,
+   "chapter": 4,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 380,
+     "y": 300,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "AI detects your products",
+   "callTarget": {
+    "x": 400,
+    "y": 470,
+    "w": 900,
+    "h": 80
+   },
+   "clicks": [
+    {
+     "t": 1.02,
+     "x": 530,
+     "y": 428
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "CLEO-detected Zepto products; pick 'Zepto Core Grocery Delivery' -> product details auto-filled."
+  },
+  {
+   "id": "s27",
+   "tIn": 44.8,
+   "tOut": 46.4,
+   "src": 1,
+   "srcIn": 288.5,
+   "srcOut": 291.2,
+   "freeze": false,
+   "chapter": 4,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 200,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": null,
+   "callTarget": {
+    "x": 1020,
+    "y": 725,
+    "w": 230,
+    "h": 40
+   },
+   "clicks": [
+    {
+     "t": 1.24,
+     "x": 1135,
+     "y": 745
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Filled product name/description/reference link -> click Add Deliverables."
+  },
+  {
+   "id": "s29",
+   "tIn": 46.4,
+   "tOut": 49.4,
+   "src": 1,
+   "srcIn": 292.3,
+   "srcOut": 299.0,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 0.4,
+     "x": 1000,
+     "y": 280,
+     "w": 914,
+     "h": 514
+    }
+   ],
+   "callout": "Format picked from real data",
+   "callTarget": {
+    "x": 1010,
+    "y": 450,
+    "w": 880,
+    "h": 90
+   },
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "click"
+   ],
+   "note": "Deliverables list (Kartik, Mira) -> per-creator brief panel: link yes/no, post format bars from creator's real history, Text+Image 'Recommended'."
+  },
+  {
+   "id": "s31",
+   "tIn": 49.4,
+   "tOut": 49.8,
+   "src": 1,
+   "srcIn": 312.2,
+   "srcOut": 312.9,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 700,
+     "y": 180,
+     "w": 900,
+     "h": 506
+    }
+   ],
+   "callout": null,
+   "callTarget": {
+    "x": 1100,
+    "y": 280,
+    "w": 220,
+    "h": 34
+   },
+   "clicks": [
+    {
+     "t": 0.23,
+     "x": 1205,
+     "y": 297
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "CTA beat: click 'Write all briefs with AI' (manual brief typing 299-312 skipped)."
+  },
+  {
+   "id": "s31b",
+   "tIn": 49.8,
+   "tOut": 50.6,
+   "src": 1,
+   "srcIn": 319.6,
+   "srcOut": 326.0,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 420,
+     "y": 160,
+     "w": 1080,
+     "h": 608
+    }
+   ],
+   "callout": "CLEO writes every brief",
+   "callTarget": {
+    "x": 478,
+    "y": 250,
+    "w": 957,
+    "h": 180
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "riser"
+   ],
+   "note": "Fast glimpse of the AI progress bar's last stretch (~50% 'Personalising content' -> 100% 'Briefs ready!') at 8x; 312.9-319.6 cut."
+  },
+  {
+   "id": "s32",
+   "tIn": 50.6,
+   "tOut": 53.7,
+   "src": 1,
+   "srcIn": 327.6,
+   "srcOut": 332.5,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 440,
+     "y": 40,
+     "w": 1040,
+     "h": 585
+    },
+    {
+     "at": 1,
+     "x": 460,
+     "y": 180,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": null,
+   "callTarget": null,
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "chime"
+   ],
+   "note": "Generated brief for Mira: recommended format, then brief text appears."
+  },
+  {
+   "id": "s33",
+   "tIn": 53.7,
+   "tOut": 56.7,
+   "src": 1,
+   "srcIn": 332.5,
+   "srcOut": 332.5,
+   "freeze": true,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 480,
+     "y": 200,
+     "w": 960,
+     "h": 540
+    },
+    {
+     "at": 1,
+     "x": 500,
+     "y": 240,
+     "w": 880,
+     "h": 495
+    }
+   ],
+   "callout": "Personalised, ready to send",
+   "callTarget": {
+    "x": 500,
+    "y": 560,
+    "w": 900,
+    "h": 260
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "PAYOFF freeze on full brief text (What's happening / Why / What we want / Example vibes)."
+  },
+  {
+   "id": "s34",
+   "tIn": 56.7,
+   "tOut": 58.2,
+   "src": 1,
+   "srcIn": 336.5,
+   "srcOut": 340.1,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 440,
+     "y": 100,
+     "w": 1040,
+     "h": 585
+    }
+   ],
+   "callout": "Guidelines & hashtags included",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Campaign guidelines (do/don't) and hashtags (#ZeptoCore ...)."
+  },
+  {
+   "id": "s35",
+   "tIn": 58.2,
+   "tOut": 59.4,
+   "src": 1,
+   "srcIn": 350.2,
+   "srcOut": 351.4,
+   "freeze": false,
+   "chapter": 5,
+   "focus": [
+    {
+     "at": 0,
+     "x": 700,
+     "y": 300,
+     "w": 900,
+     "h": 506
+    },
+    {
+     "at": 1,
+     "x": 380,
+     "y": 240,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Applied to all creators",
+   "callTarget": {
+    "x": 1420,
+    "y": 770,
+    "w": 300,
+    "h": 40
+   },
+   "clicks": [
+    {
+     "t": 0.4,
+     "x": 1335,
+     "y": 760
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "Apply All -> toast 'AI brief applied to 2 creators', briefs 100% complete."
+  },
+  {
+   "id": "s36",
+   "tIn": 59.4,
+   "tOut": 61.4,
+   "src": 1,
+   "srcIn": 357.0,
+   "srcOut": 363.0,
+   "freeze": false,
+   "chapter": 6,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 160,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Final check before launch",
+   "callTarget": {
+    "x": 400,
+    "y": 260,
+    "w": 1100,
+    "h": 120
+   },
+   "clicks": [],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Review your campaign: budget Rs 7,268, 2 creators, est. reach 19.9K-22.2K, 2 briefs; campaign info table; 'Ready to launch'."
+  },
+  {
+   "id": "s37",
+   "tIn": 61.4,
+   "tOut": 63.2,
+   "src": 1,
+   "srcIn": 366.2,
+   "srcOut": 369.8,
+   "freeze": false,
+   "chapter": 6,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 90,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Clear pricing, GST included",
+   "callTarget": {
+    "x": 980,
+    "y": 60,
+    "w": 520,
+    "h": 260
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Checkout: campaign details, order summary (subtotal, GST 18%, total Rs 8,576.65), credits, payment options."
+  },
+  {
+   "id": "s39",
+   "tIn": 63.2,
+   "tOut": 65.2,
+   "src": 1,
+   "srcIn": 380.8,
+   "srcOut": 385.8,
+   "freeze": false,
+   "chapter": 6,
+   "focus": [
+    {
+     "at": 0,
+     "x": 640,
+     "y": 300,
+     "w": 960,
+     "h": 540
+    },
+    {
+     "at": 0.3,
+     "x": 520,
+     "y": 150,
+     "w": 860,
+     "h": 484
+    }
+   ],
+   "callout": "Pay by UPI or card",
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 0.16,
+     "x": 1230,
+     "y": 772
+    },
+    {
+     "t": 1.16,
+     "x": 735,
+     "y": 690
+    },
+    {
+     "t": 1.88,
+     "x": 957,
+     "y": 549
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Click Pay Rs 8,576.65 (hover 369.8-380.8 cut) -> Select Payment Method: UPI (no extra fee) -> Pay via UPI. Loader 385.9-388 cut."
+  },
+  {
+   "id": "s40",
+   "tIn": 65.2,
+   "tOut": 66.4,
+   "src": 1,
+   "srcIn": 388.0,
+   "srcOut": 391.8,
+   "freeze": false,
+   "chapter": 6,
+   "focus": [
+    {
+     "at": 0,
+     "x": 520,
+     "y": 160,
+     "w": 880,
+     "h": 495
+    }
+   ],
+   "callout": "Invoice details saved",
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 0.38,
+     "x": 1175,
+     "y": 597
+    },
+    {
+     "t": 1.14,
+     "x": 1169,
+     "y": 560
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "Billing Details: Individual -> Save -> 'Billing details saved' -> Done."
+  },
+  {
+   "id": "s41",
+   "tIn": 66.4,
+   "tOut": 70.4,
+   "src": 1,
+   "srcIn": 391.9,
+   "srcOut": 394.9,
+   "freeze": false,
+   "chapter": 6,
+   "focus": [
+    {
+     "at": 0,
+     "x": 560,
+     "y": 140,
+     "w": 800,
+     "h": 450
+    },
+    {
+     "at": 1,
+     "x": 420,
+     "y": 120,
+     "w": 1080,
+     "h": 608
+    }
+   ],
+   "callout": "Campaign activated!",
+   "callTarget": {
+    "x": 700,
+    "y": 160,
+    "w": 520,
+    "h": 220
+   },
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "impact",
+    "chime"
+   ],
+   "note": "PAYOFF at 0.75x: 'Congratulations! Campaign Activated' + status tracker + toast."
+  },
+  {
+   "id": "s42",
+   "tIn": 70.4,
+   "tOut": 72.4,
+   "src": 2,
+   "srcIn": 16.0,
+   "srcOut": 22.0,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 340,
+     "y": 180,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Track every creator's status",
+   "callTarget": {
+    "x": 400,
+    "y": 212,
+    "w": 1100,
+    "h": 120
+   },
+   "clicks": [],
+   "transition": "fade",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Campaign dashboard: Influencer Status & Drafts, cards 2 selected / 2 accepted / 2 drafts submitted, table."
+  },
+  {
+   "id": "s43",
+   "tIn": 72.4,
+   "tOut": 74.4,
+   "src": 2,
+   "srcIn": 29.5,
+   "srcOut": 35.5,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 100,
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "callout": "Preview drafts before they post",
+   "callTarget": {
+    "x": 400,
+    "y": 140,
+    "w": 670,
+    "h": 560
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Post Preview of Mira's LinkedIn draft with image, Approve Post / Suggest Changes."
+  },
+  {
+   "id": "s44",
+   "tIn": 74.4,
+   "tOut": 76.0,
+   "src": 2,
+   "srcIn": 41.5,
+   "srcOut": 45.0,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 900,
+     "y": 240,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Request changes in-app",
+   "callTarget": {
+    "x": 1180,
+    "y": 580,
+    "w": 660,
+    "h": 220
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Suggest Changes -> 'Give Suggestions' text box (2 suggestions left)."
+  },
+  {
+   "id": "s45",
+   "tIn": 76.0,
+   "tOut": 77.4,
+   "src": 2,
+   "srcIn": 47.4,
+   "srcOut": 49.8,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 900,
+     "y": 60,
+     "w": 900,
+     "h": 506
+    },
+    {
+     "at": 1,
+     "x": 500,
+     "y": 150,
+     "w": 900,
+     "h": 506
+    }
+   ],
+   "callout": "Approve with one click",
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 0.41,
+     "x": 1445,
+     "y": 227
+    },
+    {
+     "t": 1.28,
+     "x": 1185,
+     "y": 491
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "click"
+   ],
+   "note": "Approve Post -> 'Are you sure?' -> Continue. Lag 49.8-51.4 cut."
+  },
+  {
+   "id": "s46",
+   "tIn": 77.4,
+   "tOut": 79.6,
+   "src": 2,
+   "srcIn": 51.6,
+   "srcOut": 53.3,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 480,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 600,
+     "y": 240,
+     "w": 1110,
+     "h": 624
+    }
+   ],
+   "callout": "Draft approved",
+   "callTarget": {
+    "x": 640,
+    "y": 330,
+    "w": 640,
+    "h": 200
+   },
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "chime"
+   ],
+   "note": "PAYOFF at 0.77x: 'Draft is approved! Now you can set the live date' + toast."
+  },
+  {
+   "id": "s47",
+   "tIn": 79.6,
+   "tOut": 82.4,
+   "src": 2,
+   "srcIn": 53.6,
+   "srcOut": 60.4,
+   "freeze": false,
+   "chapter": 7,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 0,
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "at": 1,
+     "x": 500,
+     "y": 60,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": null,
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 1.94,
+     "x": 1444,
+     "y": 476
+    },
+    {
+     "t": 2.76,
+     "x": 1187,
+     "y": 487
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "click"
+   ],
+   "note": "Next draft (Kartik) preview -> Approve Post -> Continue (2.43x)."
+  },
+  {
+   "id": "s49",
+   "tIn": 82.4,
+   "tOut": 86.6,
+   "src": 2,
+   "srcIn": 62.5,
+   "srcOut": 72.6,
+   "freeze": false,
+   "chapter": 8,
+   "focus": [
+    {
+     "at": 0,
+     "x": 480,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 0.3,
+     "x": 360,
+     "y": 180,
+     "w": 1150,
+     "h": 647
+    },
+    {
+     "at": 1,
+     "x": 760,
+     "y": 200,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Pick each go-live date",
+   "callTarget": {
+    "x": 1300,
+    "y": 270,
+    "w": 360,
+    "h": 420
+   },
+   "clicks": [
+    {
+     "t": 0.71,
+     "x": 1166,
+     "y": 472
+    },
+    {
+     "t": 2.45,
+     "x": 1732,
+     "y": 466
+    },
+    {
+     "t": 3.99,
+     "x": 1470,
+     "y": 662
+    }
+   ],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "click",
+    "click"
+   ],
+   "note": "Draft approved modal -> Set Live Date -> Customize Live Dates table -> Set Custom for Mira -> calendar Oct 4 -> Confirm (2.6x)."
+  },
+  {
+   "id": "s50",
+   "tIn": 86.6,
+   "tOut": 88.4,
+   "src": 2,
+   "srcIn": 73.0,
+   "srcOut": 76.6,
+   "freeze": false,
+   "chapter": 8,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 120,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Both creators scheduled",
+   "callTarget": {
+    "x": 1640,
+    "y": 440,
+    "w": 220,
+    "h": 150
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "pop"
+   ],
+   "note": "Kartik set to Oct 5; both live dates shown; toast 'Live Date for Mira set successfully'."
+  },
+  {
+   "id": "s51",
+   "tIn": 88.4,
+   "tOut": 89.4,
+   "src": 2,
+   "srcIn": 79.9,
+   "srcOut": 81.5,
+   "freeze": false,
+   "chapter": 9,
+   "focus": [
+    {
+     "at": 0,
+     "x": 0,
+     "y": 100,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": null,
+   "callTarget": {
+    "x": 20,
+    "y": 520,
+    "w": 250,
+    "h": 45
+   },
+   "clicks": [
+    {
+     "t": 0.37,
+     "x": 140,
+     "y": 540
+    }
+   ],
+   "transition": "whoosh",
+   "sfx": [
+    "whoosh",
+    "click"
+   ],
+   "note": "Click Performance in campaign sidebar -> Live Campaign Performance."
+  },
+  {
+   "id": "s52",
+   "tIn": 89.4,
+   "tOut": 92.4,
+   "src": 3,
+   "srcIn": 0.5,
+   "srcOut": 4.5,
+   "freeze": false,
+   "chapter": 9,
+   "focus": [
+    {
+     "at": 0,
+     "x": 350,
+     "y": 260,
+     "w": 1000,
+     "h": 563
+    },
+    {
+     "at": 1,
+     "x": 840,
+     "y": 250,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "Reach & engagement, live",
+   "callTarget": {
+    "x": 380,
+    "y": 320,
+    "w": 760,
+    "h": 120
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "pop"
+   ],
+   "note": "Overall Summary: 134,193 impressions, 10,738 likes, 542 comments, 8.41% avg engagement, 2/2 live, budget gauge Rs 7,268."
+  },
+  {
+   "id": "s53",
+   "tIn": 92.4,
+   "tOut": 94.4,
+   "src": 3,
+   "srcIn": 19.0,
+   "srcOut": 25.0,
+   "freeze": false,
+   "chapter": 9,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 180,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Per-post stats, synced",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Per-influencer table and Post Details (Kartik 123,456 impressions, 9,920 likes), Check Post-Analysis Report."
+  },
+  {
+   "id": "s54",
+   "tIn": 94.4,
+   "tOut": 95.2,
+   "src": 3,
+   "srcIn": 35.2,
+   "srcOut": 36.4,
+   "freeze": false,
+   "chapter": 9,
+   "focus": [
+    {
+     "at": 0,
+     "x": 0,
+     "y": 150,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": null,
+   "callTarget": {
+    "x": 20,
+    "y": 585,
+    "w": 250,
+    "h": 45
+   },
+   "clicks": [
+    {
+     "t": 0.3,
+     "x": 172,
+     "y": 606
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Click 'AI Analysis Report'. Loading 37.0-38.2 cut."
+  },
+  {
+   "id": "s55",
+   "tIn": 95.2,
+   "tOut": 96.7,
+   "src": 3,
+   "srcIn": 38.3,
+   "srcOut": 41.3,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 60,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "AI audience breakdown",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "whoosh"
+   ],
+   "note": "Reach Audience Analysis (Mira): ER 6.99%, likes 818, comments 72; reach summary tags, job role & location distributions."
+  },
+  {
+   "id": "s56",
+   "tIn": 96.7,
+   "tOut": 99.9,
+   "src": 3,
+   "srcIn": 42.5,
+   "srcOut": 53.5,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 120,
+     "w": 1100,
+     "h": 619
+    },
+    {
+     "at": 1,
+     "x": 360,
+     "y": 100,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Campaign-wide metrics",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Overall campaign view: Campaign Metrics 134,193 reach / 10,738 likes / 542 comments / 8.41% ER, then Top Audience Categories (role, location, seniority, industry)."
+  },
+  {
+   "id": "s58",
+   "tIn": 99.9,
+   "tOut": 102.2,
+   "src": 3,
+   "srcIn": 69.8,
+   "srcOut": 71.8,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 400,
+     "y": 150,
+     "w": 1100,
+     "h": 619
+    },
+    {
+     "at": 1,
+     "x": 440,
+     "y": 200,
+     "w": 1000,
+     "h": 563
+    }
+   ],
+   "callout": "AI sentiment on every comment",
+   "callTarget": {
+    "x": 480,
+    "y": 270,
+    "w": 340,
+    "h": 320
+   },
+   "clicks": [],
+   "transition": "zoom",
+   "sfx": [
+    "chime"
+   ],
+   "note": "PAYOFF at 0.87x: Overall Sentiment donut 519 comments, 24.66% positive / 23.51% negative / 51.83% neutral, example comments."
+  },
+  {
+   "id": "s59",
+   "tIn": 102.2,
+   "tOut": 103.9,
+   "src": 3,
+   "srcIn": 72.0,
+   "srcOut": 75.6,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 20,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Positive, negative, neutral",
+   "callTarget": null,
+   "clicks": [
+    {
+     "t": 0.09,
+     "x": 1112,
+     "y": 180
+    },
+    {
+     "t": 0.94,
+     "x": 1270,
+     "y": 180
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Negative and Neutral tabs with real example comments."
+  },
+  {
+   "id": "s60",
+   "tIn": 103.9,
+   "tOut": 105.5,
+   "src": 3,
+   "srcIn": 81.0,
+   "srcOut": 85.0,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 140,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Queries & purchase intent",
+   "callTarget": {
+    "x": 380,
+    "y": 300,
+    "w": 1100,
+    "h": 180
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "pop"
+   ],
+   "note": "Overall Customer Query Analysis: 20 product queries, 25 purchase intent, 31 concerns; top query categories."
+  },
+  {
+   "id": "s61",
+   "tIn": 105.5,
+   "tOut": 106.8,
+   "src": 3,
+   "srcIn": 89.5,
+   "srcOut": 92.5,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 80,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Spot buyers in the comments",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "High Intent Examples with High/Medium/Low intent tags."
+  },
+  {
+   "id": "s63",
+   "tIn": 106.8,
+   "tOut": 108.6,
+   "src": 3,
+   "srcIn": 100.0,
+   "srcOut": 106.0,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 240,
+     "w": 1100,
+     "h": 619
+    },
+    {
+     "at": 1,
+     "x": 360,
+     "y": 120,
+     "w": 1150,
+     "h": 647
+    }
+   ],
+   "callout": "Rank creators by results",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Best Performing Influencers (reach, positive sentiment, queries) + Influencer Performance Analysis table."
+  },
+  {
+   "id": "s64",
+   "tIn": 108.6,
+   "tOut": 110.1,
+   "src": 3,
+   "srcIn": 107.6,
+   "srcOut": 110.6,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 400,
+     "y": 150,
+     "w": 1100,
+     "h": 619
+    },
+    {
+     "at": 1,
+     "x": 760,
+     "y": 240,
+     "w": 1154,
+     "h": 624
+    }
+   ],
+   "callout": "Export to CSV",
+   "callTarget": {
+    "x": 1415,
+    "y": 730,
+    "w": 465,
+    "h": 105
+   },
+   "clicks": [
+    {
+     "t": 0.3,
+     "x": 1342,
+     "y": 407
+    }
+   ],
+   "transition": "cut",
+   "sfx": [
+    "click",
+    "pop"
+   ],
+   "note": "Export CSV -> green 'Data exported successfully' toast."
+  },
+  {
+   "id": "s65",
+   "tIn": 110.1,
+   "tOut": 111.7,
+   "src": 3,
+   "srcIn": 115.4,
+   "srcOut": 118.6,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 360,
+     "y": 200,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Drill into each creator",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Per-creator (Mira) AI Comment Analysis: Brand Sentiment Positive, 8 / 21 / 19 comments."
+  },
+  {
+   "id": "s67",
+   "tIn": 111.7,
+   "tOut": 113.2,
+   "src": 3,
+   "srcIn": 155.6,
+   "srcOut": 158.0,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 380,
+     "y": 60,
+     "w": 1100,
+     "h": 619
+    }
+   ],
+   "callout": "Keywords that drive talk",
+   "callTarget": null,
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [],
+   "note": "Keyword Analysis: top keywords by sentiment, word cloud (convenience, quality), key takeaways."
+  },
+  {
+   "id": "s68",
+   "tIn": 113.2,
+   "tOut": 114.6,
+   "src": 3,
+   "srcIn": 175.2,
+   "srcOut": 179.6,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 820,
+     "y": 20,
+     "w": 1094,
+     "h": 615
+    }
+   ],
+   "callout": "Rate creators for next time",
+   "callTarget": {
+    "x": 1500,
+    "y": 20,
+    "w": 340,
+    "h": 700
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "click"
+   ],
+   "note": "Rate the Influencer: 5 stars, future collaboration likelihood 10, feedback field."
+  },
+  {
+   "id": "s69",
+   "tIn": 114.6,
+   "tOut": 115.5,
+   "src": 3,
+   "srcIn": 180.4,
+   "srcOut": 181.3,
+   "freeze": false,
+   "chapter": 10,
+   "focus": [
+    {
+     "at": 0,
+     "x": 820,
+     "y": 20,
+     "w": 1094,
+     "h": 615
+    }
+   ],
+   "callout": null,
+   "callTarget": {
+    "x": 1720,
+    "y": 80,
+    "w": 180,
+    "h": 280
+   },
+   "clicks": [],
+   "transition": "cut",
+   "sfx": [
+    "chime"
+   ],
+   "note": "'Thank you for sharing your feedback!' + toast 'Feedback submitted successfully'. (Small red loader dots at 180.3-180.6 visible <0.3 s.)"
+  }
+ ],
+ "endCard": {
+  "tIn": 115.5,
+  "tOut": 120.0,
+  "text": "Anchors \u2014 influencer campaigns, start to finish",
+  "logoSource": {
+   "src": 1,
+   "t": 13.0,
+   "x": 12,
+   "y": 12,
+   "w": 144,
+   "h": 36
+  }
+ }
+}
