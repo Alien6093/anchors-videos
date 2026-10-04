@@ -354,6 +354,7 @@ END = dict(tIn=115.5, tOut=120.0, text="Anchors — influencer campaigns, start 
 # keys: si/so (source in/out), focus [(at,rect)], ct rect | [(at,rect)], win [a,b], clicks [(srcT,x,y)], call, note_add
 K = lambda *ks: list(ks)
 OV = {
+ "s16": dict(at="top"),
  "s08": dict(so=29.5, note_add=" QA1: srcOut 29.5 so the 'Please select start date' error never shows."),
  "s09": dict(si=31.4, so=36.3, clicks=[],
              focus=K((0, R(360, 120, 1000, 563)), (0.45, R(380, 300, 1000, 563)), (1, R(380, 300, 1000, 563))),
@@ -381,7 +382,7 @@ OV = {
              focus=K((0, R(380, 200, 1100, 619)), (0.45, R(814, 247, 1100, 619)), (1, R(814, 247, 1100, 619))),
              ct=R(1412, 760, 483, 85), win=[0.4, 1],
              note_add=" QA1: src 351.15-352.35 (1x), after the modal closes (no 'No briefs generated' error); pans to the real toast 'AI brief applied to 2 creators'."),
- "s36": dict(ct=K((0, R(400, 262, 1100, 120)), (0.3, R(400, 262, 1100, 120)), (0.45, R(400, 160, 1100, 105)), (1, R(400, 160, 1100, 105))), win=[0, 0.7]),
+ "s36": dict(at="bottom", ct=K((0, R(400, 262, 1100, 120)), (0.42, R(400, 262, 1100, 120)), (0.65, R(400, 160, 1100, 105)), (1, R(400, 160, 1100, 105))), win=[0, 0.8]),
  "s37": dict(ct=R(985, 195, 520, 250)),
  "s41": dict(si=392.25, note_add=" QA1: srcIn 392.25 so the billing modal is not seen."),
  "s42": dict(so=19.6, focus=K((0, R(340, 40, 1150, 647))), ct=R(400, 82, 1090, 100),
@@ -390,8 +391,8 @@ OV = {
              note_add=" QA1: src 32.1-33.6 (0.75x) on the stable post preview; highlight on Mira's draft post."),
  "s44": dict(so=44.6, ct=R(1180, 585, 660, 220), win=[0.47, 1]),
  "s49": dict(focus=K((0, R(480, 150, 1000, 563)), (0.22, R(700, 180, 1150, 647)), (1, R(760, 200, 1150, 647))),
-             ct=K((0, R(1600, 400, 220, 200)), (0.55, R(1600, 400, 220, 200)), (0.62, R(1215, 270, 370, 400)), (1, R(1215, 270, 370, 400))),
-             win=[0.2, 1],
+             ct=K((0, R(1600, 400, 220, 200)), (0.6, R(1600, 400, 220, 200)), (0.65, R(1215, 270, 370, 400)), (1, R(1215, 270, 370, 400))),
+             win=[0.25, 1],
              note_add=" QA1: focus pans right to the Live Date column; highlight on the Set Custom buttons, then follows the calendar popover."),
  "s50": dict(si=76.1, so=77.4, focus=K((0, R(760, 120, 1150, 647))), ct=R(1620, 435, 215, 170),
              note_add=" QA1: src 76.1-77.4 (0.72x), both live dates already set (Oct 4th / Oct 5th); highlight on the Live Date column."),
@@ -399,9 +400,9 @@ OV = {
              ct=K((0, R(365, 418, 780, 198)), (0.66, R(365, 418, 780, 198)), (0.77, R(365, 200, 780, 150)), (1, R(365, 195, 780, 150))),
              note_add=" QA1: highlight follows the KPI card when the page scrolls (src 3.15-3.6)."),
  "s58": dict(focus=K((0, R(400, 150, 1100, 619)), (1, R(400, 60, 1100, 619))),
-             ct=K((0, R(480, 275, 325, 320)), (0.3, R(480, 275, 325, 320)), (0.52, R(480, 225, 325, 320)), (0.72, R(480, 150, 325, 320)), (1, R(480, 150, 325, 320))),
+             ct=K((0, R(482, 268, 326, 326)), (0.16, R(482, 268, 326, 326)), (0.3, R(482, 143, 326, 326)), (1, R(482, 143, 326, 326))),
              note_add=" QA1: highlight tracks the donut as it scrolls up."),
- "s60": dict(ct=K((0, R(380, 540, 1100, 180)), (0.31, R(380, 525, 1100, 180)), (0.44, R(380, 295, 1100, 175)), (1, R(380, 295, 1100, 175))), win=[0.2, 1]),
+ "s60": dict(at="bottom", ct=K((0, R(380, 540, 1100, 180)), (0.31, R(380, 525, 1100, 180)), (0.44, R(380, 295, 1100, 175)), (1, R(380, 295, 1100, 175))), win=[0.2, 1]),
  "s64": dict(focus=K((0, R(400, 150, 1100, 619)), (0.3, R(760, 240, 1154, 624)), (1, R(760, 240, 1154, 624))),
              ct=R(1411, 727, 485, 120), win=[0.3, 1]),
  "s68": dict(ct=K((0, R(1495, 230, 345, 420)), (0.2, R(1495, 20, 345, 560)), (1, R(1495, 20, 345, 560)))),
@@ -419,8 +420,9 @@ def _apply(a):
     if "ct" in o: a[9] = o["ct"]
     if "clicks" in o: a[10] = o["clicks"]
     if "note_add" in o: a[13] = a[13] + o["note_add"]
+    if "at" in o: CAT[sid] = o["at"]
     return tuple(a), o.get("win")
-_S2 = []; WIN = {}
+_S2 = []; WIN = {}; CAT = {}
 for a in S:
     a2, w = _apply(a); _S2.append(a2)
     if w: WIN[a2[0]] = w
@@ -447,6 +449,7 @@ for a in S:
                       chapter=ch, focus=[dict(at=at, **r) for at, r in focus], callout=call, callTarget=_ct(ct),
                       clicks=cl, transition=tr, sfx=sfx, note=note))
     if sid in WIN: shots[-1]["callWin"] = WIN[sid]
+    if sid in CAT: shots[-1]["calloutAt"] = CAT[sid]
 
 chapters = []
 for n, title in CH:

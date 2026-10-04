@@ -594,7 +594,8 @@
     "impact",
     "chime"
    ],
-   "note": "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense)."
+   "note": "PAYOFF hold at 1.0x: match preview (65 matched, 1.0M impressions, Rs 4.9L expected expense).",
+   "calloutAt": "top"
   },
   {
    "id": "s17",
@@ -1233,14 +1234,14 @@
      "h": 120
     },
     {
-     "at": 0.3,
+     "at": 0.42,
      "x": 400,
      "y": 262,
      "w": 1100,
      "h": 120
     },
     {
-     "at": 0.45,
+     "at": 0.65,
      "x": 400,
      "y": 160,
      "w": 1100,
@@ -1262,8 +1263,9 @@
    "note": "Review your campaign: budget Rs 7,268, 2 creators, est. reach 19.9K-22.2K, 2 briefs; campaign info table; 'Ready to launch'.",
    "callWin": [
     0,
-    0.7
-   ]
+    0.8
+   ],
+   "calloutAt": "bottom"
   },
   {
    "id": "s37",
@@ -1695,14 +1697,14 @@
      "h": 200
     },
     {
-     "at": 0.55,
+     "at": 0.6,
      "x": 1600,
      "y": 400,
      "w": 220,
      "h": 200
     },
     {
-     "at": 0.62,
+     "at": 0.65,
      "x": 1215,
      "y": 270,
      "w": 370,
@@ -1741,7 +1743,7 @@
    ],
    "note": "Draft approved modal -> Set Live Date -> Customize Live Dates table -> Set Custom for Mira -> calendar Oct 4 -> Confirm (2.6x). QA1: focus pans right to the Live Date column; highlight on the Set Custom buttons, then follows the calendar popover.",
    "callWin": [
-    0.2,
+    0.25,
     1
    ]
   },
@@ -2037,38 +2039,31 @@
    "callTarget": [
     {
      "at": 0,
-     "x": 480,
-     "y": 275,
-     "w": 325,
-     "h": 320
+     "x": 482,
+     "y": 268,
+     "w": 326,
+     "h": 326
+    },
+    {
+     "at": 0.16,
+     "x": 482,
+     "y": 268,
+     "w": 326,
+     "h": 326
     },
     {
      "at": 0.3,
-     "x": 480,
-     "y": 275,
-     "w": 325,
-     "h": 320
-    },
-    {
-     "at": 0.52,
-     "x": 480,
-     "y": 225,
-     "w": 325,
-     "h": 320
-    },
-    {
-     "at": 0.72,
-     "x": 480,
-     "y": 150,
-     "w": 325,
-     "h": 320
+     "x": 482,
+     "y": 143,
+     "w": 326,
+     "h": 326
     },
     {
      "at": 1,
-     "x": 480,
-     "y": 150,
-     "w": 325,
-     "h": 320
+     "x": 482,
+     "y": 143,
+     "w": 326,
+     "h": 326
     }
    ],
    "clicks": [],
@@ -2174,7 +2169,8 @@
    "callWin": [
     0.2,
     1
-   ]
+   ],
+   "calloutAt": "bottom"
   },
   {
    "id": "s61",
