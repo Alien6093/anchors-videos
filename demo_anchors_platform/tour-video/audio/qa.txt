@@ -1,4 +1,4 @@
-ANCHORS PLATFORM TOUR (120 s) - AUDIO QA   generated 2026-10-04T22:55:00.313Z
+ANCHORS PLATFORM TOUR (120 s) - AUDIO QA   generated 2026-10-04T23:07:10.834Z
 timeline: ../project/src/timeline.json  duration 120 s, 61 shots, 10 chapters, end card 115.5 s
 
 == FILES ==
@@ -24,10 +24,10 @@ PASS  stems/music.wav: < 50 MB
 stems/sfx.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
    samples 5760000 = 120.000 s | integrated -20.2 LUFS | LRA 18.4 LU | true peak -1.3 dBTP | sample peak -1.31 dBFS | clipped samples 0
-   astats: DC offset 0.000000, peak -1.310032 dBFS, RMS -27.420731 dBFS | first sample -0.020116 | max |x| in last 50 ms 0.00e+0
+   astats: DC offset -0.000000, peak -1.310032 dBFS, RMS -27.420731 dBFS | first sample -0.020116 | max |x| in last 50 ms 0.00e+0
 PASS  stems/sfx.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
 PASS  stems/sfx.wav: no clipped samples
-PASS  stems/sfx.wav: DC offset 1.02e-12 (< 1e-4)
+PASS  stems/sfx.wav: DC offset -2.17e-12 (< 1e-4)
 PASS  stems/sfx.wav: < 50 MB
 ../project/public/audio/mix.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
@@ -122,7 +122,7 @@ PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
     44s  -17.3 -106.1  -16.4  | 45s  -17.4 -104.0  -16.5  | 46s  -17.8  -26.1  -16.3  | 47s  -16.7  -78.6  -15.9
     48s  -17.1 -125.0  -16.2  | 49s  -17.4  -35.5  -16.4  | 50s  -19.0  -24.5  -17.0  | 51s  -17.7  -30.5  -16.6
     52s  -17.0  -50.5  -16.1  | 53s  -17.0  -35.2  -16.1  | 54s  -16.9  -64.3  -16.0  | 55s  -16.6 -111.8  -15.7
-    56s  -17.0  -35.2  -16.0  | 57s  -17.1  -62.3  -16.2  | 58s  -17.4  -35.1  -16.4  | 59s  -17.4  -26.5  -16.0
+    56s  -17.0  -35.2  -16.0  | 57s  -17.1  -62.3  -16.2  | 58s  -17.4  -35.0  -16.4  | 59s  -17.4  -26.5  -16.0
     60s  -16.4  -78.7  -15.5  | 61s  -16.6  -35.2  -15.7  | 62s  -16.5  -80.4  -15.6  | 63s  -16.7  -35.2  -15.7
     64s  -17.9  -63.4  -17.0  | 65s  -21.8  -32.3  -20.5  | 66s  -19.7  -16.0  -13.8  | 67s  -15.8  -20.3  -13.4
     68s  -14.7  -30.1  -13.6  | 69s  -15.8  -41.9  -14.9  | 70s  -17.0  -29.2  -15.9  | 71s  -15.0  -83.1  -14.1
