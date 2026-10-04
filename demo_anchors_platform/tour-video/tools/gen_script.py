@@ -91,7 +91,7 @@ shot("s13", 2.0, 1, 64.0, 72.0, False, 2, [(0, R(380, 120, 1000, 563))],
      "Target creators by profession and level.")
 shot("s14", 2.6, 1, 82.5, 95.6, False, 2, [(0, R(380, 150, 1000, 563)), (1, R(760, 300, 1000, 563))],
      "Target their audience", R(1320, 815, 240, 40), [(95.3, 1440, 834)], "cut", ["click", "click"],
-     "Audience demographics: audience roles, Student + Intern seniority, country list, then click View Matched Influencers (5.0x). Disabled/loading button 95.6-99.4 cut.",
+     "Audience demographics: audience roles, Student + Intern seniority. Country list, View Matched click and disabled/loading button 90-99.4 cut.",
      "Audience Demographics dropdowns with Student / Intern chips.",
      "You can also target who the creator's audience is.")
 shot("s16", 4.2, 1, 99.5, 103.7, False, 2, [(0, R(460, 150, 1000, 563)), (1, R(560, 280, 760, 428))],
@@ -157,7 +157,7 @@ shot("s27", 1.6, 1, 288.5, 291.2, False, 4, [(0, R(380, 200, 1000, 563))],
 # ---------------- CH5 AI briefs ----------------
 shot("s29", 3.0, 1, 292.3, 299.0, False, 5, [(0, R(380, 150, 1000, 563)), (0.4, R(1000, 280, 914, 514))],
      "Format picked from real data", R(1010, 450, 880, 90), [], "whoosh", ["whoosh", "click"],
-     "Deliverables list (Kartik, Mira) -> per-creator brief panel: link yes/no, post format bars from creator's real history, Text+Image 'Recommended'.",
+     "Per-creator brief panel: post format bars from creator's real history, Text+Image 'Recommended'.",
      "Post Format performance bars with Recommended badge.",
      "Format recommendations come from each creator's real performance.")
 shot("s31", 0.4, 1, 312.2, 312.9, False, 5, [(0, R(700, 180, 900, 506))],
@@ -166,7 +166,7 @@ shot("s31", 0.4, 1, 312.2, 312.9, False, 5, [(0, R(700, 180, 900, 506))],
      "Cursor clicks Write all briefs with AI.",
      "One click generates every brief.")
 shot("s31b", 0.8, 1, 319.6, 326.0, False, 5, [(0, R(420, 160, 1080, 608))],
-     "CLEO writes every brief", R(478, 250, 957, 180), [], "cut", ["riser"],
+     "AI writes every brief", R(478, 250, 957, 180), [], "cut", ["riser"],
      "Fast glimpse of the AI progress bar's last stretch (~50% 'Personalising content' -> 100% 'Briefs ready!') at 8x; 312.9-319.6 cut.",
      "AI-Written Campaign Brief progress bar racing to 100%.",
      "The AI writes personalised briefs for all creators in seconds.")
@@ -187,8 +187,8 @@ shot("s34", 1.5, 1, 336.5, 340.1, False, 5, [(0, R(440, 100, 1040, 585))],
      "Dos, don'ts and hashtags are generated too.")
 shot("s35", 1.2, 1, 350.2, 351.4, False, 5, [(0, R(700, 300, 900, 506)), (1, R(380, 240, 1100, 619))],
      "Applied to all creators", R(1255, 738, 170, 44), [(350.6, 1335, 760)], "cut", ["click", "pop"],
-     "Apply All -> toast 'AI brief applied to 2 creators', briefs 100% complete.",
-     "Toast + progress bar 2 of 2 briefs complete.",
+     "Deliverables page after Apply All: 2 of 2 briefs complete, toast 'AI brief applied to 2 creators'.",
+     "Briefs 100% complete, then the toast.",
      "All briefs are applied in one go.")
 
 # ---------------- CH6 Checkout & launch ----------------
@@ -258,7 +258,7 @@ shot("s49", 4.2, 2, 62.5, 72.6, False, 8, [(0, R(480, 150, 1000, 563)), (0.3, R(
      "Step 8: each creator can get their own go-live date.")
 shot("s50", 1.8, 2, 73.0, 76.6, False, 8, [(0, R(360, 120, 1150, 647))],
      "Both creators scheduled", R(1640, 440, 220, 150), [], "cut", ["pop"],
-     "Kartik set to Oct 5; both live dates shown; toast 'Live Date for Mira set successfully'.",
+     "Both live dates shown (Mira Oct 4th, Kartik Oct 5th); toast 'Live Date for Mira set successfully'.",
      "Live Date column filled for both creators.",
      "The schedule is set.")
 
@@ -349,6 +349,89 @@ shot("s69", 0.9, 3, 180.4, 181.3, False, 10, [(0, R(820, 20, 1094, 615))],
 END = dict(tIn=115.5, tOut=120.0, text="Anchors — influencer campaigns, start to finish",
            logoSource=dict(src=1, t=13.0, x=12, y=12, w=144, h=36))
 
+
+# ---------- QA round 1 overrides (highlight tracking, verified at 5 fps on source frames) ----------
+# keys: si/so (source in/out), focus [(at,rect)], ct rect | [(at,rect)], win [a,b], clicks [(srcT,x,y)], call, note_add
+K = lambda *ks: list(ks)
+OV = {
+ "s08": dict(so=29.5, note_add=" QA1: srcOut 29.5 so the 'Please select start date' error never shows."),
+ "s09": dict(si=31.4, so=36.3, clicks=[],
+             focus=K((0, R(360, 120, 1000, 563)), (0.45, R(380, 300, 1000, 563)), (1, R(380, 300, 1000, 563))),
+             ct=R(400, 540, 930, 70), win=[0.5, 1],
+             note_add=" QA1: src 31.4-36.3 (date pick + budget field) avoids the 'Minimum budget' error; highlight on date+budget fields once the page settles (src 33.7+); click ring removed."),
+ "s10": dict(ct=R(640, 165, 640, 535)),
+ "s14": dict(so=90.0, clicks=[], focus=K((0, R(380, 150, 1000, 563)), (1, R(380, 250, 1000, 563))),
+             ct=R(860, 570, 440, 50), win=[0.72, 1],
+             note_add=" QA1: trimmed to src 82.5-90 (2.9x), small pan; highlight the Audience Seniority chips (Student, Intern) once they appear."),
+ "s18": dict(si=113.6, so=115.0, ct=R(1575, 65, 310, 40),
+             note_add=" QA1: src 113.6-115.0 at 0.7x, before the modal scrolls, so the 'Actual, synced data' badge stays put."),
+ "s21": dict(focus=K((0, R(420, 160, 1200, 675)), (0.45, R(714, 100, 1200, 675)), (1, R(1100, 0, 814, 458))),
+             ct=R(1595, 95, 315, 190), win=[0.45, 1]),
+ "s24": dict(si=244.6, so=246.5, ct=R(400, 330, 1100, 330),
+             note_add=" QA1: src 244.6-246.5 after the list scroll; highlight on Kartik's Selected card."),
+ "s25": dict(ct=R(400, 335, 1100, 55)),
+ "s26": dict(ct=R(400, 412, 905, 62), win=[0, 0.72]),
+ "s27": dict(ct=R(1115, 725, 230, 46), win=[0.45, 0.88]),
+ "s29": dict(si=295.9, so=298.6, focus=K((0, R(1000, 280, 914, 514))),
+             ct=R(1105, 535, 800, 65),
+             note_add=" QA1: src 295.9-298.6 (0.9x) starts on Post Format (Yes/No step skipped) and ends before the panel scrolls; highlight on the Text+Image row with the Recommended badge."),
+ "s31b": dict(call="AI writes every brief", ct=R(478, 248, 957, 225)),
+ "s33": dict(ct=R(500, 565, 900, 150)),
+ "s35": dict(si=351.15, so=352.35, clicks=[],
+             focus=K((0, R(380, 200, 1100, 619)), (0.45, R(814, 247, 1100, 619)), (1, R(814, 247, 1100, 619))),
+             ct=R(1412, 760, 483, 85), win=[0.4, 1],
+             note_add=" QA1: src 351.15-352.35 (1x), after the modal closes (no 'No briefs generated' error); pans to the real toast 'AI brief applied to 2 creators'."),
+ "s36": dict(ct=K((0, R(400, 262, 1100, 120)), (0.3, R(400, 262, 1100, 120)), (0.45, R(400, 160, 1100, 105)), (1, R(400, 160, 1100, 105))), win=[0, 0.7]),
+ "s37": dict(ct=R(985, 195, 520, 250)),
+ "s41": dict(si=392.25, note_add=" QA1: srcIn 392.25 so the billing modal is not seen."),
+ "s42": dict(so=19.6, focus=K((0, R(340, 40, 1150, 647))), ct=R(400, 82, 1090, 100),
+             note_add=" QA1: src 16.0-19.6 before the page scrolls; focus raised to include the status cards; highlight on Selected/Accepted/Draft Submitted/Approved cards."),
+ "s43": dict(si=32.1, so=33.6, focus=K((0, R(380, 100, 1200, 675))), ct=R(425, 240, 600, 460),
+             note_add=" QA1: src 32.1-33.6 (0.75x) on the stable post preview; highlight on Mira's draft post."),
+ "s44": dict(so=44.6, ct=R(1180, 585, 660, 220), win=[0.47, 1]),
+ "s49": dict(focus=K((0, R(480, 150, 1000, 563)), (0.22, R(700, 180, 1150, 647)), (1, R(760, 200, 1150, 647))),
+             ct=K((0, R(1600, 400, 220, 200)), (0.55, R(1600, 400, 220, 200)), (0.62, R(1215, 270, 370, 400)), (1, R(1215, 270, 370, 400))),
+             win=[0.2, 1],
+             note_add=" QA1: focus pans right to the Live Date column; highlight on the Set Custom buttons, then follows the calendar popover."),
+ "s50": dict(si=76.1, so=77.4, focus=K((0, R(760, 120, 1150, 647))), ct=R(1620, 435, 215, 170),
+             note_add=" QA1: src 76.1-77.4 (0.72x), both live dates already set (Oct 4th / Oct 5th); highlight on the Live Date column."),
+ "s52": dict(focus=K((0, R(350, 270, 1050, 591)), (0.66, R(350, 270, 1050, 591)), (1, R(350, 140, 1100, 619))),
+             ct=K((0, R(365, 418, 780, 198)), (0.66, R(365, 418, 780, 198)), (0.77, R(365, 200, 780, 150)), (1, R(365, 195, 780, 150))),
+             note_add=" QA1: highlight follows the KPI card when the page scrolls (src 3.15-3.6)."),
+ "s58": dict(focus=K((0, R(400, 150, 1100, 619)), (1, R(400, 60, 1100, 619))),
+             ct=K((0, R(480, 275, 325, 320)), (0.3, R(480, 275, 325, 320)), (0.52, R(480, 225, 325, 320)), (0.72, R(480, 150, 325, 320)), (1, R(480, 150, 325, 320))),
+             note_add=" QA1: highlight tracks the donut as it scrolls up."),
+ "s60": dict(ct=K((0, R(380, 540, 1100, 180)), (0.31, R(380, 525, 1100, 180)), (0.44, R(380, 295, 1100, 175)), (1, R(380, 295, 1100, 175))), win=[0.2, 1]),
+ "s64": dict(focus=K((0, R(400, 150, 1100, 619)), (0.3, R(760, 240, 1154, 624)), (1, R(760, 240, 1154, 624))),
+             ct=R(1411, 727, 485, 120), win=[0.3, 1]),
+ "s68": dict(ct=K((0, R(1495, 230, 345, 420)), (0.2, R(1495, 20, 345, 560)), (1, R(1495, 20, 345, 560)))),
+ "s69": dict(ct=R(1495, 220, 345, 300)),
+}
+def _apply(a):
+    sid = a[0]
+    o = OV.get(sid)
+    if not o: return a, None
+    a = list(a)
+    if "si" in o: a[3] = o["si"]
+    if "so" in o: a[4] = o["so"]
+    if "focus" in o: a[7] = o["focus"]
+    if "call" in o: a[8] = o["call"]
+    if "ct" in o: a[9] = o["ct"]
+    if "clicks" in o: a[10] = o["clicks"]
+    if "note_add" in o: a[13] = a[13] + o["note_add"]
+    return tuple(a), o.get("win")
+_S2 = []; WIN = {}
+for a in S:
+    a2, w = _apply(a); _S2.append(a2)
+    if w: WIN[a2[0]] = w
+S[:] = _S2
+def _ct(ct):
+    if ct is None or isinstance(ct, dict): return ct
+    return [dict(at=at, **r) for at, r in ct]
+def _ct_rects(ct):
+    if ct is None: return []
+    return [ct] if isinstance(ct, dict) else ct
+
 # ---------- build ----------
 shots = []
 t = 0.0
@@ -361,8 +444,9 @@ for a in S:
         off = (ct_s - si) / speed if speed else 0
         cl.append(dict(t=round(off, 2), x=x, y=y))
     shots.append(dict(id=sid, tIn=tIn, tOut=tOut, src=src, srcIn=round(si, 2), srcOut=round(so, 2), freeze=fr,
-                      chapter=ch, focus=[dict(at=at, **r) for at, r in focus], callout=call, callTarget=ct,
+                      chapter=ch, focus=[dict(at=at, **r) for at, r in focus], callout=call, callTarget=_ct(ct),
                       clicks=cl, transition=tr, sfx=sfx, note=note))
+    if sid in WIN: shots[-1]["callWin"] = WIN[sid]
 
 chapters = []
 for n, title in CH:
@@ -385,7 +469,9 @@ for s in shots:
     if not s["freeze"]:
         sp = (s["srcOut"] - s["srcIn"]) / d
         if not (0.5 <= sp <= 8): err.append(f"{s['id']} speed {sp:.2f}")
-    for f in s["focus"] + ([s["callTarget"]] if s["callTarget"] else []):
+    for w_ in ([s["callWin"]] if "callWin" in s else []):
+        if not (0 <= w_[0] < w_[1] <= 1): err.append(f"{s['id']} callWin")
+    for f in s["focus"] + _ct_rects(s["callTarget"]):
         if f["x"] < 0 or f["y"] < 0 or f["x"] + f["w"] > 1914 or f["y"] + f["h"] > 866:
             err.append(f"{s['id']} rect out of frame {f}")
     for c in s["clicks"]:
@@ -433,7 +519,9 @@ for a, s in zip(S, shots):
     if s["callout"]: txt.append(f"“{s['callout']}”")
     fz = " → ".join(f"({f['x']},{f['y']},{f['w']},{f['h']})" for f in s["focus"])
     zn = f"focus {fz}; in: {s['transition']}"
-    if s["callTarget"]: zn += f"; highlight ({s['callTarget']['x']},{s['callTarget']['y']},{s['callTarget']['w']},{s['callTarget']['h']})"
+    if s["callTarget"]:
+        zn += "; highlight " + " \u2192 ".join(("" if isinstance(s["callTarget"], dict) else f"@{c['at']}:") + f"({c['x']},{c['y']},{c['w']},{c['h']})" for c in _ct_rects(s["callTarget"]))
+        if "callWin" in s: zn += f" visible {s['callWin'][0]}\u2013{s['callWin'][1]}"
     if s["clicks"]: zn += "; click rings " + ", ".join(f"t+{c['t']:.2f}s @({c['x']},{c['y']})" for c in s["clicks"])
     L.append(f"| {s['id']} | {s['tIn']:.2f}–{s['tOut']:.2f} | {src} | {sees} | {' '.join(txt) or '—'} | {zn} | {und} | {', '.join(s['sfx']) or '—'} |")
 L.append(f"| END | 115.50–120.00 | V1 freeze (e.g. @392.6 activated screen or V3 @70.0 sentiment), heavily blurred; logo crop V1 @13.00 rect (12,12,144,36) | Anchors logo + tagline over blurred real UI | “{END['text']}” | logo scale-in, text fade-up, slow push | Anchors runs the whole influencer campaign | music resolve, final impact, ring-out |")
