@@ -1,14 +1,14 @@
-ANCHORS PLATFORM TOUR (120 s) - AUDIO QA   generated 2026-10-04T23:07:10.834Z
+ANCHORS PLATFORM TOUR (120 s) - AUDIO QA   generated 2026-10-04T23:36:59.463Z
 timeline: ../project/src/timeline.json  duration 120 s, 61 shots, 10 chapters, end card 115.5 s
 
 == FILES ==
 mix.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
    samples 5760000 = 120.000 s | integrated -14 LUFS | LRA 7.2 LU | true peak -1.3 dBTP | sample peak -1.51 dBFS | clipped samples 0
-   astats: DC offset 0.000004, peak -1.514414 dBFS, RMS -15.177331 dBFS | first sample -0.022305 | max |x| in last 50 ms 0.00e+0
+   astats: DC offset 0.000005, peak -1.514414 dBFS, RMS -15.117442 dBFS | first sample -0.022824 | max |x| in last 50 ms 0.00e+0
 PASS  mix.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
 PASS  mix.wav: no clipped samples
-PASS  mix.wav: DC offset 4.42e-6 (< 1e-4)
+PASS  mix.wav: DC offset 4.68e-6 (< 1e-4)
 PASS  mix.wav: < 50 MB
 PASS  mix.wav: integrated loudness -14 LUFS within -14 +/- 0.5
 PASS  mix.wav: true peak -1.3 dBTP <= -1.0
@@ -16,26 +16,26 @@ PASS  mix.wav: ends in silence (last 50 ms max -Infinity dBFS)
 stems/music.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
    samples 5760000 = 120.000 s | integrated -15.3 LUFS | LRA 7.9 LU | true peak -1.6 dBTP | sample peak -1.66 dBFS | clipped samples 0
-   astats: DC offset -0.000000, peak -1.657984 dBFS, RMS -16.364961 dBFS | first sample 0.000000 | max |x| in last 50 ms 0.00e+0
+   astats: DC offset -0.000000, peak -1.657984 dBFS, RMS -16.362659 dBFS | first sample 0.000000 | max |x| in last 50 ms 0.00e+0
 PASS  stems/music.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
 PASS  stems/music.wav: no clipped samples
-PASS  stems/music.wav: DC offset -4.19e-11 (< 1e-4)
+PASS  stems/music.wav: DC offset -4.20e-11 (< 1e-4)
 PASS  stems/music.wav: < 50 MB
 stems/sfx.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
-   samples 5760000 = 120.000 s | integrated -20.2 LUFS | LRA 18.4 LU | true peak -1.3 dBTP | sample peak -1.31 dBFS | clipped samples 0
-   astats: DC offset -0.000000, peak -1.310032 dBFS, RMS -27.420731 dBFS | first sample -0.020116 | max |x| in last 50 ms 0.00e+0
+   samples 5760000 = 120.000 s | integrated -20.5 LUFS | LRA 18.3 LU | true peak -1.3 dBTP | sample peak -1.31 dBFS | clipped samples 0
+   astats: DC offset 0.000000, peak -1.310032 dBFS, RMS -29.863020 dBFS | first sample -0.020116 | max |x| in last 50 ms 0.00e+0
 PASS  stems/sfx.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
 PASS  stems/sfx.wav: no clipped samples
-PASS  stems/sfx.wav: DC offset -2.17e-12 (< 1e-4)
+PASS  stems/sfx.wav: DC offset 9.58e-12 (< 1e-4)
 PASS  stems/sfx.wav: < 50 MB
 ../project/public/audio/mix.wav
    codec_name=pcm_s24le sample_rate=48000 channels=2 bits_per_sample=24 duration=120.000000  size 34.6 MB
    samples 5760000 = 120.000 s | integrated -14 LUFS | LRA 7.2 LU | true peak -1.3 dBTP | sample peak -1.51 dBFS | clipped samples 0
-   astats: DC offset 0.000004, peak -1.514414 dBFS, RMS -15.177331 dBFS | first sample -0.022305 | max |x| in last 50 ms 0.00e+0
+   astats: DC offset 0.000005, peak -1.514414 dBFS, RMS -15.117442 dBFS | first sample -0.022824 | max |x| in last 50 ms 0.00e+0
 PASS  ../project/public/audio/mix.wav: exactly 120.000 s (5760000 samples @ 48 kHz)
 PASS  ../project/public/audio/mix.wav: no clipped samples
-PASS  ../project/public/audio/mix.wav: DC offset 4.42e-6 (< 1e-4)
+PASS  ../project/public/audio/mix.wav: DC offset 4.68e-6 (< 1e-4)
 PASS  ../project/public/audio/mix.wav: < 50 MB
 PASS  ../project/public/audio/mix.wav: integrated loudness -14 LUFS within -14 +/- 0.5
 PASS  ../project/public/audio/mix.wav: true peak -1.3 dBTP <= -1.0
@@ -43,18 +43,18 @@ PASS  ../project/public/audio/mix.wav: ends in silence (last 50 ms max -Infinity
 PASS  project/public/audio/mix.wav is byte-identical to audio/mix.wav
    mastering alignment: mix.wav vs pre-master cross-correlation lag 0 samples
 PASS  mastering adds no delay (limiter latency compensated)
-   stems: common gain 0.5 dB (mastering gain 1.4 dB, trim -0.9 dB); null test mix - (music+sfx)x1.109: residual -37.4 dB below the mix
+   stems: common gain 0.5 dB (mastering gain 1.6 dB, trim -1.1 dB); null test mix - (music+sfx)x1.135: residual -36.9 dB below the mix
 PASS  stems sum to the mix (residual from the limiter only, < -30 dB)
 
 == CLICK / DISCONTINUITY SCAN (mix.wav) ==
-   samples whose 2nd difference exceeds 25x the running average (and 0.08): 5587; not within 30 ms of a cue or 16th-note grid onset: 0
+   samples whose 2nd difference exceeds 25x the running average (and 0.08): 5845; not within 30 ms of a cue or 16th-note grid onset: 0
 PASS  no unexplained discontinuities (clicks/pops) in the mix
 
 == CUE SYNC ==
-   (a) all 101 cues: |heard - timeline time| max 30.0 ms (heard = transient for hits/pops/clicks/chimes, envelope peak for whooshes, arrival for risers)
+   (a) all 99 cues: |heard - timeline time| max 30.0 ms (heard = transient for hits/pops/clicks/chimes, envelope peak for whooshes, arrival for risers)
 PASS  every SFX cue is heard within 1 frame of its timeline time
-   (b) 33 isolated percussive cues measured in stems/sfx.wav: worst onset offset 0.0 ms (0.00 frames)
-PASS  isolated cue onsets in the SFX stem within 1 frame of the timeline
+   (b) 35 isolated percussive cues measured in stems/sfx.wav: worst onset offset 113350.0 ms (3400.50 frames)
+FAIL  isolated cue onsets in the SFX stem within 1 frame of the timeline
 
 == MUSIC DOWNBEATS ON ANCHORS (stems/music.wav, low-band onset) ==
       0.000 s  onset 0.006  (+6.0 ms, rise >60 dB)
@@ -85,62 +85,62 @@ PASS  music downbeat at 115.50 s within 1 frame
      95.20-115.50   40 beats @ 118.23 BPM (10 bars of 4/4)
 
 == ARRANGEMENT / SECTION LEVELS (mid RMS dBFS; music stem | sfx stem | mix) ==
-   Hook     0.00-5.00    key D bars  -  hits I vi IV V I                    -17.2 |  -17.4 |  -14.0
-   L1       5.00-15.22   key D bars  5  I vi IV Vsus I                      -20.3 |  -33.7 |  -19.2
-   L2      15.22-27.48   key D bars  6  vi IV Vsus I vi IV                  -19.4 |  -31.0 |  -18.2
-   L3      27.48-45.88   key D bars  9  Vsus I vi IV Vsus I vi IV Vsus      -17.6 |  -33.0 |  -16.6
-   L4      45.88-60.18   key D bars  7  I vi IV Vsus I vi IV                -17.2 |  -31.4 |  -16.2
-   L5      60.18-64.27   key D bars  2  Vsus I                              -16.5 |  -38.3 |  -15.6
-   Lpre    64.27-66.31   key D bars  1  V                                   -20.5 |  -30.8 |  -19.2
-   L6      66.31-70.40   key D bars  2  I vi                                -16.0 |  -20.6 |  -13.8
-   R1      70.40-82.40   key D bars  6  vi IV I6 V vi IV                    -15.4 |  -30.2 |  -14.3
-   R2      82.40-86.40   key D bars  2  I6 V                                -16.2 |  -35.6 |  -15.2
-   Rpre    86.40-88.40   key D bars  1  V                                   -17.6 |  -31.4 |  -16.5
-   M1      88.40-94.68   key E bars  3  I vi IV                             -14.3 |  -36.1 |  -13.4
-   Mpre    94.68-95.20   key E bars  1  V                                   -19.2 |  -24.5 |  -17.1
-   M2      95.20-111.44  key E bars  8  I V vi IV I V vi IV                 -13.3 |  -33.8 |  -12.4
-   M3     111.44-113.47  key E bars  1  ii                                  -14.0 |  -35.3 |  -13.1
-   Mres   113.47-115.50  key E bars  1  V                                   -18.2 |  -36.0 |  -17.2
-   End    115.50-120.00  key E bars  -  I (Emaj9) ring-out                  -23.8 |  -21.9 |  -19.0
+   Hook     0.00-5.00    key D bars  -  hits I vi IV V I                    -17.2 |  -17.4 |  -13.9
+   L1       5.00-15.22   key D bars  5  I vi IV Vsus I                      -20.3 |  -33.7 |  -19.0
+   L2      15.22-27.48   key D bars  6  vi IV Vsus I vi IV                  -19.4 |  -31.0 |  -18.0
+   L3      27.48-45.88   key D bars  9  Vsus I vi IV Vsus I vi IV Vsus      -17.6 |  -33.0 |  -16.4
+   L4      45.88-60.18   key D bars  7  I vi IV Vsus I vi IV                -17.2 |  -31.6 |  -16.0
+   L5      60.18-64.27   key D bars  2  Vsus I                              -16.5 |   -inf |  -15.4
+   Lpre    64.27-66.31   key D bars  1  V                                   -20.5 |   -inf |  -19.4
+   L6      66.31-70.40   key D bars  2  I vi                                -16.0 |   -inf |  -14.9
+   R1      70.40-82.40   key D bars  6  vi IV I6 V vi IV                    -15.4 |   -inf |  -14.3
+   R2      82.40-86.40   key D bars  2  I6 V                                -16.2 |   -inf |  -15.1
+   Rpre    86.40-88.40   key D bars  1  V                                   -17.6 |   -inf |  -16.5
+   M1      88.40-94.68   key E bars  3  I vi IV                             -14.3 |   -inf |  -13.2
+   Mpre    94.68-95.20   key E bars  1  V                                   -19.2 |   -inf |  -18.1
+   M2      95.20-111.44  key E bars  8  I V vi IV I V vi IV                 -13.3 |   -inf |  -12.3
+   M3     111.44-113.47  key E bars  1  ii                                  -14.0 |   -inf |  -12.9
+   Mres   113.47-115.50  key E bars  1  V                                   -18.2 |   -inf |  -17.1
+   End    115.50-120.00  key E bars  -  I (Emaj9) ring-out                  -23.8 |   -inf |  -22.7
    act averages (music): Launch -18.0 (first 10 s -20.2, last 10 s -16.9) | Run -15.7 | Measure -13.9
 PASS  music builds: Launch rises across the act and Measure is the loudest act
-   ending: mix RMS -15.3 dBFS just after the end-card sting, -64.0 dBFS in the last 0.5 s
+   ending: mix RMS -18.8 dBFS just after the end-card sting, -108.8 dBFS in the last 0.5 s
 PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
 
 == PER-SECOND RMS (mid dBFS): music stem | sfx stem | mix ==
-     0s  -17.1  -17.9  -14.3  |  1s  -17.2  -17.8  -14.3  |  2s  -17.3  -17.8  -14.0  |  3s  -17.2  -17.8  -13.9
-     4s  -17.3  -16.1  -13.6  |  5s  -20.7  -29.1  -19.2  |  6s  -19.7  -94.0  -18.8  |  7s  -20.3  -35.0  -19.3
-     8s  -20.2  -48.3  -19.2  |  9s  -21.0  -35.0  -19.9  | 10s  -19.8 -104.0  -18.9  | 11s  -20.6  -35.1  -19.5
-    12s  -20.5 -108.8  -19.6  | 13s  -20.0  -35.2  -19.0  | 14s  -19.8  -34.8  -18.8  | 15s  -19.8  -27.1  -18.1
-    16s  -19.6  -35.2  -18.6  | 17s  -18.5  -64.0  -17.6  | 18s  -19.8  -35.2  -18.8  | 19s  -18.5  -63.0  -17.6
-    20s  -20.1  -35.3  -19.1  | 21s  -18.2  -64.0  -17.3  | 22s  -20.1  -36.2  -19.1  | 23s  -22.0  -21.8  -18.0
-    24s  -19.6  -33.1  -18.5  | 25s  -18.4  -70.1  -17.5  | 26s  -19.5 -116.5  -18.6  | 27s  -19.5  -26.3  -17.8
-    28s  -17.3  -74.9  -16.4  | 29s  -18.5  -27.4  -17.1  | 30s  -17.2  -72.8  -16.3  | 31s  -17.5  -35.2  -16.6
-    32s  -17.7  -79.6  -16.8  | 33s  -18.0  -35.2  -17.0  | 34s  -17.1  -75.5  -16.2  | 35s  -17.8  -35.3  -16.8
-    36s  -17.3  -43.8  -16.4  | 37s  -18.2  -26.8  -16.8  | 38s  -17.2  -88.4  -16.3  | 39s  -17.3  -35.2  -16.3
-    40s  -18.0  -29.5  -16.8  | 41s  -18.0  -29.1  -16.8  | 42s  -17.6  -35.2  -16.7  | 43s  -17.4  -48.8  -16.5
-    44s  -17.3 -106.1  -16.4  | 45s  -17.4 -104.0  -16.5  | 46s  -17.8  -26.1  -16.3  | 47s  -16.7  -78.6  -15.9
-    48s  -17.1 -125.0  -16.2  | 49s  -17.4  -35.5  -16.4  | 50s  -19.0  -24.5  -17.0  | 51s  -17.7  -30.5  -16.6
-    52s  -17.0  -50.5  -16.1  | 53s  -17.0  -35.2  -16.1  | 54s  -16.9  -64.3  -16.0  | 55s  -16.6 -111.8  -15.7
-    56s  -17.0  -35.2  -16.0  | 57s  -17.1  -62.3  -16.2  | 58s  -17.4  -35.0  -16.4  | 59s  -17.4  -26.5  -16.0
-    60s  -16.4  -78.7  -15.5  | 61s  -16.6  -35.2  -15.7  | 62s  -16.5  -80.4  -15.6  | 63s  -16.7  -35.2  -15.7
-    64s  -17.9  -63.4  -17.0  | 65s  -21.8  -32.3  -20.5  | 66s  -19.7  -16.0  -13.8  | 67s  -15.8  -20.3  -13.4
-    68s  -14.7  -30.1  -13.6  | 69s  -15.8  -41.9  -14.9  | 70s  -17.0  -29.2  -15.9  | 71s  -15.0  -83.1  -14.1
-    72s  -14.9  -35.2  -14.0  | 73s  -15.3  -80.7  -14.4  | 74s  -14.7  -35.3  -13.8  | 75s  -14.3  -81.0  -13.4
-    76s  -16.0  -35.0  -15.0  | 77s  -17.7  -21.7  -15.0  | 78s  -16.3  -26.7  -15.1  | 79s  -15.0  -36.5  -14.1
-    80s  -14.7  -77.4  -13.8  | 81s  -15.3  -48.6  -14.4  | 82s  -15.9  -26.7  -14.6  | 83s  -16.3  -48.3  -15.4
-    84s  -15.5 -123.8  -14.6  | 85s  -16.6 -178.5  -15.7  | 86s  -16.2  -35.3  -15.3  | 87s  -17.4  -71.8  -16.6
-    88s  -17.1  -27.0  -15.7  | 89s  -14.8  -35.2  -13.9  | 90s  -13.8  -81.7  -12.9  | 91s  -13.6 -130.4  -12.7
-    92s  -14.4  -35.2  -13.4  | 93s  -14.2  -69.4  -13.3  | 94s  -16.0  -33.1  -15.0  | 95s  -14.5  -26.1  -13.3
-    96s  -13.6  -35.2  -12.7  | 97s  -12.9  -64.0  -12.0  | 98s  -13.4 -113.8  -12.5  | 99s  -13.2  -28.7  -12.2
-   100s  -13.9  -26.4  -12.9  |101s  -13.4  -42.9  -12.5  |102s  -13.5  -35.2  -12.5  |103s  -13.0  -91.2  -12.1
-   104s  -13.7  -35.2  -12.7  |105s  -13.0  -35.2  -12.1  |106s  -13.6  -35.7  -12.6  |107s  -12.8  -44.6  -11.9
-   108s  -13.2  -35.1  -12.3  |109s  -13.2  -72.1  -12.3  |110s  -13.4  -35.2  -12.5  |111s  -13.6  -35.2  -12.7
-   112s  -13.9  -63.6  -13.0  |113s  -15.5  -35.3  -14.6  |114s  -18.0  -90.8  -17.1  |115s  -20.8  -18.0  -15.5
-   116s  -20.3  -20.0  -16.4  |117s  -26.1  -25.1  -21.7  |118s  -40.9  -32.7  -31.2  |119s  -80.4  -49.6  -48.7
+     0s  -17.1  -17.9  -14.2  |  1s  -17.2  -17.8  -14.2  |  2s  -17.3  -17.8  -13.8  |  3s  -17.2  -17.8  -13.7
+     4s  -17.3  -16.1  -13.5  |  5s  -20.7  -29.1  -19.0  |  6s  -19.7  -94.0  -18.6  |  7s  -20.3  -35.0  -19.1
+     8s  -20.2  -48.3  -19.0  |  9s  -21.0  -35.0  -19.7  | 10s  -19.8 -103.9  -18.7  | 11s  -20.4  -35.2  -19.2
+    12s  -20.5 -108.9  -19.4  | 13s  -20.0  -35.2  -18.8  | 14s  -19.8  -34.8  -18.6  | 15s  -19.8  -27.1  -17.9
+    16s  -19.6  -35.2  -18.4  | 17s  -18.5  -64.0  -17.4  | 18s  -19.8  -35.2  -18.6  | 19s  -18.5  -63.0  -17.4
+    20s  -20.1  -35.2  -18.9  | 21s  -18.2  -64.0  -17.1  | 22s  -20.1  -36.2  -18.9  | 23s  -22.0  -21.8  -17.8
+    24s  -19.6  -33.1  -18.3  | 25s  -18.4  -70.1  -17.3  | 26s  -19.5 -116.5  -18.4  | 27s  -19.5  -26.3  -17.6
+    28s  -17.3  -74.9  -16.2  | 29s  -18.5  -27.4  -16.9  | 30s  -17.2  -72.8  -16.1  | 31s  -17.5  -35.2  -16.4
+    32s  -17.7  -79.6  -16.6  | 33s  -18.0  -35.2  -16.8  | 34s  -17.1  -75.5  -16.0  | 35s  -17.8  -35.3  -16.6
+    36s  -17.3  -43.8  -16.2  | 37s  -18.2  -26.8  -16.6  | 38s  -17.2  -88.4  -16.1  | 39s  -17.3  -35.2  -16.1
+    40s  -18.0  -29.5  -16.6  | 41s  -18.0  -29.1  -16.6  | 42s  -17.6  -35.2  -16.5  | 43s  -17.4  -48.8  -16.3
+    44s  -17.3 -106.1  -16.2  | 45s  -17.4 -104.0  -16.3  | 46s  -17.8  -26.1  -16.1  | 47s  -16.7  -78.6  -15.7
+    48s  -17.1 -125.0  -16.0  | 49s  -17.4  -35.5  -16.2  | 50s  -19.0  -24.5  -16.8  | 51s  -17.7  -30.5  -16.4
+    52s  -17.0  -50.5  -15.9  | 53s  -17.0  -35.2  -15.9  | 54s  -16.9  -64.3  -15.8  | 55s  -16.6 -111.8  -15.5
+    56s  -17.0  -35.2  -15.8  | 57s  -17.1  -62.3  -16.0  | 58s  -17.2  -35.3  -16.0  | 59s  -17.4  -27.3  -15.9
+    60s  -16.4   -inf  -15.3  | 61s  -16.6   -inf  -15.5  | 62s  -16.5   -inf  -15.4  | 63s  -16.7   -inf  -15.6
+    64s  -17.9   -inf  -16.8  | 65s  -21.8   -inf  -20.7  | 66s  -19.7   -inf  -18.6  | 67s  -15.8   -inf  -14.7
+    68s  -14.7   -inf  -13.6  | 69s  -15.8   -inf  -14.7  | 70s  -17.0   -inf  -15.9  | 71s  -15.0   -inf  -13.9
+    72s  -14.9   -inf  -13.8  | 73s  -15.3   -inf  -14.2  | 74s  -14.7   -inf  -13.6  | 75s  -14.3   -inf  -13.2
+    76s  -16.0   -inf  -14.9  | 77s  -17.7   -inf  -16.6  | 78s  -16.3   -inf  -15.2  | 79s  -15.0   -inf  -13.9
+    80s  -14.7   -inf  -13.6  | 81s  -15.3   -inf  -14.3  | 82s  -15.9   -inf  -14.8  | 83s  -16.3   -inf  -15.2
+    84s  -15.5   -inf  -14.4  | 85s  -16.6   -inf  -15.5  | 86s  -16.2   -inf  -15.1  | 87s  -17.4   -inf  -16.4
+    88s  -17.1   -inf  -16.0  | 89s  -14.8   -inf  -13.8  | 90s  -13.8   -inf  -12.7  | 91s  -13.6   -inf  -12.5
+    92s  -14.4   -inf  -13.3  | 93s  -14.2   -inf  -13.1  | 94s  -16.0   -inf  -14.9  | 95s  -14.5   -inf  -13.5
+    96s  -13.6   -inf  -12.5  | 97s  -12.9   -inf  -11.8  | 98s  -13.4   -inf  -12.3  | 99s  -13.2   -inf  -12.1
+   100s  -13.9   -inf  -12.9  |101s  -13.4   -inf  -12.3  |102s  -13.5   -inf  -12.4  |103s  -13.0   -inf  -11.9
+   104s  -13.7   -inf  -12.6  |105s  -13.0   -inf  -11.9  |106s  -13.6   -inf  -12.5  |107s  -12.8   -inf  -11.7
+   108s  -13.2   -inf  -12.2  |109s  -13.2   -inf  -12.1  |110s  -13.4   -inf  -12.3  |111s  -13.6   -inf  -12.5
+   112s  -13.9   -inf  -12.8  |113s  -15.5   -inf  -14.4  |114s  -18.0   -inf  -16.9  |115s  -20.8   -inf  -19.7
+   116s  -20.3   -inf  -19.2  |117s  -26.1   -inf  -25.0  |118s  -40.9   -inf  -39.8  |119s  -80.4   -inf  -79.3
 
-== CUE LIST (101 SFX cues; time = moment heard; frame @ 30 fps) ==
-   counts: hit 5, whoosh 12, riser 5, zoom 8, pop 45, click 17, impact 2, bell 3, success 2, swell 1, sting 1
+== CUE LIST (99 SFX cues; time = moment heard; frame @ 30 fps) ==
+   counts: hit 5, whoosh 12, riser 5, zoom 8, pop 45, click 15, impact 2, bell 3, success 2, swell 1, sting 1
    time_s   frame  type     gain  duck_dB  heard_ms  reason
      0.000      0  hit      0.90     -5  +  0.5    hook hit 1/5 (s01 "65 creators matched")
      1.000     30  hit      0.90     -5  +  0.7    hook hit 2/5 (s02 "AI writes every brief")
@@ -158,9 +158,8 @@ PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
      7.550    227  pop      0.45     -3  +  0.5    callout "Pick your goal" (s07)
      8.070    242  click    0.55     -3  +  0.1    cursor click in s07 (1 in shot, first kept)
      9.050    272  pop      0.45     -3  +  0.6    callout "Business type & platform" (s08)
-     9.380    281  click    0.55     -3  +  0.2    cursor click in s08 (1 in shot, first kept)
+     9.440    283  click    0.55     -3  +  0.2    cursor click in s08 (1 in shot, first kept)
     11.050    332  pop      0.45     -3  +  0.5    callout "Set budget & timeline" (s09)
-    11.230    337  click    0.55     -3  +  0.1    cursor click in s09 (1 in shot, first kept)
     13.250    398  pop      0.45     -3  +  0.6    callout "Confirm in one glance" (s10)
     14.970    449  click    0.55     -3  +  0.1    cursor click in s10 (1 in shot, first kept)
     15.100    453  whoosh   0.60     -3  -25.0    whoosh transition into s11
@@ -191,14 +190,13 @@ PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
     46.400   1392  whoosh   0.60     -3  +  5.0    whoosh transition into s29
     46.550   1397  pop      0.45     -3  +  0.6    callout "Format picked from real data" (s29)
     49.630   1489  click    0.55     -3  +  0.2    cursor click in s31 (1 in shot, first kept)
-    49.950   1499  pop      0.45     -3  +  0.5    callout "CLEO writes every brief" (s31b)
+    49.950   1499  pop      0.45     -3  +  0.5    callout "AI writes every brief" (s31b)
     50.600   1518  zoom     0.62     -3  +  5.0    zoom transition into s32
-    50.600   1518  riser    0.40     -3  -30.0    timeline riser under s31b "CLEO writes every brief" into s32
+    50.600   1518  riser    0.40     -3  -30.0    timeline riser under s31b "AI writes every brief" into s32
     50.700   1521  bell     0.50     -3  +  1.0    reveal bell on s32 ""
     53.850   1616  pop      0.45     -3  +  0.6    callout "Personalised, ready to send" (s33)
     56.850   1706  pop      0.45     -3  +  0.8    callout "Guidelines & hashtags included" (s34)
     58.350   1751  pop      0.45     -3  +  0.6    callout "Applied to all creators" (s35)
-    58.600   1758  click    0.55     -3  +  0.2    cursor click in s35 (1 in shot, first kept)
     59.400   1782  whoosh   0.60     -3   -5.0    whoosh transition into s36
     59.550   1787  pop      0.45     -3  +  0.5    callout "Final check before launch" (s36)
     61.550   1847  pop      0.45     -3  +  0.7    callout "Clear pricing, GST included" (s37)
@@ -262,4 +260,4 @@ PASS  ending fades to silence (last 0.5 s below -60 dBFS RMS)
    113.470  section Mres  (V) key E
    115.500  end-card resolve: Emaj9 stab + pad + sub + bells, ring-out, digital silence from 119.90 s
 
-RESULT: ALL CHECKS PASSED
+RESULT: 1 CHECK(S) FAILED
