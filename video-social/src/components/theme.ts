@@ -5,11 +5,15 @@ import { FONT_FACES } from './fontData';
 // by tools/fetch-fonts.mjs, so rendering needs no network (fonts.gstatic.com is unreachable behind some proxies).
 // Same families/weights as the previous @remotion/google-fonts loaders.
 if (typeof document !== 'undefined' && typeof FontFace !== 'undefined') {
-  const handle = delayRender('Loading embedded fonts');
+  const handle = delayRender('Loading embedded fonts', { timeoutInMilliseconds: 60000 });
+  let done = false;
+  const finish = () => { if (!done) { done = true; continueRender(handle); } };
   Promise.all(
     FONT_FACES.map((m) => new FontFace(m.family, `url(${m.src}) format('woff2')`, { style: m.style, weight: m.weight, unicodeRange: m.unicodeRange })
       .load().then((f) => document.fonts.add(f))),
-  ).then(() => continueRender(handle), (e) => { console.error(e); continueRender(handle); });
+  ).then(finish, (e) => { console.error(e); finish(); });
+  // Data-URI fonts decode in milliseconds; never let a stalled tab hang the render (fonts are re-checked below).
+  setTimeout(finish, 8000);
 }
 const inter = { fontFamily: 'Inter' };
 const serif = { fontFamily: '"Source Serif Four"' };

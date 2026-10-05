@@ -20,7 +20,7 @@ const Row: React.FC<{ k: string; i: number; f: number }> = ({ k, i, f }) => {
   const flash = i >= 4 ? 1 - prog(f, flipAt, 10) : 0;
   const collapse = prog(f, COLLAPSE_AT + i * 0.5, 7, easeInOut);
   return (
-    <div style={{ height: ROW_H * (1 - collapse), opacity: 1 - collapse, overflow: 'hidden', display: 'flex', alignItems: 'center', gap: 20, borderBottom: `1.5px solid ${C.border}`, boxSizing: 'border-box' }}>
+    <div style={{ height: ROW_H, opacity: 1 - collapse, transform: `translateY(${-14 * collapse}px)`, overflow: 'hidden', display: 'flex', alignItems: 'center', gap: 20, borderBottom: `1.5px solid ${C.border}`, boxSizing: 'border-box' }}>
       <Avatar k={k} size={48} />
       <div style={{ fontFamily: FONT_SANS, fontSize: 44, fontWeight: 600, color: '#fff', flex: 1, whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>{CREATORS[k].name}</div>
       <Pill size={36} dot={live} color={live ? '#5ed39d' : '#c8b4ff'} bg={live ? `rgba(63,178,127,${0.18 + 0.3 * flash})` : 'rgba(182,156,255,.17)'}>{live ? 'Live' : 'Scheduled'}</Pill>

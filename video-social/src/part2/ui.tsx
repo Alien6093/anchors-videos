@@ -68,6 +68,9 @@ export const Panel: React.FC<{ children: React.ReactNode; style?: React.CSSPrope
   );
 };
 
+/* 9:16 only: keep the card band clear of the Reels/Shorts right-hand button rail (script v2 0.3: no text x>960, y 900-1500). */
+const RAIL_SAFE = 0.92;
+
 /** Container for one scene's card content inside the card band. Pops in without ever being empty. */
 export const Stage: React.FC<{ f: number; children: React.ReactNode; align?: 'top' | 'center'; noEnter?: boolean; push?: number; dim?: number }> = ({
   f, children, align = 'top', noEnter, push = 0, dim = 0,
@@ -75,7 +78,9 @@ export const Stage: React.FC<{ f: number; children: React.ReactNode; align?: 'to
   const L = useL();
   const enter = noEnter ? 1 : prog(f, 0, 6);
   const sc = lerp(noEnter ? 1 : 0.965, 1, enter) * (1 + push);
+  const rail = L.fmt === '916' ? RAIL_SAFE : 1;
   return (
+    <div style={{ position: 'absolute', inset: 0, transform: `scale(${rail})`, transformOrigin: `${L.cardX}px ${L.cardY}px` }}>
     <div style={{
       position: 'absolute', left: L.cardX, top: L.cardY, width: L.cardW, height: L.cardH, transform: `scale(${sc})`, transformOrigin: '50% 40%',
       filter: dim > 0 ? `brightness(${1 - dim})` : undefined,
@@ -84,6 +89,7 @@ export const Stage: React.FC<{ f: number; children: React.ReactNode; align?: 'to
         width: L.inW, height: L.inH, display: 'flex', flexDirection: 'column', justifyContent: align === 'top' ? 'flex-start' : 'center',
         transform: `scale(${L.zoom})`, transformOrigin: '0 0', fontFamily: FONT_SANS,
       }}>{children}</div>
+    </div>
     </div>
   );
 };

@@ -51,12 +51,18 @@ export const Caption: React.FC = () => {
   );
 };
 
+/* 9:16 only: keep the card band clear of the Reels/Shorts right-hand button rail (script v2 0.3: no text x>960, y 900-1500). */
+const RAIL_SAFE = 0.92;
+
 /** The card frame plus the centred design box (dw x DH) scenes are laid out in. */
 export const Card: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { card, dw } = useLay();
+  const { card, dw, fmt } = useLay();
+  const rail = fmt === '916' ? RAIL_SAFE : 1;
   return (
+    <div style={{ position: 'absolute', inset: 0, transform: `scale(${rail})`, transformOrigin: `${card.x}px ${card.y}px` }}>
     <div style={{ position: 'absolute', left: card.x, top: card.y, width: card.w, height: card.h, boxSizing: 'border-box', borderRadius: 44, background: 'linear-gradient(180deg,#2a2927 0%,#242321 100%)', border: `2px solid ${C.border}`, boxShadow: '0 30px 80px rgba(0,0,0,.45)', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', left: (card.w - dw) / 2, top: (card.h - DH) / 2, width: dw, height: DH }}>{children}</div>
+    </div>
     </div>
   );
 };
