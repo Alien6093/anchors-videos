@@ -12,7 +12,7 @@ for p in "1 build" "2 review" "3 monitor"; do
     ffmpeg -v error -y -i social/v2/silent/Part$1_$f.mp4 -i "$(mix $1 $f)" -map 0:v -map 1:a \
       -vf "scale=in_range=full:out_range=tv,format=yuv420p" -c:v libx264 -preset slow -crf 17 -profile:v high \
       -colorspace bt709 -color_primaries bt709 -color_trc bt709 -color_range tv \
-      -c:a aac -b:a 320k -ar 48000 -t 48 -movflags +faststart social/v2/part$1-$2-$f.mp4
+      -c:a aac -b:a 320k -shortest -movflags +faststart social/v2/part$1-$2-$f.mp4
     echo "built social/v2/part$1-$2-$f.mp4"
   done
 done
