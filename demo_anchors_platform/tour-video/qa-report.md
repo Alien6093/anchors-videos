@@ -106,3 +106,5 @@ A new brand will clearly follow the flow: create, set criteria, see 65 matches, 
 
 ---
 _Director's note (after round 3): the round-3 minors m1 (s69 loader, srcIn 180.6) and m2 (s41 callout moved to the bottom band) were fixed in the final render and checked on stills. m3 (toast cut at the edge) and m4 (true-peak margin) are left as is. No timing or audio changed._
+
+_Director's note (follow-up): m3 is fixed too. s41 now ends on a wide framing of the whole confirmation page, so the "Campaign activated successfully" toast, the tracker and "Go to Dashboard" are all fully in frame by 70 s. Re-rendered (120.000 s, 3600 frames, -14.1 LUFS, -1.2 dBTP) and checked on stills at 67, 68.5 and 70.2 s._
