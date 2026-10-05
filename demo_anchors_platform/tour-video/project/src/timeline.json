@@ -1429,7 +1429,8 @@
     "impact",
     "chime"
    ],
-   "note": "PAYOFF at 0.75x: 'Congratulations! Campaign Activated' + status tracker + toast. QA1: srcIn 392.25 so the billing modal is not seen."
+   "note": "PAYOFF at 0.75x: 'Congratulations! Campaign Activated' + status tracker + toast. QA1: srcIn 392.25 so the billing modal is not seen.",
+   "calloutAt": "bottom"
   },
   {
    "id": "s42",
@@ -2390,7 +2391,7 @@
    "tIn": 114.6,
    "tOut": 115.5,
    "src": 3,
-   "srcIn": 180.4,
+   "srcIn": 180.6,
    "srcOut": 181.3,
    "freeze": false,
    "chapter": 10,

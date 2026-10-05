@@ -78,7 +78,7 @@ Speed = (src out − src in) / shot duration. Focus rects are SOURCE px (x,y,w,h
 | s65 | 110.10–111.70 | V3 (171654) 115.40–118.60 (2.00x) | Brand Sentiment Analysis cards for one influencer. | “Drill into each creator” | focus (360,200,1100,619); in: cut | Every insight is available per creator. | — |
 | s67 | 111.70–113.20 | V3 (171654) 155.60–158.00 (1.60x) | Keyword bars and word cloud. | “Keywords that drive talk” | focus (380,60,1100,619); in: cut | AI summarises the themes in the conversation. | — |
 | s68 | 113.20–114.60 | V3 (171654) 175.20–179.30 (2.93x) | Rating panel with stars and 1-10 scale. | “Rate creators for next time” | focus (820,20,1094,615); in: cut; highlight @0:(1495,230,345,420) → @0.2:(1495,20,345,560) → @1:(1495,20,345,560) | Your ratings improve future recommendations. | click |
-| s69 | 114.60–115.50 | V3 (171654) 180.40–181.30 (1.00x) | Feedback confirmation. | — | focus (820,20,1094,615); in: cut; highlight (1495,220,345,300) | Loop closes: insights feed the next campaign. | chime |
+| s69 | 114.60–115.50 | V3 (171654) 180.60–181.30 (0.78x) | Feedback confirmation. | — | focus (820,20,1094,615); in: cut; highlight (1495,220,345,300) | Loop closes: insights feed the next campaign. | chime |
 | END | 115.50–120.00 | V1 freeze (e.g. @392.6 activated screen or V3 @70.0 sentiment), heavily blurred; logo crop V1 @13.00 rect (12,12,144,36) | Anchors logo + tagline over blurred real UI | “Anchors — influencer campaigns, start to finish” | logo scale-in, text fade-up, slow push | Anchors runs the whole influencer campaign | music resolve, final impact, ring-out |
 
 ## Dead time cut (not used)
