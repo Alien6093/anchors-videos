@@ -103,3 +103,6 @@ A new brand will clearly follow the flow: create, set criteria, see 65 matches, 
 ---
 *Round 1: FAIL. About 12 highlights did not track the scrolling UI, the hook phrases were too short, and the s50 payoff was missing.*
 *Round 2: FAIL (blocker). A NaN pan in `sfx.mjs` from keyframed `callTarget` silenced every SFX after 59.55 s, and the audio sat 43 ms late.*
+
+---
+_Director's note (after round 3): the round-3 minors m1 (s69 loader, srcIn 180.6) and m2 (s41 callout moved to the bottom band) were fixed in the final render and checked on stills. m3 (toast cut at the edge) and m4 (true-peak margin) are left as is. No timing or audio changed._

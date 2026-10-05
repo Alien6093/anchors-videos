@@ -51,4 +51,19 @@ SKIP_AUDIO=1 bash demo_anchors_platform/tour-video/build.sh   # reuse committed 
 Requirements: Node 18+, ffmpeg and Chromium (`BROWSER=` overrides the headless-shell path). The render takes about 10 min on 4 cores. Intermediates (`_work/`, `project/public/src`, `project/public/audio`, `audio/build`, `project/out`) are gitignored and recreated.
 
 ## QA summary
-See `qa-report.md` (final round) for the full checklist.
+The independent QA Reviewer ran three rounds (full report in `qa-report.md`):
+
+| Round | Verdict | Main findings | Action |
+|---|---|---|---|
+| 1 | FAIL | Highlight boxes did not track scrolling UI (about 12 shots); hook phrases too brief; live-dates payoff not shown | Keyframed highlight targets and visibility windows; whole-phrase hook; s50 re-cut; error messages trimmed |
+| 2 | FAIL (blocker) | No SFX after 59.55 s: the new keyframed-target format produced a NaN pan in `sfx.mjs`; audio played 43 ms late | NaN-safe pan with a hard fail on NaN or clipping; audio QA now fails the build; AAC encoded from the master with priming compensation; 8 minor framing fixes |
+| 3 | **PASS** | No blockers or majors. Minors: loader flash at 114.5 s, s41 callout over tracker labels, toast cut at the frame edge in s41, true peak only 0.2 dB under the -1 dBTP spec | Loader and callout fixed in the final render, checked on stills; the other two are left as is (see below) |
+
+**Final file:** 120.000 s, 3600 frames, 1920x1080, 42.4 MB, -14.1 LUFS integrated, -1.2 dBTP true peak, audio offset 0 samples.
+
+**Not done / known limits:**
+- **Not re-checked by QA:** the two fixes after round 3 (s41 callout position, s69 loader trim) were checked by the director on stills. They change no timing and the audio is identical.
+- **Toast cut at the edge:** in s41 the "Campaign activated successfully" toast is still partly cut at the frame edge.
+- **True peak:** -1.2 dBTP is within spec but has little margin.
+- **Not listened to:** the music was judged from measurements, spectrograms and stem analysis. No one in the crew could listen to it by ear, so a human listening pass is recommended.
+- **Demo footage:** the "Sample Mode" banner and the Zepto demo brand are part of the real footage and appear in places.
