@@ -21,6 +21,9 @@ Part 3 has an uploadable cover (`Part3_cover.png`, `Part3_cover_45.png`), becaus
 - **Part 3 chip:** the chip "Rs 15 below plan" sat under the "Max spend vs spent" row, where the real gap is Rs 2,712. The Rs 15 is the CPM gap (Rs 540 vs Rs 525). The chip now reads "CPM Rs 15 below plan", and Part 3 was re-rendered in both formats.
 - **Part 2 9:16 true peak:** the master reached +0.2 dBTP after AAC encoding. A 17 kHz low-pass on the master brings it to -1.4 dBTP (see `audio-social/v2/part2/MASTER_NOTE.md`).
 - **Colour range:** all finals are re-encoded from full-range yuvj420p to limited-range yuv420p, so platforms don't shift the colours.
+- **9:16 button area:** cards, rows and figures in the 9:16 versions used to run under the Reels/Shorts like/comment/share buttons. In 9:16 the card band is now scaled to 92% from its left edge, so all card content ends at x≈960, as the script's layout rule requires (no text at x>960 between y 900 and 1500). Text stays at 40 px or more.
+- **Part 3 opening:** the board rows used to collapse by shrinking their height, which squashed 44 px names into each other for about 0.3 s. They now fade and lift away instead.
+- **Rendering:** long Part 1 renders intermittently froze a browser tab here. `video-social/tools/render-chunked.sh` renders 240-frame PNG chunks in a fresh browser each time, then encodes once.
 - **Fonts:** `video-social` now embeds the exact Google Fonts files (`tools/fetch-fonts.mjs`), so renders need no network access.
 
 ## Earlier v1 reels (`social/stage*-*.mp4`)
