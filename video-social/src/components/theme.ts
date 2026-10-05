@@ -1,11 +1,20 @@
-import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
-import { loadFont as loadSerif } from '@remotion/google-fonts/SourceSerif4';
-import { loadFont as loadInstrument } from '@remotion/google-fonts/InstrumentSerif';
+import { continueRender, delayRender } from 'remotion';
+import { FONT_FACES } from './fontData';
 
-const inter = loadInter('normal', { weights: ['400', '500', '600', '700', '800', '900'], subsets: ['latin'] });
-const serif = loadSerif('normal', { weights: ['400', '600'], subsets: ['latin'] });
-const instrument = loadInstrument('normal', { weights: ['400'], subsets: ['latin'] });
-const instrumentItalic = loadInstrument('italic', { weights: ['400'], subsets: ['latin'] });
+// Fonts: the exact Google Fonts files (Inter, Source Serif 4, Instrument Serif; latin subset) embedded as data URIs
+// by tools/fetch-fonts.mjs, so rendering needs no network (fonts.gstatic.com is unreachable behind some proxies).
+// Same families/weights as the previous @remotion/google-fonts loaders.
+if (typeof document !== 'undefined' && typeof FontFace !== 'undefined') {
+  const handle = delayRender('Loading embedded fonts');
+  Promise.all(
+    FONT_FACES.map((m) => new FontFace(m.family, `url(${m.src}) format('woff2')`, { style: m.style, weight: m.weight, unicodeRange: m.unicodeRange })
+      .load().then((f) => document.fonts.add(f))),
+  ).then(() => continueRender(handle), (e) => { console.error(e); continueRender(handle); });
+}
+const inter = { fontFamily: 'Inter' };
+const serif = { fontFamily: '"Source Serif Four"' };
+const instrument = { fontFamily: '"Instrument Serif"' };
+const instrumentItalic = instrument;
 
 export const FONT_SANS = `${inter.fontFamily}, system-ui, sans-serif`;
 export const FONT_SERIF = `${serif.fontFamily}, Georgia, serif`;

@@ -75,7 +75,7 @@ const PlanCard: React.FC<{ f: number }> = ({ f }) => {
         );
       })}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 14, opacity: Math.min(1, pop(f, CHIP_AT, 12, 200) * 2), transform: `scale(${lerp(0.8, 1, Math.min(1, pop(f, CHIP_AT, 12, 200)))})` }}>
-        <Pill size={50} color="#fff" bg={C.greenDeep}>Rs 15 below plan</Pill>
+        <Pill size={50} color="#fff" bg={C.greenDeep}>CPM Rs 15 below plan</Pill>
       </div>
     </div>
   );
