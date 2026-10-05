@@ -1410,10 +1410,10 @@
     },
     {
      "at": 1,
-     "x": 400,
-     "y": 150,
-     "w": 1120,
-     "h": 630
+     "x": 0,
+     "y": 0,
+     "w": 1914,
+     "h": 862
     }
    ],
    "callout": "Campaign activated!",
@@ -1429,7 +1429,7 @@
     "impact",
     "chime"
    ],
-   "note": "PAYOFF at 0.75x: 'Congratulations! Campaign Activated' + status tracker + toast. QA1: srcIn 392.25 so the billing modal is not seen.",
+   "note": "PAYOFF at 0.75x: 'Congratulations! Campaign Activated' + status tracker + toast. QA1: srcIn 392.25 so the billing modal is not seen. QA3 m3: ends wide so the success toast is whole.",
    "calloutAt": "bottom"
   },
   {

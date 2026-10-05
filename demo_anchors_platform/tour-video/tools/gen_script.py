@@ -385,7 +385,7 @@ OV = {
              note_add=" QA1: src 351.15-352.35 (1x), after the modal closes (no 'No briefs generated' error); pans to the real toast 'AI brief applied to 2 creators'."),
  "s36": dict(at="bottom", ct=K((0, R(400, 262, 1100, 120)), (0.42, R(400, 262, 1100, 120)), (0.65, R(400, 160, 1100, 105)), (1, R(400, 160, 1100, 105))), win=[0, 0.8]),
  "s37": dict(ct=R(985, 195, 520, 250)),
- "s41": dict(si=392.25, focus=K((0, R(560, 140, 800, 450)), (1, R(400, 150, 1120, 630))), at="bottom", note_add=" QA1: srcIn 392.25 so the billing modal is not seen."),
+ "s41": dict(si=392.25, focus=K((0, R(560, 140, 800, 450)), (1, R(0, 0, 1914, 862))), at="bottom", note_add=" QA1: srcIn 392.25 so the billing modal is not seen. QA3 m3: ends wide so the success toast is whole."),
  "s42": dict(so=19.6, focus=K((0, R(340, 40, 1150, 647))), ct=R(400, 82, 1090, 100),
              note_add=" QA1: src 16.0-19.6 before the page scrolls; focus raised to include the status cards; highlight on Selected/Accepted/Draft Submitted/Approved cards."),
  "s43": dict(si=32.1, so=33.6, focus=K((0, R(380, 100, 1200, 675))), ct=R(425, 240, 600, 460),
